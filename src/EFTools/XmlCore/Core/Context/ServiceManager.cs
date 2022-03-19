@@ -23,7 +23,7 @@ namespace Microsoft.Data.Entity.Design.Core.Context
         /// <summary>
         ///     Retrives the requested service.  This method returns null if the service could not be located.
         /// </summary>
-        /// <typeparam name="ServiceType">The type of service to retrieve.</typeparam>
+        /// <typeparam name="TServiceType">The type of service to retrieve.</typeparam>
         /// <returns>An instance of the service, or null if the service has not been published.</returns>
         public TServiceType GetService<TServiceType>()
         {
@@ -63,7 +63,7 @@ namespace Microsoft.Data.Entity.Design.Core.Context
         ///     A generic version of this method is provided for convenience, and calls the non-generic
         ///     method with appropriate casts.
         /// </summary>
-        /// <typeparam name="ServiceType">The type of service to subscribe.</typeparam>
+        /// <typeparam name="TServiceType">The type of service to subscribe.</typeparam>
         /// <param name="callback">A callback that will be invoked when the service is available.</param>
         /// <exception cref="ArgumentNullException">If callback is null.</exception>
         public void Subscribe<TServiceType>(SubscribeServiceCallback<TServiceType> callback)
@@ -106,7 +106,7 @@ namespace Microsoft.Data.Entity.Design.Core.Context
         ///     requests the service the PublishServiceCallback will be invoked to create the instance.
         ///     The callback is only invoked once and after that the instance it returned is cached.
         /// </summary>
-        /// <typeparam name="ServiceType">The type of service to publish.</typeparam>
+        /// <typeparam name="TServiceType">The type of service to publish.</typeparam>
         /// <param name="callback">A callback to be invoked when the service is required.</param>
         /// <exception cref="ArgumentNullException">If callback is null.</exception>
         /// <exception cref="ArgumentException">If ServiceType has already been published.</exception>
@@ -126,7 +126,7 @@ namespace Microsoft.Data.Entity.Design.Core.Context
         ///     Publishes the given service.  Once published, the service instance remains in the
         ///     service collection until the editing context is disposed.
         /// </summary>
-        /// <typeparam name="ServiceType">The type of service to publish.</typeparam>
+        /// <typeparam name="TServiceType">The type of service to publish.</typeparam>
         /// <param name="serviceInstance">The instance of the service to publish.</param>
         /// <exception cref="ArgumentException">If ServiceType has already been published.</exception>
         public void Publish<TServiceType>(TServiceType serviceInstance)
@@ -141,7 +141,7 @@ namespace Microsoft.Data.Entity.Design.Core.Context
         /// <summary>
         ///     Removes a subscription for the ServiceType.
         /// </summary>
-        /// <typeparam name="ServiceType">The type of service to remove the subscription from.</typeparam>
+        /// <typeparam name="TServiceType">The type of service to remove the subscription from.</typeparam>
         /// <param name="callback">The callback object to remove from the subscription.</param>
         /// <exception cref="ArgumentNullException">If callback is null.</exception>
         public void Unsubscribe<TServiceType>(SubscribeServiceCallback<TServiceType> callback)

@@ -14,7 +14,7 @@ namespace Microsoft.Data.Entity.Design.Core.Context
     /// <summary>
     ///     A generic delegate that is a callback for service subscriptions
     /// </summary>
-    /// <typeparam name="ServiceType">The type of service to listen to.</typeparam>
+    /// <typeparam name="TServiceType">The type of service to listen to.</typeparam>
     /// <param name="serviceInstance">The instance of the service.</param>
     public delegate void SubscribeServiceCallback<TServiceType>(TServiceType serviceInstance);
 }

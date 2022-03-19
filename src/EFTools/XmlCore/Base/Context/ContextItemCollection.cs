@@ -46,7 +46,7 @@ namespace Microsoft.Data.Entity.Design.Base.Context
         /// <summary>
         ///     Returns true if the item manager contains an item of the given type.
         /// </summary>
-        /// <typeparam name="ItemType">The type of item to check.</typeparam>
+        /// <typeparam name="TItemType">The type of item to check.</typeparam>
         /// <returns>True if the context contains an instance of this item type.</returns>
         internal bool Contains<TItemType>() where TItemType : ContextItem
         {
@@ -86,7 +86,7 @@ namespace Microsoft.Data.Entity.Design.Base.Context
         ///     Returns an instance of the requested item type.  If there is no context
         ///     item with the given type, an empty item will be created.
         /// </summary>
-        /// <typeparam name="ItemType">The type of item to return.</typeparam>
+        /// <typeparam name="TItemType">The type of item to return.</typeparam>
         /// <returns>A context item of the requested type.  If there is no item in the context of this type a default one will be created.</returns>
         internal TItemType GetValue<TItemType>() where TItemType : ContextItem
         {
@@ -137,7 +137,7 @@ namespace Microsoft.Data.Entity.Design.Base.Context
         /// <summary>
         ///     Adds an event callback that will be invoked with a context item of the given item type changes.
         /// </summary>
-        /// <typeparam name="ContextItemType">The type of item you wish to subscribe to.</typeparam>
+        /// <typeparam name="TContextItemType">The type of item you wish to subscribe to.</typeparam>
         /// <param name="callback">A callback that will be invoked when contextItemType changes.</param>
         /// <exception cref="ArgumentNullException">if callback is null.</exception>
         internal void Subscribe<TContextItemType>(SubscribeContextCallback<TContextItemType> callback) where TContextItemType : ContextItem
@@ -153,7 +153,7 @@ namespace Microsoft.Data.Entity.Design.Base.Context
         /// <summary>
         ///     Removes a subscription.
         /// </summary>
-        /// <typeparam name="ContextItemType">The type of context item to remove the callback from.</typeparam>
+        /// <typeparam name="TContextItemType">The type of context item to remove the callback from.</typeparam>
         /// <param name="callback">The callback to remove.</param>
         /// <exception cref="ArgumentNullException">if callback is null.</exception>
         internal void Unsubscribe<TContextItemType>(SubscribeContextCallback<TContextItemType> callback)

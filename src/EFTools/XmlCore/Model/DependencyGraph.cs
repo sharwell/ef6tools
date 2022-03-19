@@ -175,7 +175,7 @@ namespace Microsoft.Data.Entity.Design.Model
         ///     a queue combined with a hash set.  This provides constant-time lookup of individual items,
         ///     but still provides first-in first-out behavior.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="R"></typeparam>
         private class QueueHashSet<R>
         {
             private readonly HashSet<R> _dictionary = new HashSet<R>();

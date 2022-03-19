@@ -16,7 +16,7 @@ namespace Microsoft.Data.Entity.Design.Core.Context
     ///     A generic delegate that is called back when an object should publish an
     ///     instance of a service.
     /// </summary>
-    /// <typeparam name="ServiceType">The type of service to be published.</typeparam>
+    /// <typeparam name="TServiceType">The type of service to be published.</typeparam>
     /// <returns>An instance of ServiceType.</returns>
     public delegate TServiceType PublishServiceCallback<TServiceType>();
 }

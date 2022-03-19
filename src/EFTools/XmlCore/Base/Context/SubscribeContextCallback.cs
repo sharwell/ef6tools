@@ -13,7 +13,7 @@ namespace Microsoft.Data.Entity.Design.Base.Context
     ///     Defines a callback method that will be invoked when a context item
     ///     changes.
     /// </summary>
-    /// <typeparam name="ContextItemType">The type of context item this subscription is for.</typeparam>
+    /// <typeparam name="TContextItemType">The type of context item this subscription is for.</typeparam>
     /// <param name="item">The context item that has changed.</param>
     internal delegate void SubscribeContextCallback<TContextItemType>(TContextItemType item) where TContextItemType : ContextItem;
 }
