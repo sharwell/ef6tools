@@ -486,10 +486,7 @@ namespace Microsoft.Data.Entity.Design.Core.Controls
             {
                 OnEndEdit();
 
-                if (EndEditFromLostFocus != null)
-                {
-                    EndEditFromLostFocus(this, new EndEditFromLostFocusEventArgs(e.NewFocus));
-                }
+                EndEditFromLostFocus?.Invoke(this, new EndEditFromLostFocusEventArgs(e.NewFocus));
             }
         }
 

@@ -79,10 +79,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.Model
             // Register the artifact into the ModelBus if it is resolved.
             if (State == EFElementState.Resolved)
             {
-                if (AfterLoadedArtifact != null)
-                {
-                    AfterLoadedArtifact(this, null);
-                }
+                AfterLoadedArtifact?.Invoke(this, null);
             }
         }
 

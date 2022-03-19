@@ -512,10 +512,7 @@ namespace System.Data.Entity.Core.Objects
         // </summary>
         private void OnSavingChanges()
         {
-            if (null != _onSavingChanges)
-            {
-                _onSavingChanges(this, new EventArgs());
-            }
+            _onSavingChanges?.Invoke(this, new EventArgs());
         }
 
         /// <summary>Occurs when a new entity object is created from data in the data source as part of a query or load operation. </summary>
@@ -527,10 +524,7 @@ namespace System.Data.Entity.Core.Objects
 
         internal void OnObjectMaterialized(object entity)
         {
-            if (null != _onObjectMaterialized)
-            {
-                _onObjectMaterialized(this, new ObjectMaterializedEventArgs(entity));
-            }
+            _onObjectMaterialized?.Invoke(this, new ObjectMaterializedEventArgs(entity));
         }
 
         // <summary>

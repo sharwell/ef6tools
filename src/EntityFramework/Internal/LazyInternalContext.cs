@@ -550,10 +550,7 @@ namespace System.Data.Entity.Internal
 
             Owner.CallOnModelCreating(modelBuilder);
 
-            if (OnModelCreating != null)
-            {
-                OnModelCreating(modelBuilder);
-            }
+            OnModelCreating?.Invoke(modelBuilder);
 
             return modelBuilder;
         }

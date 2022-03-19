@@ -116,56 +116,32 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
 
         private void RaiseAfterShowDialogEvent()
         {
-            var handlers = AfterShowDialog;
-            if (handlers != null)
-            {
-                handlers(this, EventArgs.Empty);
-            }
+            AfterShowDialog?.Invoke(this, EventArgs.Empty);
         }
 
         private void RaiseBeforeShowDialogEvent()
         {
-            var handlers = BeforeShowDialog;
-            if (handlers != null)
-            {
-                handlers(this, EventArgs.Empty);
-            }
+            BeforeShowDialog?.Invoke(this, EventArgs.Empty);
         }
 
         private void RaiseAfterAddSourcesEvent()
         {
-            var handlers = AfterAddSources;
-            if (handlers != null)
-            {
-                handlers(this, EventArgs.Empty);
-            }
+            AfterAddSources?.Invoke(this, EventArgs.Empty);
         }
 
         private void RaiseBeforeAddSourcesEvent()
         {
-            var handlers = BeforeAddSources;
-            if (handlers != null)
-            {
-                handlers(this, EventArgs.Empty);
-            }
+            BeforeAddSources?.Invoke(this, EventArgs.Empty);
         }
 
         private void RaiseAfterIsAdoNetProviderEvent()
         {
-            var handlers = AfterCheckIsAdoNetProviderEvent;
-            if (handlers != null)
-            {
-                handlers(this, EventArgs.Empty);
-            }
+            AfterCheckIsAdoNetProviderEvent?.Invoke(this, EventArgs.Empty);
         }
 
         private void RaiseBeforeIsAdoNetProviderEvent()
         {
-            var handlers = BeforeCheckIsAdoNetProviderEvent;
-            if (handlers != null)
-            {
-                handlers(this, EventArgs.Empty);
-            }
+            BeforeCheckIsAdoNetProviderEvent?.Invoke(this, EventArgs.Empty);
         }
     }
 }

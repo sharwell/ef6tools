@@ -790,10 +790,7 @@ namespace Microsoft.Data.Entity.Design.UI.Views.Explorer
 
         private void OnSearchCompleted()
         {
-            if (SearchCompleted != null)
-            {
-                SearchCompleted(this, EventArgs.Empty);
-            }
+            SearchCompleted?.Invoke(this, EventArgs.Empty);
         }
 
         internal void OnMouseDownAncestorOfSearchResultItemStyle(object sender)
@@ -926,10 +923,7 @@ namespace Microsoft.Data.Entity.Design.UI.Views.Explorer
 
         private void OnPropertyChanged(string name)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(name));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
         internal void OnTreeViewItemCollapsed()

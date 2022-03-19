@@ -65,10 +65,7 @@ namespace Microsoft.Data.Entity.Design.UI.Views.Dialogs
             }
 
             // For test purposes only!!!
-            if (DialogActivatedTestEventStorage != null)
-            {
-                DialogActivatedTestEventStorage(this, EventArgs.Empty);
-            }
+            DialogActivatedTestEventStorage?.Invoke(this, EventArgs.Empty);
         }
 
         #endregion
@@ -1277,10 +1274,7 @@ namespace Microsoft.Data.Entity.Design.UI.Views.Dialogs
                 }
             }
 
-            if (GetResultColumnsCompletedEventStorage != null)
-            {
-                GetResultColumnsCompletedEventStorage(this, EventArgs.Empty);
-            }
+            GetResultColumnsCompletedEventStorage?.Invoke(this, EventArgs.Empty);
         }
 
         private IVsDataConnection Connection

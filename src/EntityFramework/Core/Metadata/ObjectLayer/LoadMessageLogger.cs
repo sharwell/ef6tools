@@ -19,10 +19,7 @@ namespace System.Data.Entity.Core.Metadata.Edm
 
         internal virtual void LogLoadMessage(string message, EdmType relatedType)
         {
-            if (_logLoadMessage != null)
-            {
-                _logLoadMessage(message);
-            }
+            _logLoadMessage?.Invoke(message);
 
             LogMessagesWithTypeInfo(message, relatedType);
         }

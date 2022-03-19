@@ -525,10 +525,7 @@ namespace Microsoft.Data.Entity.Design.Base.Shell
         /// <param name="modification">Indicates the type of modification</param>
         protected void DoBranchModification(BranchModificationEventArgs modification)
         {
-            if (_onBranchModification != null)
-            {
-                _onBranchModification(this, modification);
-            }
+            _onBranchModification?.Invoke(this, modification);
         }
 
         #endregion
@@ -571,13 +568,10 @@ namespace Microsoft.Data.Entity.Design.Base.Shell
                 {
                     if (_childBranchArray[i].Branch == e.Branch)
                     {
-                        if (_onBranchModification != null)
-                        {
-                            _onBranchModification(
-                                this,
-                                BranchModificationEventArgs.DisplayDataChanged(
-                                    new DisplayDataChangedData(VirtualTreeDisplayDataChanges.StateImage, this, i, -1, 1)));
-                        }
+                        _onBranchModification?.Invoke(
+                            this,
+                            BranchModificationEventArgs.DisplayDataChanged(
+                                new DisplayDataChangedData(VirtualTreeDisplayDataChanges.StateImage, this, i, -1, 1)));
                     }
                 }
             }

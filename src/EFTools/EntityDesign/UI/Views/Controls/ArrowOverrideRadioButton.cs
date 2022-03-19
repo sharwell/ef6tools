@@ -18,17 +18,11 @@ namespace Microsoft.Data.Entity.Design.UI.Views.Controls
             switch (key)
             {
                 case Keys.Down:
-                    if (eventHandler != null)
-                    {
-                        eventHandler(this, key);
-                    }
+                    eventHandler?.Invoke(this, key);
                     return true;
 
                 case Keys.Up:
-                    if (eventHandler != null)
-                    {
-                        eventHandler(this, key);
-                    }
+                    eventHandler?.Invoke(this, key);
                     return true;
 
                 default:

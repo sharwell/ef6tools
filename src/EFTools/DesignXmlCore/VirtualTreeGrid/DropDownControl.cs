@@ -818,10 +818,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
         protected virtual void OnOpeningDropDown(EventArgs e)
         {
             // inform listeners that the drop-down is about to open
-            if (OpeningDropDown != null)
-            {
-                OpeningDropDown(this, EventArgs.Empty);
-            }
+            OpeningDropDown?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>
@@ -830,10 +827,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
         protected virtual void OnPropertyDescriptorValueChanged(EventArgs e)
         {
             // inform listeners that the value is changing
-            if (PropertyDescriptorValueChanged != null)
-            {
-                PropertyDescriptorValueChanged(this, EventArgs.Empty);
-            }
+            PropertyDescriptorValueChanged?.Invoke(this, EventArgs.Empty);
         }
 
         private void DisplayDropDown()
@@ -1207,10 +1201,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
         /// </summary>
         protected virtual void OnDropDownClosed(EventArgs e)
         {
-            if (DropDownClosed != null)
-            {
-                DropDownClosed(this, e);
-            }
+            DropDownClosed?.Invoke(this, e);
         }
 
         private void OnEditKeyDown(object sender, KeyEventArgs e)

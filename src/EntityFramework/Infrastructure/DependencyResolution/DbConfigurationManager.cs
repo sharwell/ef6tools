@@ -88,11 +88,7 @@ namespace System.Data.Entity.Infrastructure.DependencyResolution
 
             var eventArgs = new DbConfigurationLoadedEventArgs(configuration);
 
-            var handler = _loadedHandler;
-            if (handler != null)
-            {
-                handler(configuration.Owner, eventArgs);
-            }
+            _loadedHandler?.Invoke(configuration.Owner, eventArgs);
 
             configuration.DispatchLoadedInterceptors(eventArgs);
         }

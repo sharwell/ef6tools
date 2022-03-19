@@ -173,19 +173,13 @@ namespace System.Data.Entity.Core.Objects
         internal virtual void OnObjectStateManagerChanged(CollectionChangeAction action, object entity)
         {
             Debug.Assert(!(entity is IEntityWrapper), "Object is an IEntityWrapper instance instead of the raw entity.");
-            if (onObjectStateManagerChangedDelegate != null)
-            {
-                onObjectStateManagerChangedDelegate(this, new CollectionChangeEventArgs(action, entity));
-            }
+            onObjectStateManagerChangedDelegate?.Invoke(this, new CollectionChangeEventArgs(action, entity));
         }
 
         private void OnEntityDeleted(CollectionChangeAction action, object entity)
         {
             Debug.Assert(!(entity is IEntityWrapper), "Object is an IEntityWrapper instance instead of the raw entity.");
-            if (onEntityDeletedDelegate != null)
-            {
-                onEntityDeletedDelegate(this, new CollectionChangeEventArgs(action, entity));
-            }
+            onEntityDeletedDelegate?.Invoke(this, new CollectionChangeEventArgs(action, entity));
         }
 
         #endregion

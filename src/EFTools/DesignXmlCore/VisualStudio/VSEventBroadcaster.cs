@@ -73,10 +73,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio
         {
             if (msg == NativeMethods.WM_SYSCOLORCHANGE)
             {
-                if (OnFontChanged != null)
-                {
-                    OnFontChanged(this, EventArgs.Empty);
-                }
+                OnFontChanged?.Invoke(this, EventArgs.Empty);
             }
             return VSConstants.S_OK;
         }

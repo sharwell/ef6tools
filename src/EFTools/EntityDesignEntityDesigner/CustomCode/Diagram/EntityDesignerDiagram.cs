@@ -1881,10 +1881,7 @@ namespace Microsoft.Data.Entity.Design.EntityDesigner.View
                 if (value != base.Title)
                 {
                     base.Title = value;
-                    if (OnDiagramTitleChanged != null)
-                    {
-                        OnDiagramTitleChanged(this, EventArgs.Empty);
-                    }
+                    OnDiagramTitleChanged?.Invoke(this, EventArgs.Empty);
                 }
             }
         }

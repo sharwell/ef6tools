@@ -100,11 +100,8 @@ namespace Microsoft.Data.Entity.Design.Model
         internal void BeforeCommitChangeGroups(CommandProcessorContext cpc)
         {
             var args = new EfiChangingEventArgs(cpc);
-            if (BeforeModelChangesCommitted != null)
-            {
-                // now tell everyone that the changes are about to be committed
-                BeforeModelChangesCommitted(this, args);
-            }
+            // now tell everyone that the changes are about to be committed
+            BeforeModelChangesCommitted?.Invoke(this, args);
         }
 
         internal void RouteChangeGroups()
@@ -115,11 +112,8 @@ namespace Microsoft.Data.Entity.Design.Model
                 {
                     var changeGroup = _changeGroups.Dequeue();
                     var args = new EfiChangedEventArgs(changeGroup);
-                    if (ModelChangesCommitted != null)
-                    {
-                        // now tell everyone that things have changed
-                        ModelChangesCommitted(this, args);
-                    }
+                    // now tell everyone that things have changed
+                    ModelChangesCommitted?.Invoke(this, args);
                 }
             }
             finally

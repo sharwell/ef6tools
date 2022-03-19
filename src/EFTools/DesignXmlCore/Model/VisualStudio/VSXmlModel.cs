@@ -132,10 +132,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.Model.VisualStudio
                     new EventHandler<EventArgs>(OnBufferReload), sender, e);
                 return;
             }
-            if (BufferReload != null)
-            {
-                BufferReload(this, e);
-            }
+            BufferReload?.Invoke(this, e);
         }
 
         /// <summary>

@@ -100,10 +100,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Navigat
                     return;
                 }
 
-                if (constraintConfigurationAction != null)
-                {
-                    constraintConfigurationAction((T)_configuration.Constraint);
-                }
+                constraintConfigurationAction?.Invoke((T)_configuration.Constraint);
             }
         }
 

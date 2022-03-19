@@ -66,10 +66,7 @@ namespace Microsoft.Data.Entity.Design.UI.Commands
 
         private void OnCanExecuteChanged()
         {
-            if (CanExecuteChanged != null)
-            {
-                CanExecuteChanged(this, EventArgs.Empty);
-            }
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }

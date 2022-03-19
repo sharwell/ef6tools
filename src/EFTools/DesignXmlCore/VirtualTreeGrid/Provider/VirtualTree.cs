@@ -2730,12 +2730,9 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
                             if (tn.ComplexSubItem
                                 && tn.TotalCount == 0)
                             {
-                                if (OnDisplayDataChanged != null)
-                                {
-                                    OnDisplayDataChanged(
-                                        this,
-                                        new DisplayDataChangedEventArgs(this, VirtualTreeDisplayDataChanges.All, absIndex, -1, killCount));
-                                }
+                                OnDisplayDataChanged?.Invoke(
+                                    this,
+                                    new DisplayDataChangedEventArgs(this, VirtualTreeDisplayDataChanges.All, absIndex, -1, killCount));
                             }
                             else if (ItemCountChanged != null)
                             {
@@ -4916,10 +4913,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
             {
                 Debug.Assert(!GetStateFlag(TreeStateFlags.TurnOffRedraw), "Don't call Redraw = true if TurnOffRedraw is set");
                 Debug.Assert(myRedrawCount != -1, "Redraw calls unbalanced");
-                if (OnSetRedraw != null)
-                {
-                    OnSetRedraw(this, new SetRedrawEventArgs(value));
-                }
+                OnSetRedraw?.Invoke(this, new SetRedrawEventArgs(value));
             }
 
             if (fireSingleColumnEvent)
@@ -5313,13 +5307,10 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
                     {
                         if ((killCount + subItemKillCount) == 0)
                         {
-                            if (OnDisplayDataChanged != null)
-                            {
-                                OnDisplayDataChanged(
-                                    this,
-                                    new DisplayDataChangedEventArgs(
-                                        this, VirtualTreeDisplayDataChanges.VisibleElements, absIndex, notifyColumn, 1));
-                            }
+                            OnDisplayDataChanged?.Invoke(
+                                this,
+                                new DisplayDataChangedEventArgs(
+                                    this, VirtualTreeDisplayDataChanges.VisibleElements, absIndex, notifyColumn, 1));
                         }
                         else if (ItemCountChanged != null)
                         {
@@ -7947,10 +7938,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
             if (GetStateFlag(TreeStateFlags.TurnOffRedraw))
             {
                 SetStateFlag(TreeStateFlags.TurnOffRedraw, false);
-                if (OnSetRedraw != null)
-                {
-                    OnSetRedraw(this, new SetRedrawEventArgs(false));
-                }
+                OnSetRedraw?.Invoke(this, new SetRedrawEventArgs(false));
                 return true;
             }
             return false;

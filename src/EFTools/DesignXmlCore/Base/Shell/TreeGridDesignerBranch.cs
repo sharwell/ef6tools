@@ -1029,10 +1029,7 @@ namespace Microsoft.Data.Entity.Design.Base.Shell
         /// <param name="modification">Indicates the type of modification</param>
         protected void DoBranchModification(BranchModificationEventArgs modification)
         {
-            if (_onBranchModification != null)
-            {
-                _onBranchModification(this, modification);
-            }
+            _onBranchModification?.Invoke(this, modification);
         }
 
         internal static bool InVirtualTreeEdit { get; set; }

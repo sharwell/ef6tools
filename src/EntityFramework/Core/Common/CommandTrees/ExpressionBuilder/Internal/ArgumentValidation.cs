@@ -195,10 +195,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Internal
                 arguments, argumentName,
                 (exp, idx) =>
                     {
-                        if (validationCallback != null)
-                        {
-                            validationCallback(exp, idx);
-                        }
+                        validationCallback?.Invoke(exp, idx);
                         return exp;
                     },
                 expList => new DbExpressionList(expList)
@@ -216,10 +213,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Internal
                 arguments, argumentName,
                 (exp, idx) =>
                     {
-                        if (validationCallback != null)
-                        {
-                            validationCallback(exp, idx);
-                        }
+                        validationCallback?.Invoke(exp, idx);
                         return exp;
                     },
                 (expList) => new DbExpressionList(expList)

@@ -252,10 +252,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio
                     // show this first, so the node in the entity-designer will be highlighted.
                     PackageManager.Package.MappingDetailsWindow.Show();
 
-                    if (_dslDesignerOnNavigate != null)
-                    {
-                        _dslDesignerOnNavigate(efobject);
-                    }
+                    _dslDesignerOnNavigate?.Invoke(efobject);
                 }
             }
         }

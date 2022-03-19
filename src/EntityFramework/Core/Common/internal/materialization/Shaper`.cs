@@ -172,10 +172,7 @@ namespace System.Data.Entity.Core.Common.Internal.Materialization
                     }
                 }
 
-                if (null != OnDone)
-                {
-                    OnDone(this, new EventArgs());
-                }
+                OnDone?.Invoke(this, new EventArgs());
             }
         }
 

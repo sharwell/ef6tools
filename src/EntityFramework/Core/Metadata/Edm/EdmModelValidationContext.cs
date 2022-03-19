@@ -54,10 +54,7 @@ namespace System.Data.Entity.Core.Metadata.Edm
         {
             DebugCheck.NotNull(error);
 
-            if (OnError != null)
-            {
-                OnError(this, error);
-            }
+            OnError?.Invoke(this, error);
         }
     }
 }

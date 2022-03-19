@@ -57,10 +57,7 @@ namespace Microsoft.Data.Entity.Design.UI.ViewModels.Explorer
 
                 // now let everyone know we've changed
                 var args = new ExplorerViewModelChangedEventArgs(_viewModel);
-                if (ExplorerViewModelChanged != null)
-                {
-                    ExplorerViewModelChanged(this, args);
-                }
+                ExplorerViewModelChanged?.Invoke(this, args);
             }
         }
 

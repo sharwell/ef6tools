@@ -217,10 +217,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         protected virtual void PostInvoke(CommandProcessorContext cpc)
         {
             var eventArgs = new CommandEventArgs(cpc);
-            if (PostInvokeEvent != null)
-            {
-                PostInvokeEvent(this, eventArgs);
-            }
+            PostInvokeEvent?.Invoke(this, eventArgs);
         }
 
         #endregion

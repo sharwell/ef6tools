@@ -41,10 +41,7 @@ namespace System.Data.Entity.Core.Metadata.Edm
                 e =>
                 {
                     modelIsValid = false;
-                    if (OnError != null)
-                    {
-                        OnError(this, e);
-                    }
+                    OnError?.Invoke(this, e);
                 };
 
             if (model.NamespaceNames.Count() > 1

@@ -92,10 +92,7 @@ namespace System.Data.Entity.Core.Metadata.Edm
                     if (metadataItem == null || !MetadataItemHelper.IsInvalid(metadataItem))
                     {
                         modelIsValid = false;
-                        if (OnError != null)
-                        {
-                            OnError(this, e);
-                        }
+                        OnError?.Invoke(this, e);
                     }
                 };
 

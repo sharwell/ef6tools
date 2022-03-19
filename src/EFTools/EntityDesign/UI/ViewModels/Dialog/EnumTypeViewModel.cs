@@ -218,10 +218,7 @@ namespace Microsoft.Data.Entity.Design.UI.ViewModels
                 SetViewModelIsValidState();
             }
 
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
 
         private void EnumTypeMember_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)

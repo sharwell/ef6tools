@@ -36,10 +36,7 @@ namespace Microsoft.Data.Entity.Design.UI.Views.Dialogs
         {
             base.OnActivated(e);
 
-            if (DialogActivatedTestEventStorage != null)
-            {
-                DialogActivatedTestEventStorage(this, EventArgs.Empty);
-            }
+            DialogActivatedTestEventStorage?.Invoke(this, EventArgs.Empty);
         }
 
         #endregion

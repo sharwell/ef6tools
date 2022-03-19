@@ -121,10 +121,7 @@ namespace Microsoft.Data.Entity.Design.Core.Context
             if (disposing)
             {
                 // Let any interested parties know the context is being disposed
-                if (Disposing != null)
-                {
-                    Disposing(this, EventArgs.Empty);
-                }
+                Disposing?.Invoke(this, EventArgs.Empty);
 
                 var d = _services as IDisposable;
                 if (d != null)

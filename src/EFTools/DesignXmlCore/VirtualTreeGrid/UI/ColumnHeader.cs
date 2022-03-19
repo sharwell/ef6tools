@@ -2607,11 +2607,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
         /// <param name="e">VirtualTreeColumnHeaderClickEventArgs</param>
         protected internal virtual void OnDrawColumnHeaderItem(DrawItemEventArgs e)
         {
-            var handler = Events[EVENT_DRAWCOLUMNHEADERITEM] as DrawItemEventHandler;
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            (Events[EVENT_DRAWCOLUMNHEADERITEM] as DrawItemEventHandler)?.Invoke(this, e);
         }
 
         #endregion // Column Header Events

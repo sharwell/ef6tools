@@ -332,26 +332,17 @@ namespace System.Data.Entity.Migrations.Design
 
             public override void Info(string message)
             {
-                if (_facade.LogInfoDelegate != null)
-                {
-                    _facade.LogInfoDelegate(message);
-                }
+                _facade.LogInfoDelegate?.Invoke(message);
             }
 
             public override void Warning(string message)
             {
-                if (_facade.LogWarningDelegate != null)
-                {
-                    _facade.LogWarningDelegate(message);
-                }
+                _facade.LogWarningDelegate?.Invoke(message);
             }
 
             public override void Verbose(string sql)
             {
-                if (_facade.LogVerboseDelegate != null)
-                {
-                    _facade.LogVerboseDelegate(sql);
-                }
+                _facade.LogVerboseDelegate?.Invoke(sql);
             }
         }
 

@@ -31,10 +31,7 @@ namespace Microsoft.Data.Entity.Design.Base.Context
 
         internal virtual void OnReloaded(EventArgs args)
         {
-            if (Reloaded != null)
-            {
-                Reloaded(this, args);
-            }
+            Reloaded?.Invoke(this, args);
         }
 
         /// <summary>
@@ -108,10 +105,7 @@ namespace Microsoft.Data.Entity.Design.Base.Context
             if (disposing)
             {
                 // Let any interested parties know the context is being disposed
-                if (Disposing != null)
-                {
-                    Disposing(this, EventArgs.Empty);
-                }
+                Disposing?.Invoke(this, EventArgs.Empty);
 
                 if (_contextItems != null)
                 {

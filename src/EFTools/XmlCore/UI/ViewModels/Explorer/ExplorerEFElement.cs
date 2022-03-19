@@ -765,10 +765,7 @@ namespace Microsoft.Data.Entity.Design.UI.ViewModels.Explorer
 
         protected void OnPropertyChanged(String info)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(info));
         }
 
         internal virtual void OnModelPropertyChanged(string modelPropName)

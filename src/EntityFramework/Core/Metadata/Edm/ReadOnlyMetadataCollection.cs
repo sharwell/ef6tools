@@ -141,11 +141,7 @@ namespace System.Data.Entity.Core.Metadata.Edm
                 finally
                 {
                     // local variable is used to avoid concurrency problems
-                    var sae = SourceAccessed;
-                    if (sae != null)
-                    {
-                        sae(this, null);
-                    }
+                    SourceAccessed?.Invoke(this, null);
                 }
             }
         }

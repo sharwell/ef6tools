@@ -146,10 +146,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VisualStudio.UI
                 Status = sb.ToString();
                 closeInterrruptButton.Text = Resources.ProgressDialogCloseInterruptButtonCloseText;
                 closeInterrruptButton.Enabled = true;
-                if (BackgroundWorkCompletedEventStorage != null)
-                {
-                    BackgroundWorkCompletedEventStorage(this, EventArgs.Empty);
-                }
+                BackgroundWorkCompletedEventStorage?.Invoke(this, EventArgs.Empty);
             }
             else if (e.Cancelled)
             {
@@ -161,20 +158,14 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VisualStudio.UI
                 Status = statusText;
                 closeInterrruptButton.Text = Resources.ProgressDialogCloseInterruptButtonCloseText;
                 closeInterrruptButton.Enabled = true;
-                if (BackgroundWorkCompletedEventStorage != null)
-                {
-                    BackgroundWorkCompletedEventStorage(this, EventArgs.Empty);
-                }
+                BackgroundWorkCompletedEventStorage?.Invoke(this, EventArgs.Empty);
             }
             else
             {
                 // background job completed successfully - close dialog
                 DialogResult = DialogResult.OK; // set result to OK so that caller knows what happened
                 closeInterrruptButton.Enabled = false;
-                if (BackgroundWorkCompletedEventStorage != null)
-                {
-                    BackgroundWorkCompletedEventStorage(this, EventArgs.Empty);
-                }
+                BackgroundWorkCompletedEventStorage?.Invoke(this, EventArgs.Empty);
                 Close();
             }
         }

@@ -108,10 +108,7 @@ namespace Microsoft.Data.Tools.XmlDesignerBase.Model
         /// <param name="args">This API supports the Entity Framework infrastructure and is not intended to be used directly from your code.</param>
         protected virtual void OnTransactionCompleted(XmlTransactionEventArgs args)
         {
-            if (TransactionCompleted != null)
-            {
-                TransactionCompleted(this, args);
-            }
+            TransactionCompleted?.Invoke(this, args);
         }
 
         /// <summary>
@@ -125,10 +122,7 @@ namespace Microsoft.Data.Tools.XmlDesignerBase.Model
         /// <param name="args">This API supports the Entity Framework infrastructure and is not intended to be used directly from your code.</param>
         protected virtual void OnUndoRedoCompleted(XmlTransactionEventArgs args)
         {
-            if (UndoRedoCompleted != null)
-            {
-                UndoRedoCompleted(this, args);
-            }
+            UndoRedoCompleted?.Invoke(this, args);
         }
 
         /// <summary>

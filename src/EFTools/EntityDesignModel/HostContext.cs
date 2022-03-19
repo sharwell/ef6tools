@@ -18,10 +18,7 @@ namespace Microsoft.Data.Entity.Design.Model
         // a better way to log the error.
         public void LogUpdateModelWizardError(ErrorInfo errorInfo, string fileInfoPath)
         {
-            if (LogUpdateModelWizardErrorAction != null)
-            {
-                LogUpdateModelWizardErrorAction(errorInfo, fileInfoPath);
-            }
+            LogUpdateModelWizardErrorAction?.Invoke(errorInfo, fileInfoPath);
         }
 
         public Action<ErrorInfo, string> LogUpdateModelWizardErrorAction { get; set; }

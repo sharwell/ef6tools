@@ -2229,10 +2229,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
             Debug.Assert(!(entity is IEntityWrapper), "Object is an IEntityWrapper instance instead of the raw entity.");
             if (!_suppressEvents)
             {
-                if (_onAssociationChanged != null)
-                {
-                    _onAssociationChanged(this, (new CollectionChangeEventArgs(collectionChangeAction, entity)));
-                }
+                _onAssociationChanged?.Invoke(this, (new CollectionChangeEventArgs(collectionChangeAction, entity)));
             }
         }
 

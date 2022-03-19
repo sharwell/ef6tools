@@ -3699,11 +3699,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
         protected virtual void OnDrawItem(DrawItemEventArgs e)
         {
             DoDrawItem(e);
-            var handler = Events[EVENT_DRAWITEM] as DrawItemEventHandler;
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            (Events[EVENT_DRAWITEM] as DrawItemEventHandler)?.Invoke(this, e);
         }
 
         /// <summary>
@@ -3712,11 +3708,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
         /// <param name="e">ContextMenuEventArgs</param>
         protected virtual void OnContextMenuInvoked(ContextMenuEventArgs e)
         {
-            var handler = Events[EVENT_CONTEXTMENU] as ContextMenuEventHandler;
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            (Events[EVENT_CONTEXTMENU] as ContextMenuEventHandler)?.Invoke(this, e);
         }
 
         /// <summary>
@@ -3726,12 +3718,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
         /// <param name="e"></param>
         protected virtual void OnLabelEditControlChanged(EventArgs e)
         {
-            var handler = Events[EVENT_LABELEDITCONTROLCHANGED] as EventHandler;
-
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            (Events[EVENT_LABELEDITCONTROLCHANGED] as EventHandler)?.Invoke(this, e);
         }
 
         [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
@@ -3748,11 +3735,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
         /// <param name="e">VirtualTreeControl specific DoubleClickEventArgs</param>
         protected virtual void OnDoubleClick(DoubleClickEventArgs e)
         {
-            var handler = Events[EVENT_DOUBLECLICK] as DoubleClickEventHandler;
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            (Events[EVENT_DOUBLECLICK] as DoubleClickEventHandler)?.Invoke(this, e);
             if (!e.Handled
                 && myTree != null
                 && e.Button == MouseButtons.Left)
@@ -3817,11 +3800,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.VirtualTreeGrid
         /// <param name="e">EventArgs</param>
         protected virtual void OnSelectionChanged(EventArgs e)
         {
-            var handler = Events[EVENT_SELCHANGED] as EventHandler;
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            (Events[EVENT_SELCHANGED] as EventHandler)?.Invoke(this, e);
         }
 
         /// <summary>
