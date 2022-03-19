@@ -532,16 +532,6 @@ namespace System.Data.Entity.Core.Mapping
 
         public bool Equals(InputForComputingCellGroups one, InputForComputingCellGroups two)
         {
-            if (ReferenceEquals(one, two))
-            {
-                return true;
-            }
-            if (ReferenceEquals(one, null)
-                || ReferenceEquals(two, null))
-            {
-                return false;
-            }
-
             return one.Equals(two);
         }
 
@@ -569,10 +559,6 @@ namespace System.Data.Entity.Core.Mapping
 
         public static bool operator ==(InputForComputingCellGroups input1, InputForComputingCellGroups input2)
         {
-            if (ReferenceEquals(input1, input2))
-            {
-                return true;
-            }
             return input1.Equals(input2);
         }
 
