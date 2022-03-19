@@ -14,7 +14,7 @@ namespace Microsoft.Data.Entity.Design.Model.UpdateFromDatabase
     ///     This class defines the "Identity" of a property that participates in an association.
     ///     This can be either through an AssociationSetMapping, or through a C-side ReferentialConstratint.
     ///     Since a ReferentialConstraint on the c-side can be defined over properties that are mapped to multiple
-    ///     columns in the database (eg, in TPC scenarios), we define the "principal" & "dependent" ends of the
+    ///     columns in the database (eg, in TPC scenarios), we define the "principal" &amp; "dependent" ends of the
     ///     Association property via a list of columns.
     ///     For AssociationSetMappings, we look at the C-side column referenced in the ASM - the "Principal" end identity is the
     ///     set of columns that this c-side column is mapped to.  For the Dependent end, we use the columns that the ASM has mapped.

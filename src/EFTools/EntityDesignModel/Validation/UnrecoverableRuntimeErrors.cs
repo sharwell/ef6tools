@@ -311,6 +311,7 @@ namespace Microsoft.Data.Entity.Design.Model.Validation
                     ErrorCode.EnumMemberValueOutOfItsUnderylingTypeRange,
                 };
 
+        /// <summary>
         /// Mapping Error Codes that should cause a document to be opened without designer support.  
         /// 
         /// Note: the error code is commented because:

@@ -18,6 +18,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.Refactoring
     using Microsoft.VisualStudio.TextManager.Interop;
 
     /// <summary>
+    ///     <para>
     ///     The RefactorOperation base class drives the actual lifecycle of the refactoring operation.
     ///     The derived classes methods are invoked by the base class methods.
     ///     </para>

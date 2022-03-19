@@ -2263,7 +2263,7 @@ namespace Microsoft.Data.Entity.Design.Model
         }
 
         /// <summary>
-        ///     Returns the "non-EDMX" xml attributes & elements that are direct children of this element.
+        ///     Returns the "non-EDMX" xml attributes &amp; elements that are direct children of this element.
         /// </summary>
         internal static IEnumerable<XObject> GetStructuredAnnotationsForElement(EFElement efElement)
         {

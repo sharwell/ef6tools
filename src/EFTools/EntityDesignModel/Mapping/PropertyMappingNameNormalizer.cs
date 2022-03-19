@@ -79,7 +79,7 @@ namespace Microsoft.Data.Entity.Design.Model.Mapping
         }
 
         /// <summary>
-        ///     Normalize a ref name relative to an Association End.  This will return true if the symbol is valid & points to a valid
+        ///     Normalize a ref name relative to an Association End.  This will return true if the symbol is valid &amp; points to a valid
         ///     EFElement, false otherwise.
         /// </summary>
         /// <param name="setEnd"></param>
@@ -164,11 +164,12 @@ namespace Microsoft.Data.Entity.Design.Model.Mapping
 
         /// <summary>
         ///     Normalize a refName where the refName is a child of a EntityTypeMapping
-        ///     <param name="etm"></param>
-        ///     <param name="fae"></param>
-        ///     <param name="parent"></param>
-        ///     <param name="refName"></param>
-        ///     <returns></returns>
+        /// </summary>
+        /// <param name="etm"></param>
+        /// <param name="fae"></param>
+        /// <param name="parent"></param>
+        /// <param name="refName"></param>
+        /// <returns></returns>
         internal static NormalizedName NormalizePropertyNameRelativeToEntityTypeMapping(
             EntityTypeMapping etm, EFElement parent, string refName)
         {

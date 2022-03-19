@@ -146,9 +146,9 @@ namespace EFDesignerTestInfrastructure
         }
 
         /// <summary>
-        ///     The strings from the resources file have & in them to denote Hot key. For ex. &New Connection.
+        ///     The strings from the resources file have &amp; in them to denote Hot key. For ex. &amp;New Connection.
         ///     If you assign this text to a button the button text appears to be "New Connection" with N as keyboard hot key.
-        ///     Here we need to know the string without all the &s. There is not standard method to get the real string
+        ///     Here we need to know the string without all the &amp;s. There is not standard method to get the real string
         ///     from resource string (at least none was found). So created this one.
         /// </summary>
         /// <param name="value">Resource string</param>

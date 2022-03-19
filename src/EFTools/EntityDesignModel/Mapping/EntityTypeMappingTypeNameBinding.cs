@@ -10,12 +10,10 @@ namespace Microsoft.Data.Entity.Design.Model.Mapping
     using Microsoft.Data.Entity.Design.Model.Entity;
 
     /// <summary>
-    ///     This class derives from MultiItemBinding
-    ///     <EntityType>
-    ///         , so its able to track
+    ///     This class derives from <see cref="MultiItemBinding{T}">MultiItemBinding</see>&lt;<see cref="EntityType"/>&gt;, so its able to track
     ///         a delimited list of items and bind them to EntityTypes.  Also, the X reference
     ///         may include the "IsTypeOf()" modifier:
-    ///         <EntityTypeMapping cdm:TypeName="IsTypeOf(Test.Aruba1a.Baseline)">
+    ///         &lt;EntityTypeMapping cdm:TypeName="IsTypeOf(Test.Aruba1a.Baseline)">
     ///             So, this class also keeps track of a list of bools, denoting whether an item in the
     ///             binding list is using the "IsTypeOf()" modifier.
     /// </summary>

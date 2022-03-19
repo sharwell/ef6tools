@@ -273,7 +273,7 @@ namespace Microsoft.Data.Entity.Design.Model
         }
 
         /// | IsNotPresent  |IsNotPresent == false|  IsNotPresent == false   |
-        /// |  == true      |  && ActualValue is  |  ActualValue is not      |
+        /// |  == true      |  &amp;&amp; ActualValue is  |  ActualValue is not      |
         /// |               | convertible to T    |  Convertible to T        |
         /// -------------|---------------|-------------------- |--------------------------|
         /// IsRequired   |  return false |  return true        |  return false            |

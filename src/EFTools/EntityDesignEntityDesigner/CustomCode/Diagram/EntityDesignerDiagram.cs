@@ -412,7 +412,7 @@ namespace Microsoft.Data.Entity.Design.EntityDesigner.View
 
         /// <summary>
         ///     This is called before a transaction has committed,
-        ///     This tests to see if the transaction was a drag & drop, and if
+        ///     This tests to see if the transaction was a drag &amp; drop, and if
         ///     so the new elements can be auto-arranged before the transaction has finished.
         ///     See Also: ShapeAddedToDiagramRule
         /// </summary>

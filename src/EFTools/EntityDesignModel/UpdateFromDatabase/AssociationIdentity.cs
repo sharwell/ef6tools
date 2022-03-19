@@ -71,7 +71,7 @@ namespace Microsoft.Data.Entity.Design.Model.UpdateFromDatabase
         ///     "covers" means that the
         ///     1.  The columns mapped to the RC's principal keys match the columns mapped to the
         ///     association's principal keys.
-        ///     2.  For each "pair" of properties that match between the RC & the ASM, the
+        ///     2.  For each "pair" of properties that match between the RC &amp; the ASM, the
         ///     ASM's mapped column is contained in the dependent columns of the RC.
         /// </summary>
         private static bool IsCoveredBy(AssociationIdentityForReferentialConstraint assRC, AssociationIdentityForAssociationSetMapping asmid)

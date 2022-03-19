@@ -71,13 +71,13 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.SingleFileGenerator {
         
         /// <summary>
         ///   Looks up a localized string similar to // T4 code generation is enabled for model &apos;{0}&apos;.
-        ///// To enable legacy code generation, change the value of the &apos;Code Generation Strategy&apos; designer
-        ///// property to &apos;Legacy ObjectContext&apos;. This property is available in the Properties Window when the model
-        ///// is open in the designer.
+        /// // To enable legacy code generation, change the value of the &apos;Code Generation Strategy&apos; designer
+        /// // property to &apos;Legacy ObjectContext&apos;. This property is available in the Properties Window when the model
+        /// // is open in the designer.
         ///
-        ///// If no context and entity classes have been generated, it may be because you created an empty model but
-        ///// have not yet chosen which version of Entity Framework to use. To generate a context class and entity
-        ///// classes fo [rest of string was truncated]&quot;;.
+        /// // If no context and entity classes have been generated, it may be because you created an empty model but
+        /// // have not yet chosen which version of Entity Framework to use. To generate a context class and entity
+        /// // classes fo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string CodeGenerationDisabledCommentCSharp {
             get {
@@ -103,7 +103,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.SingleFileGenerator {
         
         /// <summary>
         ///   Looks up a localized string similar to // Seeing this comment implies that the code generation for file &apos;{0}&apos;
-        ///// failed. See the ErrorList for details..
+        /// // failed. See the ErrorList for details..
         /// </summary>
         internal static string CodeGenerationFailureCommentCSharp {
             get {

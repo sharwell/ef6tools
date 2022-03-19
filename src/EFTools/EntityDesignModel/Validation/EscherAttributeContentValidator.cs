@@ -80,7 +80,7 @@ namespace Microsoft.Data.Entity.Design.Model.Validation
         /// <summary>
         ///     This is a convenience method that will create an AttributePath instance from a string of the form "xxx/yyy/zzz/attr".  This assumes that
         ///     "attr" is the name of an attribute with no namespace value, and that "xxx", "yyy" and "zzz" are element names with namespace nameSpaceUri.
-        ///     This is a valid assumption for CSDL, SSDL & MSL XSD definitions, but is not necessarily true for all XSDs.
+        ///     This is a valid assumption for CSDL, SSDL &amp; MSL XSD definitions, but is not necessarily true for all XSDs.
         /// </summary>
         internal static AttributePath MakeAttributePathFromString(string nameSpaceUri, string path)
         {
@@ -138,7 +138,7 @@ namespace Microsoft.Data.Entity.Design.Model.Validation
 
         /// <summary>
         ///     Builds the XmlSchemaSet to use for Escher document validation.  This retrieves Xml Schemas that are embedded as resources
-        ///     in EntityFramework.dll & Microsoft.Data.Entity.Design.dll.  We use these schemas instead of those installed with VS because
+        ///     in EntityFramework.dll &amp; Microsoft.Data.Entity.Design.dll.  We use these schemas instead of those installed with VS because
         ///     we know that these schemas will not have been altered by users.
         /// </summary>
         private static XmlSchemaSet BuildEdmxSchemaSet()

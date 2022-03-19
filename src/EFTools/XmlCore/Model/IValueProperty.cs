@@ -28,9 +28,9 @@ namespace Microsoft.Data.Entity.Design.Model
         ///     This API supports the Entity Framework infrastructure and is not intended to be used directly from your code.
         /// </summary>
         /// <remarks>
-        ///     The following table indicates return values for expected permutations of IsNotPresent, IsRequired & ActualValue
+        ///     The following table indicates return values for expected permutations of IsNotPresent, IsRequired &amp; ActualValue
         ///     | IsNotPresent         |IsNotPresent == false|  IsNotPresent == false   |
-        ///     |  == true             |  && ActualValue is  |  ActualValue is not      |
+        ///     |  == true             |  &amp;&amp; ActualValue is  |  ActualValue is not      |
         ///     |                      | convertible to T    |  Convertible to T        |
         ///     -------------|----------------------|-------------------- |--------------------------|
         ///     IsRequired   |  return DefaultValue |  return value       |       throw              |
@@ -44,9 +44,9 @@ namespace Microsoft.Data.Entity.Design.Model
         ///     This API supports the Entity Framework infrastructure and is not intended to be used directly from your code.
         /// </summary>
         /// <remarks>
-        ///     The following table indicates return values for expected permutations of IsNotPresent, IsRequired & ActualValue
+        ///     The following table indicates return values for expected permutations of IsNotPresent, IsRequired &amp; ActualValue
         ///     | IsNotPresent  |IsNotPresent == false|  IsNotPresent == false   |
-        ///     |  == true      |  && ActualValue is  |  ActualValue is not      |
+        ///     |  == true      |  &amp;&amp; ActualValue is  |  ActualValue is not      |
         ///     |               | convertible to T    |  Convertible to T        |
         ///     -------------|---------------|-------------------- |--------------------------|
         ///     IsRequired   |  return false |  return true        |  return false            |

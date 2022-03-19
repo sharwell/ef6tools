@@ -3830,14 +3830,14 @@ namespace Microsoft.Data.Entity.Design {
         
         /// <summary>
         ///   Looks up a localized string similar to ------------------------------------------------------------------------
-        ///// Copyright(c) 2009 Microsoft Corp.  All Rights Reserved.
-        /////    
-        ///// To use this template:
-        /////      1) Copy it into your solution and name it what you want your generated file named
-        /////      2) Click on the EDMX file in Solution Explorer and set it&apos;s &quot;Custom Tool&quot; property
-        /////         to empty in the property window. This causes Visual Studio to no longer generate 
-        /////         the *.designer.cs file under the EDMX file
-        /////      3) U [rest of string was truncated]&quot;;.
+        /// // Copyright(c) 2009 Microsoft Corp.  All Rights Reserved.
+        /// //    
+        /// // To use this template:
+        /// //      1) Copy it into your solution and name it what you want your generated file named
+        /// //      2) Click on the EDMX file in Solution Explorer and set it&apos;s &quot;Custom Tool&quot; property
+        /// //         to empty in the property window. This causes Visual Studio to no longer generate 
+        /// //         the *.designer.cs file under the EDMX file
+        /// //      3) U [rest of string was truncated]&quot;;.
         /// </summary>
         public static string T4_ItemTemplate_CSharp_Comment {
             get {

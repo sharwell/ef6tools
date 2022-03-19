@@ -7,7 +7,7 @@ namespace Microsoft.Data.Entity.Design.Model.Eventing
 
     /// <summary>
     ///     EventArgs based class for communicating an EfiChangeGroup to those
-    ///     subscribing to change events on EFService <see cref="EFService">.
+    ///     subscribing to change events on EFService <see cref="EFService"/>.
     /// </summary>
     internal class EfiChangedEventArgs : EventArgs
     {

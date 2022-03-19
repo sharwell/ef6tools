@@ -175,7 +175,7 @@ namespace Microsoft.Data.Entity.Design.Model
 
         /// <summary>
         ///     NOTE: This will replace the entire RefName with this item's name, replacing any
-        ///     list that might be there.  If you want to maintain the list, call SetRefName(IEnumerable<T> items).
+        ///     list that might be there.  If you want to maintain the list, call <see cref="SetRefName(IEnumerable{T})"/>.
         /// </summary>
         /// <param name="item"></param>
         internal override void SetRefName(EFNormalizableItem item)
