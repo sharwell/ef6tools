@@ -5,7 +5,6 @@ namespace Microsoft.VisualStudio.Shell
     using System;
     using System.Globalization;
 
-    /// <include file='doc\ProvideMenuResourceAttribute.uex' path='docs/doc[@for="ProvideMenuResourceAttribute"]' />
     /// <devdoc>
     ///     *** NOTE: This is a copy of ProvideMenuResourceAttribute implementation from VSIP sdk, modified to
     ///     support resource ID as a string (as opposed to an int as in the original implementation)
@@ -24,8 +23,6 @@ namespace Microsoft.VisualStudio.Shell
         private readonly string _resourceId;
         private readonly int _version;
 
-        /// <include file='doc\ProvideMenuResourceAttribute.uex'
-        ///     path='docs/doc[@for="ProvideMenuResourceAttribute.ProvideMenuResourceAttribute"]' />
         /// <devdoc>
         ///     Creates a new ProvideMenuResourceAttribute.
         /// </devdoc>
@@ -35,7 +32,6 @@ namespace Microsoft.VisualStudio.Shell
             _version = version;
         }
 
-        /// <include file='doc\ProvideMenuResourceAttribute.uex' path='docs/doc[@for="ProvideMenuResourceAttribute.ResourceID"]' />
         /// <devdoc>
         ///     Returns the native resource ID for the menu resource.
         /// </devdoc>
@@ -44,7 +40,6 @@ namespace Microsoft.VisualStudio.Shell
             get { return _resourceId; }
         }
 
-        /// <include file='doc\ProvideMenuResourceAttribute.uex' path='docs/doc[@for="ProvideMenuResourceAttribute.Version"]' />
         /// <devdoc>
         ///     Returns the version of this menu resource.
         /// </devdoc>
@@ -53,7 +48,6 @@ namespace Microsoft.VisualStudio.Shell
             get { return _version; }
         }
 
-        /// <include file='doc\ProvideMenuResourceAttribute.uex' path='docs/doc[@for="Register"]' />
         /// <devdoc>
         ///     Called to register this attribute with the given context.  The context
         ///     contains the location where the registration inforomation should be placed.

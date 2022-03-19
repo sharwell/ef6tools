@@ -133,7 +133,6 @@ namespace Microsoft.Data.Entity.Design.UI.ViewModels.PropertyWindow.Descriptors
     {
         private readonly string name;
 
-        /// <include file='doc\PropertyPages.uex' path='docs/doc[@for="LocDisplayNameAttribute.DisplayNameAttribute"]/*' />
         public CommonLocDisplayNameAttribute(string name)
         {
             this.name = name;
@@ -144,7 +143,6 @@ namespace Microsoft.Data.Entity.Design.UI.ViewModels.PropertyWindow.Descriptors
             get { return Resources.ResourceManager; }
         }
 
-        /// <include file='doc\PropertyPages.uex' path='docs/doc[@for="LocDisplayNameAttribute.DisplayName"]/*' />
         public override string DisplayName
         {
             get
