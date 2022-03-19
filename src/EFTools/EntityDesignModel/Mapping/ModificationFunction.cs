@@ -364,7 +364,7 @@ namespace Microsoft.Data.Entity.Design.Model.Mapping
 
         internal override void GetXLinqInsertPosition(EFElement child, out XNode insertAt, out bool insertBefore)
         {
-            /// 557417: push these to the top so that they are always before any ResultBinding elements
+            // 557417: push these to the top so that they are always before any ResultBinding elements
             if (child is FunctionAssociationEnd)
             {
                 insertAt = FirstChildXElementOrNull();

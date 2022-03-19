@@ -113,7 +113,7 @@ namespace Microsoft.Data.Entity.Design.EntityDesigner.View
             var modelDiagram = ModelElement.ModelXRef.GetExisting(this) as ModelDiagram;
             if (modelDiagram.IsEFObjectRepresentedInDiagram(efElement))
             {
-                /// Navigate to the "most-appropriate" DSL node for the given EFObject in the diagram.
+                // Navigate to the "most-appropriate" DSL node for the given EFObject in the diagram.
                 DSLDesignerNavigationHelper.NavigateToDSLNodeInDiagram(this, efElement);
             }
             else

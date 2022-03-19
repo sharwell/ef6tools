@@ -252,7 +252,7 @@ namespace Microsoft.Data.Entity.Design.Model.Mapping
         {
             if (child is FunctionScalarProperty)
             {
-                /// 557417: push these to the top so that they are always before any ResultBinding elements
+                // 557417: push these to the top so that they are always before any ResultBinding elements
                 insertAt = FirstChildXElementOrNull();
                 insertBefore = true;
             }

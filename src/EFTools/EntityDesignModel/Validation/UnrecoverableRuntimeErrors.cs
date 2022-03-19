@@ -159,14 +159,14 @@ namespace Microsoft.Data.Entity.Design.Model.Validation
                     // Designer -- ErrorCode.NonComposableFunctionWithReturnType,
             
                     //  Non-composable functions do not permit the aggregate, niladic, or 
-                    /// built-in attributes.
+                    //  built-in attributes.
                     // Designer -- ErrorCode.NonComposableFunctionAttributesNotValid,
             
                     //  Composable functions can not include command text attribute.
                     ErrorCode.ComposableFunctionWithCommandText,
             
                     //  Functions should not declare both a store name and command text
-                    /// (only one or the other can be used).
+                    //  (only one or the other can be used).
                     ErrorCode.FunctionDeclaresCommandTextAndStoreFunctionName,
             
                     // Designer -- ErrorCode.SystemNamespace,
@@ -189,7 +189,7 @@ namespace Microsoft.Data.Entity.Design.Model.Validation
                     //  Function import specifies a non-existent entity set.
                     // Designer -- ErrorCode.FunctionImportUnknownEntitySet,
 
-                    ///Designer Function import specifies entity type return but no entity set.
+                    // Designer Function import specifies entity type return but no entity set.
                     // Designer -- ErrorCode.FunctionImportReturnsEntitiesButDoesNotSpecifyEntitySet,
             
                     //  Function import specifies entity type that does not derive from element type of entity set.
@@ -241,7 +241,7 @@ namespace Microsoft.Data.Entity.Design.Model.Validation
                     //  Empty CommandText element
                     ErrorCode.EmptyCommandText,
             
-                    /// Inconsistent Provider Manifest token values in SSDL artifacts
+                    // Inconsistent Provider Manifest token values in SSDL artifacts
                     ErrorCode.InconsistentProviderManifestToken,
 
                     //  Duplicated Function overloads

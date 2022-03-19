@@ -18,7 +18,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <NoWarn>$(NoWarn);1587;1584;1571;1589</NoWarn>
+    <NoWarn>$(NoWarn);1584;1571;1589</NoWarn>
     <NoWarn>$(NoWarn);VSSDK006</NoWarn>
 
     <!-- IS_BOOTSTRAP_PACKAGE is defined here to fix up the namespace of any files required by MicrosoftDataEntityDesignBootstrapPackage.
