@@ -11,10 +11,6 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <NoWarn>$(NoWarn);1584</NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <!-- Microsoft.VisualStudio.WizardFramework is not available in a package -->
     <IdeDirectory Condition="'$(DevEnvDir)' != ''">$(DevEnvDir)</IdeDirectory>
     <IdeDirectory Condition="'$(IdeDirectory)' == ''">$(VS170COMNTOOLS)..\IDE\</IdeDirectory>

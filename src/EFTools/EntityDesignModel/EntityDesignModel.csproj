@@ -14,10 +14,6 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <NoWarn>$(NoWarn);1584</NoWarn>
-  </PropertyGroup>
-
   <ItemGroup>
     <Reference Include="System.Design" />
   </ItemGroup>

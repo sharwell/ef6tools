@@ -9,10 +9,6 @@
     <AssemblyName>Microsoft.Data.Entity.Design.VersioningFacade</AssemblyName>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <NoWarn>$(NoWarn);1584</NoWarn>
-  </PropertyGroup>
-
   <ItemGroup>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data.DataSetExtensions" />
