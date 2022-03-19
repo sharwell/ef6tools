@@ -24,6 +24,11 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <AnalysisLevel>9999</AnalysisLevel>
+    <Features>strict</Features>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <!-- During the conversion to SDK projects, continue to list all project items explicitly -->
     <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
     <EnableDefaultPageItems>false</EnableDefaultPageItems>
