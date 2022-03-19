@@ -627,7 +627,7 @@ namespace Microsoft.Data.Entity.Design.Base.Shell
         /// </summary>
         /// <param name="row">Index into this branch</param>
         /// <param name="column">Column index</param>
-        /// <param name="key">Character typed by the user</param>
+        /// <param name="keyPressed">Character typed by the user</param>
         /// <param name="modifiers">Any modifiers keys currently held down</param>
         /// <returns>ProcessKeyResult structure that indicates what action should be taken (if any)</returns>
         protected virtual ProcessKeyResult ProcessKeyPress(int row, int column, char keyPressed, Keys modifiers)
@@ -655,8 +655,6 @@ namespace Microsoft.Data.Entity.Design.Base.Shell
         /// </summary>
         /// <param name="row">Index into this branch</param>
         /// <param name="column">Column index</param>
-        /// <param name="key">Character typed by the user</param>
-        /// <param name="modifiers">Any modifiers keys currently held down</param>
         /// <returns>ProcessKeyResult structure that indicates what action should be taken (if any)</returns>
         protected virtual ProcessKeyResult ProcessKeyDown(int row, int column, KeyEventArgs e)
         {
@@ -1101,7 +1099,7 @@ namespace Microsoft.Data.Entity.Design.Base.Shell
         /// <summary>
         ///     Indicates that a new creator node should be inserted at the given index
         /// </summary>
-        /// <param name="absIndex">index to insert</param>
+        /// <param name="row">index to insert</param>
         /// <param name="creatorNodeIndex">specifies the creator node to insert</param>
         public void /* ITreeGridDesignerBranch */ InsertCreatorNode(int row, int creatorNodeIndex)
         {

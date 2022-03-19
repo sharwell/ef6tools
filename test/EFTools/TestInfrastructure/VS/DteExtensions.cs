@@ -183,7 +183,7 @@ namespace EFDesignerTestInfrastructure.VS
         ///     Close a solution
         /// </summary>
         /// <param name="dte">dte instance</param>
-        /// <param name="name">save or not before closing</param>
+        /// <param name="saveFirst">save or not before closing</param>
         public static void CloseSolution(this DTE dte, bool saveFirst)
         {
             Debug.Assert(dte != null, "dte must not be null.");

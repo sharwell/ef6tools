@@ -16,7 +16,6 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Creates a copy of Property from a Clipboard format in the specified EntityType
         /// </summary>
-        /// <param name="entityType"></param>
         /// <param name="clipboardProperty"></param>
         /// <returns></returns>
         internal CopyPropertyCommand(PropertyClipboardFormat clipboardProperty, EntityType entity)
@@ -27,8 +26,8 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Creates a copy of Property from a Clipboard format in the specified EntityType and Position.
         /// </summary>
-        /// <param name="entityType">The entity to create the property in</param>
         /// <param name="clipboardProperty"></param>
+        /// <param name="entity">The entity to create the property in</param>
         /// <param name="insertPosition">Information where the property should be inserted to. If the parameter is null, the property will be placed as the last property of the entity.</param>
         /// <returns></returns>
         internal CopyPropertyCommand(PropertyClipboardFormat clipboardProperty, EntityType entity, InsertPropertyPosition insertPosition)

@@ -12,7 +12,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Deletes the passed in EnumType
         /// </summary>
-        /// <param name="complexType"></param>
+        /// <param name="enumType"></param>
         internal DeleteEnumTypeCommand(EnumType enumType)
             : base(enumType)
         {

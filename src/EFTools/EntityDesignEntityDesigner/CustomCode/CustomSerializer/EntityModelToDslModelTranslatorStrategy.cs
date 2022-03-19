@@ -205,7 +205,6 @@ namespace Microsoft.Data.Entity.Design.EntityDesigner.CustomSerializer
         /// </summary>
         /// <param name="viewModel"></param>
         /// <param name="entityType"></param>
-        /// <param name="processChildren"></param>
         /// <returns></returns>
         private static ViewModelEntityType TranslateEntityType(EntityDesignerViewModel viewModel, ConceptualEntityType entityType)
         {

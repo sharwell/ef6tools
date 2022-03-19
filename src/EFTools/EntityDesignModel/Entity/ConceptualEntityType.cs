@@ -308,7 +308,7 @@ namespace Microsoft.Data.Entity.Design.Model.Entity
         /// <summary>
         ///     Return true if the input is the base entity type of the instance.
         /// </summary>
-        /// <param name="baseType"></param>
+        /// <param name="baseEntityType"></param>
         /// <returns></returns>
         internal bool IsDerivedFrom(ConceptualEntityType baseEntityType)
         {

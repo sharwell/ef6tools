@@ -154,7 +154,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.Package
         ///     Used whenever we need to change window frame selection (switching/opening/closing). This is used
         ///     when we are explicitly given a new window frame.
         /// </summary>
-        /// <param name="frame"></param>
+        /// <param name="newFrame"></param>
         private void UpdateToolWindowsAndCmdsForFrame(FrameWrapper newFrame)
         {
             if (newFrame.ShouldShowToolWindows)

@@ -161,7 +161,7 @@ namespace Microsoft.Data.Entity.Design.EntityDesigner.View
         ///     for binding objects of the current node bound to something in c-space. If there is no such object, we
         ///     recursively call this on efobject's parent.
         /// </summary>
-        /// <param name="efobject"></param>
+        /// <param name="mspaceEFObject"></param>
         /// <returns></returns>
         private static EFObject GetCSpaceEFObjectForMSpaceEFObject(EFObject mspaceEFObject)
         {

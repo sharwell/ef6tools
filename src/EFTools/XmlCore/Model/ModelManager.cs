@@ -155,7 +155,7 @@ namespace Microsoft.Data.Entity.Design.Model
         ///     Get the EFArtifact for a particular Uri or load it if it hasn't been loaded.
         /// </summary>
         /// <param name="uri"></param>
-        /// <param name="provider">This should alway be NULL except for our unit tests</param>
+        /// <param name="xmlModelProvider">This should alway be NULL except for our unit tests</param>
         /// <remarks>virtual for testing</remarks>
         internal virtual EFArtifact GetNewOrExistingArtifact(Uri uri, XmlModelProvider xmlModelProvider)
         {

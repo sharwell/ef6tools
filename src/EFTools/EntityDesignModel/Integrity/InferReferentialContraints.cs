@@ -38,8 +38,6 @@ namespace Microsoft.Data.Entity.Design.Model.Integrity
         ///     passed in Association.  If yes, it will create one (or recreate as needed).  If no, it
         ///     will delete one if it exists.
         /// </summary>
-        /// <param name="cpc"></param>
-        /// <param name="association">This is only valid for C-Side associations.</param>
         [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling")]
         [SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         public void Invoke()

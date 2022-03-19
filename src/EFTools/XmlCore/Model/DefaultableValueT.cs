@@ -127,8 +127,6 @@ namespace Microsoft.Data.Entity.Design.Model
         ///     out to the XAttribute.
         /// </summary>
         /// <param name="val"></param>
-        /// <param name="errors"></param>
-        /// <param name="errorLevel"></param>
         /// <returns></returns>
         protected internal virtual string ConvertValueToString(T val)
         {
@@ -145,8 +143,6 @@ namespace Microsoft.Data.Entity.Design.Model
         ///     template.
         /// </summary>
         /// <param name="stringVal"></param>
-        /// <param name="errors"></param>
-        /// <param name="errorLevel"></param>
         /// <returns></returns>
         protected internal virtual T ConvertStringToValue(string stringVal)
         {

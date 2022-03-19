@@ -46,7 +46,7 @@ namespace Microsoft.Data.Entity.Design.Base.Shell
 
         /// <summary>
         /// </summary>
-        /// <param name="columns"></param>
+        /// <param name="columnHost"></param>
         internal TreeGridDesignerTreeControl(ITreeGridDesignerColumnHost columnHost)
         {
             _columnTable = new HybridDictionary(5);
@@ -142,7 +142,6 @@ namespace Microsoft.Data.Entity.Design.Base.Shell
         ///     Allows a set of default columns.  If no columns are specified via attributes on the object
         ///     passed to PopulateTree, these default columns will be used.
         /// </summary>
-        /// <param name="defaultColumns"></param>
         [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         internal ICollection DefaultColumns
         {
@@ -1194,7 +1193,7 @@ namespace Microsoft.Data.Entity.Design.Base.Shell
         ///     that will be used first.  Otherwise, the type converter will be used.
         /// </param>
         /// <param name="instance">Instance of the object being edited.</param>
-        /// <param name="editStyle">
+        /// <param name="editControlStyle">
         ///     In the case that a UITypeEditor is used, controls the style of drop-down created.  This
         ///     parameter is not used in the TypeConverter case.
         /// </param>

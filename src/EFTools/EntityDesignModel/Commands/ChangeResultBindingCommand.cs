@@ -27,7 +27,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     This method lets you change aspects of a ResultBinding.
         /// </summary>
-        /// <param name="sp">Must point to a valid ResultBinding</param>
+        /// <param name="binding">Must point to a valid ResultBinding</param>
         /// <param name="entityProperty">Can be null</param>
         /// <param name="columnName">Can be null</param>
         internal ChangeResultBindingCommand(ResultBinding binding, Property entityProperty, string columnName)

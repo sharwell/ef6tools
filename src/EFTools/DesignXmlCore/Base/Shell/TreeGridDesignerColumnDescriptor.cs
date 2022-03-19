@@ -179,7 +179,7 @@ namespace Microsoft.Data.Entity.Design.Base.Shell
         ///     Allows derived classes to specify a transaction name when a check box
         ///     in a header branch is toggled.
         /// </summary>
-        /// <param name="column"></param>
+        /// <param name="component"></param>
         /// <returns></returns>
         internal virtual string GetCheckBoxTransactionName(object component)
         {

@@ -256,7 +256,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.Refactoring
         /// <summary>
         ///     Get entire TextLines buffer as a TextSpan
         /// </summary>
-        /// <param name="pBuffer"></param>
+        /// <param name="textBuffer"></param>
         /// <returns></returns>
         private static TextSpan GetBufferSpan(IVsTextLines textBuffer)
         {

@@ -66,7 +66,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.Refactoring
         /// </summary>
         /// <param name="index"></param>
         /// <param name="pfCanRecurse"></param>
-        /// <param name="ppIVsSimplePreviewChangesList"></param>
+        /// <param name="pptlNode"></param>
         /// <returns></returns>
         public int GetExpandedList(uint index, out int pfCanRecurse, out IVsLiteTreeList pptlNode)
         {
@@ -125,7 +125,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.Refactoring
         /// </summary>
         /// <param name="index"></param>
         /// <param name="tto"></param>
-        /// <param name="pbstrText"></param>
+        /// <param name="ppszText"></param>
         /// <returns></returns>
         public int GetText(uint index, VSTREETEXTOPTIONS tto, out string ppszText)
         {
@@ -141,7 +141,7 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.Refactoring
         /// </summary>
         /// <param name="index"></param>
         /// <param name="eTipType"></param>
-        /// <param name="pbstrText"></param>
+        /// <param name="ppszText"></param>
         /// <returns></returns>
         public int GetTipText(uint index, VSTREETOOLTIPTYPE eTipType, out string ppszText)
         {
@@ -155,8 +155,8 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.Refactoring
         ///     Called during a ReAlign command if TF_CANTRELOCATE isn't set.  Return
         ///     E_FAIL if the list can't be located, in which case the list will be discarded.
         /// </summary>
-        /// <param name="pIVsSimplePreviewChangesListChild"></param>
-        /// <param name="piIndex"></param>
+        /// <param name="ExpandedList"></param>
+        /// <param name="iIndex"></param>
         /// <returns></returns>
         public int LocateExpandedList(IVsLiteTreeList ExpandedList, out uint iIndex)
         {

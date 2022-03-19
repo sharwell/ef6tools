@@ -55,7 +55,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Creates new ComplexTypeMapping inside specified FunctionImportMapping
         /// </summary>
-        /// <param name="createFunctionImportMapping"></param>
+        /// <param name="createFunctionImportMappingCmd"></param>
         /// <param name="complexType"></param>
         internal CreateFunctionImportTypeMappingCommand(
             CreateFunctionImportMappingCommand createFunctionImportMappingCmd, ComplexType complexType)
@@ -69,8 +69,8 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Creates new ComplexTypeMapping inside specified FunctionImportMapping
         /// </summary>
-        /// <param name="createFunctionImportMapping"></param>
-        /// <param name="complexType"></param>
+        /// <param name="functionImportMapping"></param>
+        /// <param name="createComplexTypeCmd"></param>
         internal CreateFunctionImportTypeMappingCommand(
             FunctionImportMapping functionImportMapping, CreateComplexTypeCommand createComplexTypeCmd)
             : base(PrereqId)
@@ -83,8 +83,8 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Creates new ComplexTypeMapping inside specified FunctionImportMapping
         /// </summary>
-        /// <param name="functionImportMapping"></param>
-        /// <param name="complexType"></param>
+        /// <param name="createFunctionImportMappingCmd"></param>
+        /// <param name="createComplexTypeCmd"></param>
         internal CreateFunctionImportTypeMappingCommand(
             CreateFunctionImportMappingCommand createFunctionImportMappingCmd, CreateComplexTypeCommand createComplexTypeCmd)
             : base(PrereqId)

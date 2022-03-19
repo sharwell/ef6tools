@@ -58,7 +58,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         ///     Creates a MappingFragment for the passed in StorageEntitySet in the passed in ETM.
         /// </summary>
         /// <param name="entityTypeMapping">This must a valid EntityTypeMapping.</param>
-        /// <param name="entitySet">This must be a valid StorageEntitySet.</param>
+        /// <param name="storageEntitySet">This must be a valid StorageEntitySet.</param>
         internal CreateMappingFragmentCommand(EntityTypeMapping entityTypeMapping, StorageEntitySet storageEntitySet)
         {
             CommandValidation.ValidateEntityTypeMapping(entityTypeMapping);

@@ -57,7 +57,6 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// </summary>
         /// <param name="mappingFragment">The MappingFragment to place this ComplexProperty; cannot be null.</param>
         /// <param name="property">This must be a valid ComplexTypeProperty.</param>
-        /// <param name="isPartial"></param>
         internal CreateFragmentComplexPropertyCommand(MappingFragment mappingFragment, ComplexConceptualProperty property)
             : base(PrereqId)
         {
@@ -79,7 +78,6 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// </summary>
         /// <param name="complexProperty">The parent ComplexProperty to place this ComplexProperty; cannot be null.</param>
         /// <param name="property">This must be a valid ComplexTypeProperty.</param>
-        /// <param name="isPartial"></param>
         internal CreateFragmentComplexPropertyCommand(ComplexProperty complexProperty, ComplexConceptualProperty property)
             : base(PrereqId)
         {
@@ -102,7 +100,6 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// </summary>
         /// <param name="prereq"></param>
         /// <param name="property">This must be a valid ComplexConceptualProperty.</param>
-        /// <param name="isPartial"></param>
         internal CreateFragmentComplexPropertyCommand(CreateFragmentComplexPropertyCommand prereq, ComplexConceptualProperty property)
             : base(PrereqId)
         {

@@ -76,7 +76,7 @@ namespace Microsoft.Data.Entity.Design.Model.Entity
         /// <summary>
         ///     Change the property type to an enum type.
         /// </summary>
-        /// <param name="typeName"></param>
+        /// <param name="enumType"></param>
         public void ChangePropertyType(EnumType enumType)
         {
             Debug.Assert(enumType != null, "typeName parameter value is null");

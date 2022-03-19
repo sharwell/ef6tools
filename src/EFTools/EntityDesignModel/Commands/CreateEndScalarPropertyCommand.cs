@@ -34,7 +34,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Creates a ScalarProperty in the given EndProperty.
         /// </summary>
-        /// <param name="end">The EndProperty to place this ScalarProperty; cannot be null.</param>
+        /// <param name="endProperty">The EndProperty to place this ScalarProperty; cannot be null.</param>
         /// <param name="entityProperty">This must be a valid Property from the C-Model.</param>
         /// <param name="tableColumn">This must be a valid Property from the S-Model.</param>
         /// <param name="enforceConstraints">If true checks/updates conditions on association mappings and referential constraints</param>
@@ -71,7 +71,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Creates a ScalarProperty in the given EndProperty.
         /// </summary>
-        /// <param name="end">The EndProperty to place this ScalarProperty; cannot be null.</param>
+        /// <param name="endProperty">The EndProperty to place this ScalarProperty; cannot be null.</param>
         /// <param name="entityProperty">This must be a valid Property from the C-Model.</param>
         /// <param name="tableColumn">This must be a valid Property from the S-Model.</param>
         /// <returns></returns>

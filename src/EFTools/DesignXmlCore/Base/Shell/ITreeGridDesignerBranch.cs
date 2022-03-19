@@ -39,7 +39,7 @@ namespace Microsoft.Data.Entity.Design.Base.Shell
         /// <summary>
         ///     Indicates that a new creator node should be inserted at the given index
         /// </summary>
-        /// <param name="absIndex">index to insert</param>
+        /// <param name="row">index to insert</param>
         /// <param name="creatorNodeIndex">specifies the creator node to insert</param>
         void InsertCreatorNode(int row, int creatorNodeIndex);
 

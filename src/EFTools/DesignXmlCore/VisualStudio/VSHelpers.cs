@@ -299,7 +299,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio
         /// </summary>
         /// <param name="originalPath">the full path to a document</param>
         /// <param name="projectHierarchy">will contain the IVsHierarchy for the project</param>
-        /// <param name="itemId">will contain the itemID of the document</param>
+        /// <param name="fileItemId">will contain the itemID of the document</param>
         /// <param name="isDocumentInProject">will be true if the document is contained in a project</param>
         /// <param name="project">Out param will contain the Project that this item is contained in, or null if the item isn't in a project</param>
         private static void GetProjectAndFileInfoForPath(
@@ -316,7 +316,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio
         /// <param name="originalPath">the full path to a document</param>
         /// <param name="serviceProvider">the service provider to retrieve the solution and miscellaneous files project reference used by this method</param>
         /// <param name="projectHierarchy">will contain the IVsHierarchy for the project</param>
-        /// <param name="itemId">will contain the itemID of the document</param>
+        /// <param name="fileItemId">will contain the itemID of the document</param>
         /// <param name="isDocumentInProject">will be true if the document is contained in a project</param>
         /// <param name="project">Out param will contain the Project that this item is contained in, or null if the item isn't in a project</param>
         internal static void GetProjectAndFileInfoForPath(
@@ -384,9 +384,6 @@ namespace Microsoft.Data.Entity.Design.VisualStudio
         ///     implementation much different than that in VsShellUtilities due
         ///     to a bug in their implementation.
         /// </summary>
-        /// <param name="provider">
-        ///     The service provider
-        /// </param>
         /// <returns>
         ///     A refernce to the IVsProject3 interface for the misceleneous project.
         /// </returns>
@@ -547,7 +544,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio
         ///     Determines if the file can be checked out on edit and checks out if necessary
         /// </summary>
         /// <param name="serviceProvider">IServiceProvider</param>
-        /// <param name="moniker">file to checkout</param>
+        /// <param name="documents">file to checkout</param>
         /// <returns>true/false depending on </returns>
         internal static bool CheckOutFilesIfSaveable(IServiceProvider serviceProvider, string[] documents)
         {
@@ -593,7 +590,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio
         ///     Determines if the file can be checked out on edit and checks out if necessary
         /// </summary>
         /// <param name="serviceProvider">IServiceProvider</param>
-        /// <param name="moniker">file to checkout</param>
+        /// <param name="documents">file to checkout</param>
         /// <returns>true/false depending on </returns>
         internal static bool CheckOutFilesIfEditable(IServiceProvider serviceProvider, string[] documents)
         {

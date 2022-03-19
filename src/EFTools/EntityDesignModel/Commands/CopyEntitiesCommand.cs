@@ -30,7 +30,6 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Creates a copy of EntityTypes and relationships between them from clipboard format
         /// </summary>
-        /// <param name="property"></param>
         internal CopyEntitiesCommand(EntitiesClipboardFormat clipboardEntities, ModelSpace modelSpace)
             : this(null, clipboardEntities, modelSpace)
         {

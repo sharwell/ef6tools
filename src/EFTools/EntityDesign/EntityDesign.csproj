@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <NoWarn>$(NoWarn);1572;1711;1587;1584;1571;1589</NoWarn>
+    <NoWarn>$(NoWarn);1711;1587;1584;1571;1589</NoWarn>
     <NoWarn>$(NoWarn);VSTHRD010;VSSDK006;VSTHRD001</NoWarn>
   </PropertyGroup>
 

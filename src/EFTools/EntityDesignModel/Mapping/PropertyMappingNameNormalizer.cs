@@ -85,7 +85,6 @@ namespace Microsoft.Data.Entity.Design.Model.Mapping
         /// <param name="setEnd"></param>
         /// <param name="parent"></param>
         /// <param name="refName"></param>
-        /// <param name="symbol"></param>
         /// <returns></returns>
         internal static NormalizedName NormalizeNameFromAssociationSetEnd(AssociationSetEnd setEnd, EFElement parent, string refName)
         {
@@ -166,7 +165,6 @@ namespace Microsoft.Data.Entity.Design.Model.Mapping
         ///     Normalize a refName where the refName is a child of a EntityTypeMapping
         /// </summary>
         /// <param name="etm"></param>
-        /// <param name="fae"></param>
         /// <param name="parent"></param>
         /// <param name="refName"></param>
         /// <returns></returns>

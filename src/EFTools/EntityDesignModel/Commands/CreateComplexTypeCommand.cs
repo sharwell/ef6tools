@@ -20,7 +20,6 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         ///     Creates a new entity type in either the conceptual model or the storage model.
         /// </summary>
         /// <param name="name">The name to use for this type</param>
-        /// <param name="modelSpace">Either Conceptual or Storage</param>
         /// <param name="uniquifyName">Flag whether the name should be checked for uniqueness and then changed as required</param>
         internal CreateComplexTypeCommand(string name, bool uniquifyName)
             : base(PrereqId)

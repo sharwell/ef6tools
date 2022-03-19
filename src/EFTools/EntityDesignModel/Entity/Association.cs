@@ -338,7 +338,7 @@ namespace Microsoft.Data.Entity.Design.Model.Entity
         ///     Gets the AssociationEnd that is not pointing to the given EntityType. This method should not be
         ///     called for self-associations.
         /// </summary>
-        /// <param name="oneEnd"></param>
+        /// <param name="entityType"></param>
         /// <returns></returns>
         internal AssociationEnd GetOtherEnd(EntityType entityType)
         {

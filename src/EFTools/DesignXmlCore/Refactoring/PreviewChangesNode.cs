@@ -168,7 +168,6 @@ namespace Microsoft.Data.Tools.VSXmlDesignerBase.Refactoring
         /// <summary>
         ///     Set the parent to checked, unchecked or partially checked depending on the checked states of its children
         /// </summary>
-        /// <param name="checkState"></param>
         private void SetParentChecked()
         {
             if (_parent != null)

@@ -14,7 +14,7 @@ namespace Microsoft.Data.Entity.Design.Model.Visitor
         ///     determine if they want to allow the Visitor to visit.  Their Accept method should
         ///     return the child nodes to be processed next.
         /// </summary>
-        /// <param name="item"></param>
+        /// <param name="visitable"></param>
         internal void Traverse(IVisitable visitable)
         {
             // do a BFS across the metadata graph starting from item.

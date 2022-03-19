@@ -30,7 +30,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Delete the passed in function
         /// </summary>
-        /// <param name="fim"></param>
+        /// <param name="f"></param>
         internal DeleteFunctionCommand(Function f)
             : base(f)
         {

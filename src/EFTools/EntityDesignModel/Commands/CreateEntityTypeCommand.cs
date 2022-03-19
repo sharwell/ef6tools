@@ -189,7 +189,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <param name="createKeyProperty">A flag whether to create a new key property or not (sending false creates no new property)</param>
         /// <param name="propertyName">The name of the new property</param>
         /// <param name="propertyType">The type of the new property</param>
-        /// <param name="uniquifyName">Flag whether the name should be checked for uniqueness and then changed as required</param>
+        /// <param name="uniquifyNames">Flag whether the name should be checked for uniqueness and then changed as required</param>
         /// <param name="isDefaultName">Flag whether the name is the default for new entity types/sets</param>
         /// <returns>The new EntityType</returns>
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
@@ -219,7 +219,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <param name="propertyName">The name of the new property</param>
         /// <param name="propertyType">The type of the new property</param>
         /// <param name="modelSpace">Either Conceptual or Storage</param>
-        /// <param name="uniquifyName">Flag whether the name should be checked for uniqueness and then changed as required</param>
+        /// <param name="uniquifyNames">Flag whether the name should be checked for uniqueness and then changed as required</param>
         /// <param name="isDefaultName">Flag whether the name is the default for new entity types/sets</param>
         /// <returns>The new EntityType</returns>
         internal static EntityType CreateEntityTypeAndEntitySetAndProperty(

@@ -78,7 +78,7 @@ namespace Microsoft.Data.Entity.Design.Model
         ///     Convert the EDMX content where the conversion does not depend on target framework
         ///     (currently only SQL CE upgrade)
         /// </summary>
-        /// <param name="xmlDocPath"></param>
+        /// <param name="doc"></param>
         /// <returns>converted document or null</returns>
         internal XmlDocument Convert(XmlDocument doc)
         {

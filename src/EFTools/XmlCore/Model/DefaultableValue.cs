@@ -113,7 +113,7 @@ namespace Microsoft.Data.Entity.Design.Model
         ///     This method converts the contents of the XAttribute into an object of the passed
         ///     in type.  This is mainly done using the casting capabilities of the XAttribute class.
         /// </summary>
-        /// <param name="attrValue">The string passed here should be decoded as needed.</param>
+        /// <param name="stringVal">The string passed here should be decoded as needed.</param>
         /// <param name="attribute">The XAttribute to read</param>
         /// <param name="objectType">The type of object to return</param>
         /// <returns></returns>

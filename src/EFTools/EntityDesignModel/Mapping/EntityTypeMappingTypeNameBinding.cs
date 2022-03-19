@@ -75,7 +75,7 @@ namespace Microsoft.Data.Entity.Design.Model.Mapping
         ///     Abstract types are ignored (they don't contribute anything to the mapping constraint unless IsOfType is used).
         ///     Pre-condition: given types contain at least one concrete type.
         /// </summary>
-        /// <param name="items"></param>
+        /// <param name="mappedTypes"></param>
         internal override void SetRefName(IEnumerable<EntityType> mappedTypes)
         {
             Entries = from cet in

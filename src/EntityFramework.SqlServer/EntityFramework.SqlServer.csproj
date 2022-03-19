@@ -13,10 +13,6 @@
     <AssemblyOriginatorKeyFile>..\EcmaPublicKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <NoWarn>$(NoWarn);1572</NoWarn>
-  </PropertyGroup>
-
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>

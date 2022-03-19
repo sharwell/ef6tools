@@ -119,7 +119,7 @@ namespace Microsoft.Data.Entity.Design.UI.ViewModels.PropertyWindow.Descriptors
         /// <summary>
         ///     Update the property value within a shared transaction context.
         /// </summary>
-        /// <param name="updateCallback"></param>
+        /// <param name="updatePropertyValueCallback"></param>
         private void UpdatePropertyValue(UpdatePropertyValueCallback updatePropertyValueCallback, string txName)
         {
             try

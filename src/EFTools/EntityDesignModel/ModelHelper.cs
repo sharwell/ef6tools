@@ -323,7 +323,7 @@ namespace Microsoft.Data.Entity.Design.Model
         /// <summary>
         ///     Validate ComplexType property name value.
         /// </summary>
-        /// <param name="entityType">Property's ComplexType instance.</param>
+        /// <param name="complexType">Property's ComplexType instance.</param>
         /// <param name="proposedName">The proposed property name.</param>
         /// <param name="uniquenessIsCaseSensitive">A flag that indicates whether case sensitive string comparison is used to check the uniqueness of the property name.</param>
         /// <param name="errorMessage">Property name validation error message.</param>

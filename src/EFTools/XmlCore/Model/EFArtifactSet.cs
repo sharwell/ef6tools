@@ -209,7 +209,7 @@ namespace Microsoft.Data.Entity.Design.Model
         /// <summary>
         ///     Adds an dependency to this Element.  Also updates element's Anti-dependency list
         /// </summary>
-        /// <param name="element"></param>
+        /// <param name="item"></param>
         internal void AddDependency(EFObject item, EFObject dependency)
         {
             _dependencyGraph.AddDependency(item, dependency);
@@ -218,7 +218,7 @@ namespace Microsoft.Data.Entity.Design.Model
         /// <summary>
         ///     Removes a dependency from this element.  Also updates element's anti-dependency list.
         /// </summary>
-        /// <param name="element"></param>
+        /// <param name="item"></param>
         internal void RemoveDependency(EFObject item, EFObject dependency)
         {
             _dependencyGraph.RemoveDependency(item, dependency);

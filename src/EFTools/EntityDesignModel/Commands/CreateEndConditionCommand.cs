@@ -22,7 +22,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         ///     3. Send null for isNull, and null for conditionValue
         ///     You cannot send non-null values to both arguments.
         /// </summary>
-        /// <param name="mappingFragment">The AssociationSetMapping to place this Condition; cannot be null.</param>
+        /// <param name="associationSetMapping">The AssociationSetMapping to place this Condition; cannot be null.</param>
         /// <param name="tableColumn">This must be a valid Property from the S-Model.</param>
         internal CreateEndConditionCommand(
             AssociationSetMapping associationSetMapping, Property tableColumn, bool? isNull, string conditionValue)

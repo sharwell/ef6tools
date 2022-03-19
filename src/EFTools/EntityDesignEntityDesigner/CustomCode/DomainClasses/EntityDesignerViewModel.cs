@@ -54,7 +54,6 @@ namespace Microsoft.Data.Entity.Design.EntityDesigner.ViewModel
         /// <summary>
         ///     Returns true if the model has elements, false otherwise.
         /// </summary>
-        /// <param name="model"></param>
         /// <returns></returns>
         internal bool ModelHasElements()
         {
@@ -64,7 +63,6 @@ namespace Microsoft.Data.Entity.Design.EntityDesigner.ViewModel
         /// <summary>
         ///     Returns the diagram associated with this model
         /// </summary>
-        /// <param name="diagram"></param>
         /// <returns></returns>
         internal EntityDesignerDiagram GetDiagram()
         {

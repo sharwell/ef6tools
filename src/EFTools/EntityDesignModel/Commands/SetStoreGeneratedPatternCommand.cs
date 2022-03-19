@@ -33,7 +33,6 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         ///     Used to set the StoreGeneratedPattern property on a new property.
         /// </summary>
         /// <param name="prereq">Must be a non-null command creating the property</param>
-        /// <param name="isKey">Flag whether to make the property a key or not</param>
         internal SetStoreGeneratedPatternCommand(CreatePropertyCommand prereq, string value)
         {
             ValidatePrereqCommand(prereq);

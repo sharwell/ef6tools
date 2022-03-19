@@ -79,7 +79,7 @@ namespace Microsoft.Data.Entity.Design.UI.Converters
         /// <summary>
         ///     This API supports the Entity Framework infrastructure and is not intended to be used directly from your code.
         /// </summary>
-        /// <param name="o">This API supports the Entity Framework infrastructure and is not intended to be used directly from your code.</param>
+        /// <param name="value">This API supports the Entity Framework infrastructure and is not intended to be used directly from your code.</param>
         /// <param name="targetType">This API supports the Entity Framework infrastructure and is not intended to be used directly from your code.</param>
         /// <param name="parameter">This API supports the Entity Framework infrastructure and is not intended to be used directly from your code.</param>
         /// <param name="culture">This API supports the Entity Framework infrastructure and is not intended to be used directly from your code.</param>

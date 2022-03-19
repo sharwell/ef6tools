@@ -95,7 +95,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Creates a CommandProcessor, and uses the passed in information to create a CommandProcessorContext.
         /// </summary>
-        /// <param name="command">This command is placed in the queue</param>
+        /// <param name="commands">These commands are placed in the queue</param>
         internal CommandProcessor(EditingContext context, string originatorId, string transactionName, params Command[] commands)
             : this(context, originatorId, transactionName)
         {

@@ -87,7 +87,6 @@ namespace Microsoft.Data.Entity.Design.Model
         /// <summary>
         ///     NOTE: this is called from the EFObject c'tor so only that class is fully instantiated!
         /// </summary>
-        /// <param name="parent"></param>
         /// <returns></returns>
         protected override void AddToXlinq()
         {

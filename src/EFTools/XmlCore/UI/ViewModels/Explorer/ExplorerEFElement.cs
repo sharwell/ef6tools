@@ -516,8 +516,8 @@ namespace Microsoft.Data.Entity.Design.UI.ViewModels.Explorer
         ///     Compares 2 children (which must be direct children of this node i.e. already
         ///     in its Children collection)
         /// </summary>
-        /// <param name="childElement1"></param>
-        /// <param name="childElement2"></param>
+        /// <param name="child1"></param>
+        /// <param name="child2"></param>
         /// <returns>
         ///     -1 if childElement1 is in the Children list before childElement2,
         ///     +1 if childElement1 is in the Children list after childElement2, or

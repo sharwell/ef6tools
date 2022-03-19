@@ -435,7 +435,6 @@ namespace Microsoft.Data.Entity.Design.Model
         /// <summary>
         ///     NOTE: this is called from the EFObject c'tor so only that class is fully instantiated!
         /// </summary>
-        /// <param name="parent"></param>
         /// <returns></returns>
         protected override void AddToXlinq()
         {
@@ -578,7 +577,7 @@ namespace Microsoft.Data.Entity.Design.Model
         /// <summary>
         ///     Ensures the whitespace separation between two nodes.  Appropriate whitespace is added before the given node
         /// </summary>
-        /// <param name="first"></param>
+        /// <param name="node"></param>
         private XText EnsureWhitespaceBeforeNode(XNode node)
         {
             Debug.Assert(

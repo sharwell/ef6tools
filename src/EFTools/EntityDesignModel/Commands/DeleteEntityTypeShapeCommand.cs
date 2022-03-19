@@ -11,7 +11,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Deletes the passed in EntityTypeShape and the associated connectors.
         /// </summary>
-        /// <param name="entityType"></param>
+        /// <param name="entityTypeShape"></param>
         internal DeleteEntityTypeShapeCommand(EntityTypeShape entityTypeShape)
             : base(entityTypeShape)
         {

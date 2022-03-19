@@ -31,7 +31,7 @@ namespace Microsoft.Data.Entity.Design.Model.Entity
         /// </summary>
         /// <param name="parent">Property's Parent. The value is either ConceptualEntityTYpe or a ComplexType.</param>
         /// <param name="element">Property's XElement</param>
-        /// <param name="insertPosition">Information where the property should be inserted to. If the parameter is null, the property will be placed as the last property of the entity.</param>
+        /// <param name="insertPostion">Information where the property should be inserted to. If the parameter is null, the property will be placed as the last property of the entity.</param>
         internal NavigationProperty(EntityType parent, XElement element, InsertPropertyPosition insertPostion)
             : base(parent, element, insertPostion)
         {

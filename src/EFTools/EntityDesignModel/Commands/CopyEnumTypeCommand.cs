@@ -12,7 +12,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Creates a copy of EnumType from clipboard format
         /// </summary>
-        /// <param name="clipboardEntity"></param>
+        /// <param name="clipboardEnumType"></param>
         /// <returns></returns>
         internal CopyEnumTypeCommand(EnumTypeClipboardFormat clipboardEnumType)
         {

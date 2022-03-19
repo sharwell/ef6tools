@@ -12,7 +12,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Creates a copy of ComplexType from clipboard format
         /// </summary>
-        /// <param name="clipboardEntity"></param>
+        /// <param name="clipboardComplexType"></param>
         /// <returns></returns>
         internal CopyComplexTypeCommand(ComplexTypeClipboardFormat clipboardComplexType)
         {

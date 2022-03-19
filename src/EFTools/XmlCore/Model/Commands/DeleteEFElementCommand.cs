@@ -140,7 +140,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         ///     tracking a transaction, then a new one is NOT created.
         /// </summary>
         /// <param name="cpc"></param>
-        /// <param name="element">The EFElement to delete</param>
+        /// <param name="cmd"></param>
         /// <param name="rebindAllBindings">Control whether all bindings in the artifact should be rebound</param>
         internal static void DeleteInTransaction(CommandProcessorContext cpc, DeleteEFElementCommand cmd, bool rebindAllBindings)
         {

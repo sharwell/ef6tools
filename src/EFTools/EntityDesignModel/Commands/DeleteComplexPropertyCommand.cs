@@ -10,7 +10,7 @@ namespace Microsoft.Data.Entity.Design.Model.Commands
         /// <summary>
         ///     Deletes the passed in ComplexProperty
         /// </summary>
-        /// <param name="sp"></param>
+        /// <param name="cp"></param>
         internal DeleteComplexPropertyCommand(ComplexProperty cp)
             : base(cp)
         {

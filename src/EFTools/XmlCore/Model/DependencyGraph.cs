@@ -249,7 +249,7 @@ namespace Microsoft.Data.Entity.Design.Model
         ///     given item.
         /// </summary>
         /// <param name="item"></param>
-        /// <param name="closureFunction"></param>
+        /// <param name="edgeFunction"></param>
         /// <returns></returns>
         private static ICollection<T> GetClosure(T item, EdgeFunction edgeFunction)
         {
