@@ -40,7 +40,8 @@
 
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
-    <DelaySign>true</DelaySign>
+    <DelaySign>false</DelaySign>
+    <PublicSign>true</PublicSign>
     <!-- AssemblyOriginatorKeyFile is defined in Directory.Build.targets since it depends on properties defined in EntityFramework.settings.targets. -->
   </PropertyGroup>
 
