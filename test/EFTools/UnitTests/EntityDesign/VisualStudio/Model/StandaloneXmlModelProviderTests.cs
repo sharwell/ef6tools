@@ -35,7 +35,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.Model
                     ctx =>
                         {
                             Assert.Equal(ctx.EntityFrameworkVersion, new Version(3, 0, 0, 0));
-                            Assert.Equal(ctx.FileInfo.Name, "non-edmx-file.xmde");
+                            Assert.Equal("non-edmx-file.xmde", ctx.FileInfo.Name);
                             Assert.Same(ctx.ProjectItem, mockProjectItem.Object);
                             Assert.Same(ctx.Project, mockDte.Project);
                         });
@@ -186,7 +186,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.Model
                     ctx =>
                         {
                             Assert.Equal(ctx.EntityFrameworkVersion, new Version(3, 0, 0, 0));
-                            Assert.Equal(ctx.FileInfo.Name, "non-edmx-file.xmde");
+                            Assert.Equal("non-edmx-file.xmde", ctx.FileInfo.Name);
                             Assert.Same(ctx.ProjectItem, mockProjectItem.Object);
                             Assert.Same(ctx.Project, mockDte.Project);
 

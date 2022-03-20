@@ -230,9 +230,9 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb.Schema
             Assert.Equal(3, parameters.Count);
             Assert.Equal("p0", parameters[0].ParameterName);
             Assert.Equal("p1", parameters[1].ParameterName);
-            Assert.Equal(parameters["p0"].Value, "catalog");
-            Assert.Equal(parameters["p1"].Value, "schema");
-            Assert.Equal(parameters["p2"].Value, "name");
+            Assert.Equal("catalog", parameters["p0"].Value);
+            Assert.Equal("schema", parameters["p1"].Value);
+            Assert.Equal("name", parameters["p2"].Value);
         }
 
         [Fact]
@@ -261,8 +261,8 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb.Schema
             Assert.Equal(2, parameters.Count);
             Assert.Equal("p0", parameters[0].ParameterName);
             Assert.Equal("p1", parameters[1].ParameterName);
-            Assert.Equal(parameters["p0"].Value, "name");
-            Assert.Equal(parameters["p1"].Value, "name");
+            Assert.Equal("name", parameters["p0"].Value);
+            Assert.Equal("name", parameters["p1"].Value);
         }
 
         [Fact]
@@ -290,7 +290,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb.Schema
 
             Assert.Equal(1, parameters.Count);
             Assert.Equal("p0", parameters[0].ParameterName);
-            Assert.Equal(parameters["p0"].Value, "name");
+            Assert.Equal("name", parameters["p0"].Value);
         }
 
         [Fact]
@@ -319,9 +319,9 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb.Schema
             Assert.Equal(3, parameters.Count);
             Assert.Equal("p0", parameters[0].ParameterName);
             Assert.Equal("p1", parameters[1].ParameterName);
-            Assert.Equal(parameters["p0"].Value, "catalog");
-            Assert.Equal(parameters["p1"].Value, "schema");
-            Assert.Equal(parameters["p2"].Value, "name");
+            Assert.Equal("catalog", parameters["p0"].Value);
+            Assert.Equal("schema", parameters["p1"].Value);
+            Assert.Equal("name", parameters["p2"].Value);
         }
 
         [Fact]
@@ -350,8 +350,8 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb.Schema
             Assert.Equal(2, parameters.Count);
             Assert.Equal("p0", parameters[0].ParameterName);
             Assert.Equal("p1", parameters[1].ParameterName);
-            Assert.Equal(parameters["p0"].Value, "name");
-            Assert.Equal(parameters["p1"].Value, "name");
+            Assert.Equal("name", parameters["p0"].Value);
+            Assert.Equal("name", parameters["p1"].Value);
         }
 
         [Fact]
@@ -379,7 +379,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb.Schema
 
             Assert.Equal(1, parameters.Count);
             Assert.Equal("p0", parameters[0].ParameterName);
-            Assert.Equal(parameters["p0"].Value, "name");
+            Assert.Equal("name", parameters["p0"].Value);
         }
 
         [Fact]
@@ -414,8 +414,8 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb.Schema
             Assert.Equal(2, parameters.Count);
             Assert.Equal("p0", parameters[0].ParameterName);
             Assert.Equal("p1", parameters[1].ParameterName);
-            Assert.Equal(parameters["p0"].Value, "nameAllowed");
-            Assert.Equal(parameters["p1"].Value, "nameExcluded");
+            Assert.Equal("nameAllowed", parameters["p0"].Value);
+            Assert.Equal("nameExcluded", parameters["p1"].Value);
         }
 
         [Fact]
