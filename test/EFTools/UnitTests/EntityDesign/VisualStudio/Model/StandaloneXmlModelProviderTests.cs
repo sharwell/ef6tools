@@ -167,7 +167,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.Model
                 e => e.OnBeforeModelSaved(It.IsAny<ModelTransformExtensionContext>()), Times.Never());
         }
 
-        // [Fact] https://entityframework.codeplex.com/workitem/1371
+        [Fact(Skip = "https://entityframework.codeplex.com/workitem/1371")]
         public void TryGetBufferViaExtensions_passes_content_from_converter_to_transformer_and_returns_true()
         {
             var mockDte = new MockDTE(".NETFramework, Version=v4.5", references: new Reference[0]);

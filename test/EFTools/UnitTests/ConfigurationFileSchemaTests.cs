@@ -253,6 +253,7 @@ namespace UnitTests
 
         #region providers element
 
+        [Fact]
         public void Schema_accepts_empty_providers_element()
         {
             Validate("<providers />");
