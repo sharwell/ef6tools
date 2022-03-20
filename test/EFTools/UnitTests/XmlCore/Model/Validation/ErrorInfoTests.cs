@@ -45,7 +45,7 @@ namespace Microsoft.Data.Entity.Design.Model.Validation
             Assert.False(edmxErrorInfo.IsInfo());
 
             Assert.Equal(string.Format(Resources.Error_Message_With_Error_Code_Prefix, 17, "test"), edmxErrorInfo.Message);
-            Assert.Same(null, edmxErrorInfo.Item);
+            Assert.Null(edmxErrorInfo.Item);
             Assert.Equal(@"c:\project\model.edmx", edmxErrorInfo.ItemPath);
             Assert.Equal(17, edmxErrorInfo.ErrorCode);
             Assert.Equal(ErrorClass.None, edmxErrorInfo.ErrorClass);
