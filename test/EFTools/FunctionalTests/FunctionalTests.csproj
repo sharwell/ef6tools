@@ -30,6 +30,7 @@
     <PackageReference Include="Microsoft.VisualStudio.TemplateWizardInterface" Version="$(MicrosoftVisualStudioTemplateWizardInterfacePackageVersion)" />
     <PackageReference Include="Moq" Version="$(MoqPackageVersion)" />
     <PackageReference Include="xunit" Version="$(XunitPackageVersion)" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="$(xunitrunnervisualstudioPackageVersion)" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
@@ -45,16 +46,13 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
 
-  <Target Name="AfterBuild">
-    <!-- 
-    Cannot add these to the project and use CopyToOutputDirectory since backgroung compilation 
-    seems to always process edmx files even if build action is set to None. This results in 
-    displaying compilation errors all the time even the project builds successfully. 
-    -->
-    <CreateItem Include="TestArtifacts\**\*.*">
-      <Output TaskParameter="Include" ItemName="TestArtifacts" />
-    </CreateItem>
-    <Copy SourceFiles="@(TestArtifacts)" DestinationFiles="@(TestArtifacts->'$(OutputPath)TestArtifacts\%(RecursiveDir)%(Filename)%(Extension)')" />
-  </Target>
+  <ItemGroup>
+    <None Update="TestArtifacts\*.edmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="xunit.runner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>

@@ -2,9 +2,9 @@
 
 namespace EFDesigner.FunctionalTests
 {
-    using System;
     using EFDesignerTestInfrastructure;
     using EFDesignerTestInfrastructure.EFDesigner;
+    using global::FunctionalTests.TestHelpers;
     using Microsoft.Data.Entity.Design.Extensibility;
     using Microsoft.Data.Entity.Design.Model;
     using Microsoft.Data.Entity.Design.Model.Commands;
@@ -12,10 +12,10 @@ namespace EFDesigner.FunctionalTests
     using Microsoft.Data.Entity.Design.VisualStudio.ModelWizard;
     using Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine;
     using Moq;
+    using System;
     using Xunit;
-    using global::FunctionalTests.TestHelpers;
 
-    public class UpdateModelFromDatabaseTests : IUseFixture<EdmPackageFixture>
+    public class UpdateModelFromDatabaseTests : IClassFixture<EdmPackageFixture>
     {
         /// <summary>
         ///     Fixture that creates a mock package and sets PackageManager.Package
@@ -27,7 +27,7 @@ namespace EFDesigner.FunctionalTests
         ///     We don't need to set it - xUnit is keeping a reference to it and it
         ///     will dispose it after test execution is completed.
         /// </remarks>
-        public void SetFixture(EdmPackageFixture packageFixture)
+        public UpdateModelFromDatabaseTests(EdmPackageFixture packageFixture)
         {
         }
 

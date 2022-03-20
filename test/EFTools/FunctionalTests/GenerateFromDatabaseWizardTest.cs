@@ -2,15 +2,15 @@
 
 namespace EFDesigner.FunctionalTests
 {
+    using EFDesignerTestInfrastructure;
+    using global::FunctionalTests.TestHelpers;
+    using Microsoft.Data.Entity.Design.Model.Entity;
+    using Microsoft.Data.Entity.Design.VisualStudio.ModelWizard;
     using System;
     using System.Collections;
     using System.Linq;
     using System.Reflection;
-    using EFDesignerTestInfrastructure;
-    using Microsoft.Data.Entity.Design.Model.Entity;
-    using Microsoft.Data.Entity.Design.VisualStudio.ModelWizard;
     using Xunit;
-    using global::FunctionalTests.TestHelpers;
 
     public class GenerateFromDatabaseWizardTest
     {

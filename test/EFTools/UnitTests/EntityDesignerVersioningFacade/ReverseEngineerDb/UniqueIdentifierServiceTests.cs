@@ -16,7 +16,7 @@ namespace UnitTests.EntityDesignerVersioningFacade.ReverseEngineerDb
 
             var service = new UniqueIdentifierService(StringComparer.Ordinal);
             service.RegisterUsedIdentifier(identifierA);
-            Assert.DoesNotThrow(() => service.RegisterUsedIdentifier(identifierB));
+            service.RegisterUsedIdentifier(identifierB);
 
             service = new UniqueIdentifierService(StringComparer.OrdinalIgnoreCase);
             service.RegisterUsedIdentifier(identifierA);

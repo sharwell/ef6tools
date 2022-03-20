@@ -37,7 +37,7 @@
     <PackageReference Include="Microsoft.VisualStudio.TemplateWizardInterface" Version="$(MicrosoftVisualStudioTemplateWizardInterfacePackageVersion)" />
     <PackageReference Include="Moq" Version="$(MoqPackageVersion)" />
     <PackageReference Include="xunit" Version="$(XunitPackageVersion)" />
-    <PackageReference Include="xunit.extensions" Version="$(XunitPackageVersion)" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="$(xunitrunnervisualstudioPackageVersion)" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
@@ -56,9 +56,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="$(RepositoryRoot)src\EFTools\setup\EFToolsMsi\XmlSchemas\EntityFrameworkConfig_6_1_4.xsd">
+    <None Include="$(RepositoryRoot)src\EFTools\setup\EFToolsMsi\XmlSchemas\EntityFrameworkConfig_6_1_4.xsd">
       <Link>EntityFrameworkConfig_6_1_4.xsd</Link>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="xunit.runner.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -68,10 +71,6 @@
       <Link>EntityFrameworkCatalog.xml</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
 
 </Project>

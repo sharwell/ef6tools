@@ -20,7 +20,8 @@
     <MySqlDataEntityPackageVersion>6.7.2-beta-ef6</MySqlDataEntityPackageVersion>
     <SystemDataSqlServerCePackageVersion>4.0.8876.1</SystemDataSqlServerCePackageVersion>
     <VsWebSiteInteropPackageVersion>$(MicrosoftVisualStudioPackageCurrent)</VsWebSiteInteropPackageVersion>
-    <XunitPackageVersion>1.9.2</XunitPackageVersion>
+    <XunitPackageVersion>2.4.1</XunitPackageVersion>
+    <xunitrunnervisualstudioPackageVersion>2.4.3</xunitrunnervisualstudioPackageVersion>
   </PropertyGroup>
 
   <PropertyGroup>

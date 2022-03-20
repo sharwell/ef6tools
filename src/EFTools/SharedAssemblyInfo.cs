@@ -27,5 +27,8 @@ using System.Runtime.InteropServices;
 #elif VS16
 [assembly: AssemblyVersion("16.0.0.0")]
 [assembly: AssemblyFileVersion("16.0.0.0")]
+#elif VS17
+[assembly: AssemblyVersion("17.0.0.0")]
+[assembly: AssemblyFileVersion("17.0.0.0")]
 #endif
 #endif
