@@ -1,0 +1,23 @@
+﻿root = true
+
+# Don't use tabs for indentation.
+[*]
+indent_style = space
+# (Please don't specify an indent_size here; that has too many unintended consequences.)
+
+[*.cs]
+
+indent_size = 4
+insert_final_newline = true
+charset = utf-8-bom
+
+insert_final_newline = true
+
+# Sort using and Import directives with System.* appearing first
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
+
+# IDE0065: Misplaced using directive
+csharp_using_directive_placement = inside_namespace
+
+csharp_prefer_braces = when_multiline
