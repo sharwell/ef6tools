@@ -350,7 +350,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                         .GenerateEntityType(mappingContext, storeEntityType, new UniqueIdentifierService());
 
                 Assert.Equal(new[] { "Id", "ForeignKeyColumn" }, conceptualEntityType.Properties.Select(p => p.Name));
-                Assert.False(storeEntityType.Properties.Any(p => mappingContext[p] == null));
+                Assert.DoesNotContain(storeEntityType.Properties, p => mappingContext[p] == null);
             }
 
             [Fact]
@@ -377,7 +377,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.Equal(new[] { "Id" }, conceptualEntityType.Properties.Select(p => p.Name));
 
                 // the mapping still should be added to be able to build association type mapping correctly
-                Assert.False(storeEntityType.Properties.Any(p => mappingContext[p] == null));
+                Assert.DoesNotContain(storeEntityType.Properties, p => mappingContext[p] == null);
             }
 
             [Fact]
@@ -401,7 +401,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.Equal(new[] { "IdPrimaryAndForeignKey" }, conceptualEntityType.Properties.Select(p => p.Name));
 
                 // the mapping still should be added to be able to build association type mapping correctly
-                Assert.False(storeEntityType.Properties.Any(p => mappingContext[p] == null));
+                Assert.DoesNotContain(storeEntityType.Properties, p => mappingContext[p] == null);
             }
         }
 

@@ -139,8 +139,8 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
             Assert.Null(clonedEntitySet.Schema);
             Assert.Null(clonedEntitySet.Table);
-            Assert.False(entitySet.MetadataProperties.Any(p => p.Name.EndsWith(StoreSchemaAttributeNamespace + ":Schema")));
-            Assert.False(entitySet.MetadataProperties.Any(p => p.Name.EndsWith(StoreSchemaAttributeNamespace + ":Name")));
+            Assert.DoesNotContain(entitySet.MetadataProperties, p => p.Name.EndsWith(StoreSchemaAttributeNamespace + ":Schema"));
+            Assert.DoesNotContain(entitySet.MetadataProperties, p => p.Name.EndsWith(StoreSchemaAttributeNamespace + ":Name"));
         }
 
         [Fact]

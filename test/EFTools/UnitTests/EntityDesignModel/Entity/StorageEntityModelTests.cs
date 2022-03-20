@@ -28,7 +28,7 @@ namespace Microsoft.Data.Entity.Design.Model.Entity
                     SqlProviderServices.Instance.GetProviderManifest("2008").GetStoreTypes().Select(t => t.Name),
                     typeMap.Keys);
 
-                Assert.False(typeMap.Any(t => t.Key != t.Value.Name));
+                Assert.DoesNotContain(typeMap, t => t.Key != t.Value.Name);
             }
         }
 

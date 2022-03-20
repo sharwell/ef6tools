@@ -944,7 +944,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.True(new[] { "Id" }.SequenceEqual(entity.KeyMembers.Select(m => m.Name)));
                 Assert.True(new[] { "Id", "Name" }.SequenceEqual(entity.Members.Select(m => m.Name)));
                 Assert.False(needsDefiningQuery);
-                Assert.False(entity.MetadataProperties.Any(p => p.Name == "EdmSchemaErrors"));
+                Assert.DoesNotContain(entity.MetadataProperties, p => p.Name == "EdmSchemaErrors");
                 Assert.False(MetadataItemHelper.IsInvalid(entity));
             }
 
@@ -1640,13 +1640,9 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.Equal(2, entityTypes.Count);
                 Assert.True(entitySets.All(s => s.DefiningQuery == null));
 
-                Assert.True(
-                    entitySets[0].MetadataProperties.Any(
-                        p => p.Name == StoreTypeMetadataPropertyName && (string)p.Value == "Tables"));
+                Assert.Contains(entitySets[0].MetadataProperties, p => p.Name == StoreTypeMetadataPropertyName && (string)p.Value == "Tables");
 
-                Assert.True(
-                    entitySets[1].MetadataProperties.Any(
-                        p => p.Name == StoreTypeMetadataPropertyName && (string)p.Value == "Views"));
+                Assert.Contains(entitySets[1].MetadataProperties, p => p.Name == StoreTypeMetadataPropertyName && (string)p.Value == "Views");
             }
 
             [Fact]
@@ -1677,13 +1673,9 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.True(entitySets.All(s => s.DefiningQuery != null));
                 Assert.Equal(2, entityTypes.Count);
 
-                Assert.True(
-                    entitySets[0].MetadataProperties.Any(
-                        p => p.Name == StoreTypeMetadataPropertyName && (string)p.Value == "Tables"));
+                Assert.Contains(entitySets[0].MetadataProperties, p => p.Name == StoreTypeMetadataPropertyName && (string)p.Value == "Tables");
 
-                Assert.True(
-                    entitySets[1].MetadataProperties.Any(
-                        p => p.Name == StoreTypeMetadataPropertyName && (string)p.Value == "Views"));
+                Assert.Contains(entitySets[1].MetadataProperties, p => p.Name == StoreTypeMetadataPropertyName && (string)p.Value == "Views");
             }
         }
 
@@ -1704,7 +1696,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.NotNull(rowTypes);
                 Assert.Single(rowTypes);
                 Assert.Equal(new[] { "Id", "Name" }, rowTypes.Single().Value.Properties.Select(p => p.Name));
-                Assert.False(rowTypes.Single().Value.MetadataProperties.Any(p => p.Name == "EdmSchemaErrors"));
+                Assert.DoesNotContain(rowTypes.Single().Value.MetadataProperties, p => p.Name == "EdmSchemaErrors");
             }
 
             [Fact]
@@ -1738,7 +1730,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 Assert.NotNull(rowTypes);
                 Assert.Single(rowTypes);
-                Assert.True(rowTypes.Single().Value.MetadataProperties.Any(p => p.Name == "EdmSchemaErrors"));
+                Assert.Contains(rowTypes.Single().Value.MetadataProperties, p => p.Name == "EdmSchemaErrors");
             }
         }
 
@@ -2015,7 +2007,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                     .CreateFunctionParameters(functionDetailsRows, errors).ToArray();
 
                 Assert.Equal(2, parameters.Length);
-                Assert.False(parameters.Any(p => p == null));
+                Assert.DoesNotContain(parameters, p => p == null);
 
                 Assert.Single(errors);
                 var error = errors.Single();
@@ -2221,7 +2213,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.True(function.IsComposableAttribute);
                 Assert.True(function.BuiltInAttribute);
                 Assert.True(function.NiladicFunctionAttribute);
-                Assert.False(function.MetadataProperties.Any(p => p.Name == "EdmSchemaErrors"));
+                Assert.DoesNotContain(function.MetadataProperties, p => p.Name == "EdmSchemaErrors");
             }
 
             [Fact]
@@ -2250,7 +2242,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.NotNull(function);
                 Assert.Equal("myModel.function", function.FullName);
                 Assert.Same(tvfReturnTypes.Values.Single().GetCollectionType(), function.ReturnParameter.TypeUsage.EdmType);
-                Assert.False(function.MetadataProperties.Any(p => p.Name == "EdmSchemaErrors"));
+                Assert.DoesNotContain(function.MetadataProperties, p => p.Name == "EdmSchemaErrors");
             }
 
             [Fact]
@@ -2266,7 +2258,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                     CreateStoreModelBuilder()
                         .CreateFunction(functionDetailsRows, new Dictionary<string, RowType>());
 
-                Assert.True(function.MetadataProperties.Any(p => p.Name == "EdmSchemaErrors"));
+                Assert.Contains(function.MetadataProperties, p => p.Name == "EdmSchemaErrors");
             }
 
             [Fact]
@@ -2289,7 +2281,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.Null(function.StoreFunctionNameAttribute);
                 Assert.Single(function.Parameters);
                 Assert.Null(function.ReturnParameter);
-                Assert.False(function.MetadataProperties.Any(p => p.Name == "EdmSchemaErrors"));
+                Assert.DoesNotContain(function.MetadataProperties, p => p.Name == "EdmSchemaErrors");
             }
 
             [Fact]
@@ -2311,7 +2303,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.Null(function.StoreFunctionNameAttribute);
                 Assert.Empty(function.Parameters);
                 Assert.Null(function.ReturnParameter);
-                Assert.False(function.MetadataProperties.Any(p => p.Name == "EdmSchemaErrors"));
+                Assert.DoesNotContain(function.MetadataProperties, p => p.Name == "EdmSchemaErrors");
             }
 
             [Fact]
