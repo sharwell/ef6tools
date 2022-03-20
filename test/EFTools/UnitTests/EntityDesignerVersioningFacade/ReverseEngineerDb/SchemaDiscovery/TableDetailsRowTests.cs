@@ -384,7 +384,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb.Schema
         {
             var row = new TableDetailsCollection().NewRow();
             row["IsIdentity"] = true;
-            Assert.Equal(true, ((TableDetailsRow)row).IsIdentity);
+            Assert.True(((TableDetailsRow)row).IsIdentity);
         }
 
         [Fact]
@@ -423,7 +423,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb.Schema
         {
             var row = new TableDetailsCollection().NewRow();
             row["IsServerGenerated"] = true;
-            Assert.Equal(true, ((TableDetailsRow)row).IsServerGenerated);
+            Assert.True(((TableDetailsRow)row).IsServerGenerated);
         }
 
         [Fact]
@@ -462,7 +462,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb.Schema
         {
             var row = new TableDetailsCollection().NewRow();
             row["IsPrimaryKey"] = true;
-            Assert.Equal(true, ((TableDetailsRow)row).IsPrimaryKey);
+            Assert.True(((TableDetailsRow)row).IsPrimaryKey);
         }
 
         [Fact]

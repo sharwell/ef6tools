@@ -441,7 +441,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb.Schema
         {
             var row = new RelationshipDetailsCollection().NewRow();
             row["IsCascadeDelete"] = true;
-            Assert.Equal(true, ((RelationshipDetailsRow)row).RelationshipIsCascadeDelete);
+            Assert.True(((RelationshipDetailsRow)row).RelationshipIsCascadeDelete);
         }
 
         [Fact]
