@@ -108,13 +108,14 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
             var mockResolver = SetupMockResolver(mockProviderServices);
 
-            Assert.True(
+            Assert.StartsWith(
+                "Schema specified is not valid. Errors",
                 Assert.Throws<ProviderIncompatibleException>(
                     () => new StoreSchemaConnectionFactory().Create(
                         mockResolver.Object,
                         "System.Data.SqlClient",
                         "Server=test",
-                        EntityFrameworkVersion.Version3)).Message.StartsWith("Schema specified is not valid. Errors"));
+                        EntityFrameworkVersion.Version3)).Message);
         }
 
         [Fact]
@@ -141,13 +142,14 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
             var mockResolver = SetupMockResolver(mockProviderServices);
 
-            Assert.True(
+            Assert.StartsWith(
+                "Schema specified is not valid. Errors",
                 Assert.Throws<ProviderIncompatibleException>(
                     () => new StoreSchemaConnectionFactory().Create(
                         mockResolver.Object,
                         "System.Data.SqlClient",
                         "Server=test",
-                        EntityFrameworkVersion.Version3)).Message.StartsWith("Schema specified is not valid. Errors"));
+                        EntityFrameworkVersion.Version3)).Message);
         }
 
         private static Mock<DbProviderServices> SetupMockProviderServices()

@@ -110,9 +110,7 @@ namespace Microsoft.Data.Entity.Design.DatabaseGeneration
                 () => EdmExtension.CreateAndValidateEdmItemCollection(string.Empty, new Version(0, 0)));
 
             Assert.Equal("targetFrameworkVersion", exception.ParamName);
-            Assert.True(
-                exception.Message.StartsWith(
-                    string.Format(CultureInfo.CurrentCulture, Resources.ErrorNonValidTargetVersion, "0.0")));
+            Assert.StartsWith(string.Format(CultureInfo.CurrentCulture, Resources.ErrorNonValidTargetVersion, "0.0"), exception.Message);
         }
 
         [Fact]
@@ -128,7 +126,7 @@ namespace Microsoft.Data.Entity.Design.DatabaseGeneration
             var exception = Assert.Throws<InvalidOperationException>(
                 () => EdmExtension.CreateAndValidateEdmItemCollection(invalidCsdl.ToString(), new Version(3, 0, 0, 0)));
 
-            Assert.True(exception.Message.StartsWith(Resources.ErrorCsdlNotValid.Replace("{0}", string.Empty)));
+            Assert.StartsWith(Resources.ErrorCsdlNotValid.Replace("{0}", string.Empty), exception.Message);
             var errorMessages = exception.Message.Split('\n');
             Assert.Equal(3, errorMessages.Length);
             Assert.Contains("PropertyRef", errorMessages[0]);
@@ -164,7 +162,7 @@ namespace Microsoft.Data.Entity.Design.DatabaseGeneration
             var exception = Assert.Throws<InvalidOperationException>(
                 () => EdmExtension.CreateAndValidateEdmItemCollection(invalidCsdl.ToString(), new Version(2, 0, 0, 0)));
 
-            Assert.True(exception.Message.StartsWith(Resources.ErrorCsdlNotValid.Replace("{0}", string.Empty)));
+            Assert.StartsWith(Resources.ErrorCsdlNotValid.Replace("{0}", string.Empty), exception.Message);
             var errorMessages = exception.Message.Split('\n');
             Assert.Equal(3, errorMessages.Length);
             Assert.Contains("PropertyRef", errorMessages[0]);
@@ -223,9 +221,7 @@ namespace Microsoft.Data.Entity.Design.DatabaseGeneration
                     out schemaErrors));
 
             Assert.Equal("targetFrameworkVersion", exception.ParamName);
-            Assert.True(
-                exception.Message.StartsWith(
-                    string.Format(CultureInfo.CurrentCulture, Resources.ErrorNonValidTargetVersion, "0.0")));
+            Assert.StartsWith(string.Format(CultureInfo.CurrentCulture, Resources.ErrorNonValidTargetVersion, "0.0"), exception.Message);
         }
 
         [Fact]
@@ -287,9 +283,7 @@ namespace Microsoft.Data.Entity.Design.DatabaseGeneration
                 () => EdmExtension.CreateAndValidateStoreItemCollection(string.Empty, new Version(0, 0), null, true));
 
             Assert.Equal("targetFrameworkVersion", exception.ParamName);
-            Assert.True(
-                exception.Message.StartsWith(
-                    string.Format(CultureInfo.CurrentCulture, Resources.ErrorNonValidTargetVersion, "0.0")));
+            Assert.StartsWith(string.Format(CultureInfo.CurrentCulture, Resources.ErrorNonValidTargetVersion, "0.0"), exception.Message);
         }
 
         [Fact]
@@ -308,7 +302,7 @@ namespace Microsoft.Data.Entity.Design.DatabaseGeneration
                     resolver,
                     catchThrowNamingConflicts: false));
 
-            Assert.True(exception.Message.StartsWith(Resources.ErrorNonValidSsdl.Replace("{0}", string.Empty)));
+            Assert.StartsWith(Resources.ErrorNonValidSsdl.Replace("{0}", string.Empty), exception.Message);
             var exceptionData = (IList<EdmSchemaError>)exception.Data["ssdlErrors"];
             Assert.Equal(3, exceptionData.Count);
             Assert.True(exceptionData.All(e => exception.Message.Contains(e.Message)));
