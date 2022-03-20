@@ -256,7 +256,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
             Assert.Empty(mappingContext.ConceptualAssociationSets());
 
             mappingContext.AddMapping(collapsibleAssociationSet, associationSet);
-            Assert.Equal(1, mappingContext.ConceptualAssociationSets().Count());
+            Assert.Single(mappingContext.ConceptualAssociationSets());
             Assert.Same(associationSet, mappingContext.ConceptualAssociationSets().Single());
         }
 

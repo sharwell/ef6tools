@@ -207,7 +207,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
             var conceptualModelsElements =
                 edmx.Descendants(EdmxV3Namespace + "ConceptualModels").Single();
 
-            Assert.Equal(1, conceptualModelsElements.Elements().Count());
+            Assert.Single(conceptualModelsElements.Elements());
             Assert.Equal(
                 XName.Get("Schema", SchemaManager.GetCSDLNamespaceName(EntityFrameworkVersion.Version3)),
                 conceptualModelsElements.Elements().Single().Name);
@@ -235,7 +235,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
             var conceptualModelsElements =
                 edmx.Descendants(EdmxV3Namespace + "ConceptualModels").Single();
 
-            Assert.Equal(1, conceptualModelsElements.Elements().Count());
+            Assert.Single(conceptualModelsElements.Elements());
             Assert.Equal(
                 XNamespace.None + "dummy",
                 conceptualModelsElements.Elements().Single().Name);
@@ -255,7 +255,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
             var storageModelsElements =
                 edmx.Descendants(EdmxV3Namespace + "StorageModels").Single();
 
-            Assert.Equal(1, storageModelsElements.Elements().Count());
+            Assert.Single(storageModelsElements.Elements());
             Assert.Equal(
                 XName.Get("Schema", SchemaManager.GetSSDLNamespaceName(EntityFrameworkVersion.Version3)),
                 storageModelsElements.Elements().Single().Name);
@@ -306,7 +306,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
             var storageModelsElements =
                 edmx.Descendants(EdmxV3Namespace + "Mappings").Single();
 
-            Assert.Equal(1, storageModelsElements.Elements().Count());
+            Assert.Single(storageModelsElements.Elements());
             Assert.Equal(
                 XName.Get("Mapping", SchemaManager.GetMSLNamespaceName(EntityFrameworkVersion.Version3)),
                 storageModelsElements.Elements().Single().Name);

@@ -51,7 +51,7 @@ namespace Microsoft.Data.Entity.Design.CodeGeneration
 
             var files = generator.Generate(null, "WebApplication1.Models", "MyContext", "MyContextConnString").ToArray();
 
-            Assert.Equal(1, files.Length);
+            Assert.Single(files);
             Assert.Equal("MyContext.cs", files[0].Key);
             Assert.Contains(Resources.CodeFirstCodeFile_DbSetComment_CS, files[0].Value);
         }
@@ -74,7 +74,7 @@ namespace Microsoft.Data.Entity.Design.CodeGeneration
 
             var files = generator.Generate(null, "WebApplication1.Models", "MyContext", "MyContextConnString").ToArray();
 
-            Assert.Equal(1, files.Length);
+            Assert.Single(files);
             Assert.Equal("MyContext.vb", files[0].Key);
             Assert.Contains(Resources.CodeFirstCodeFile_DbSetComment_VB, files[0].Value);
         }

@@ -200,7 +200,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
             var schemaErrors = ModelGenerator.CollectStoreModelErrors(model);
 
             Assert.NotNull(schemaErrors);
-            Assert.Equal(1, schemaErrors.Count);
+            Assert.Single(schemaErrors);
             Assert.Same(edmSchemaError, schemaErrors.Single());
         }
 
@@ -241,7 +241,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
             var schemaErrors = ModelGenerator.CollectStoreModelErrors(model);
 
             Assert.NotNull(schemaErrors);
-            Assert.Equal(1, schemaErrors.Count);
+            Assert.Single(schemaErrors);
             Assert.Same(edmSchemaError, schemaErrors.Single());
         }
 

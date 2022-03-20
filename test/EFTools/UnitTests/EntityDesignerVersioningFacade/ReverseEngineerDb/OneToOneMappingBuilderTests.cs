@@ -544,7 +544,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                     OneToOneMappingBuilder.CreateFunctionImportParameters(mappingContext, storeFunction);
 
                 Assert.Null(functionImportParameters);
-                Assert.Equal(1, mappingContext.Errors.Count);
+                Assert.Single(mappingContext.Errors);
                 Assert.Equal(
                     String.Format(
                         CultureInfo.InvariantCulture,
@@ -566,7 +566,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var mappingContext = new SimpleMappingContext(new EdmModel(DataSpace.SSpace), true);
                 Assert.Null(OneToOneMappingBuilder.GetStoreTvfReturnType(mappingContext, storeFunction));
 
-                Assert.Equal(1, mappingContext.Errors.Count);
+                Assert.Single(mappingContext.Errors);
                 Assert.Equal(
                     (int)ModelBuilderErrorCode.UnableToGenerateFunctionImportReturnType,
                     mappingContext.Errors.Single().ErrorCode);
@@ -591,7 +591,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 var mappingContext = new SimpleMappingContext(new EdmModel(DataSpace.SSpace), true);
                 Assert.Null(OneToOneMappingBuilder.GetStoreTvfReturnType(mappingContext, storeFunction));
-                Assert.Equal(1, mappingContext.Errors.Count);
+                Assert.Single(mappingContext.Errors);
                 Assert.Equal(
                     (int)ModelBuilderErrorCode.UnableToGenerateFunctionImportReturnType,
                     mappingContext.Errors.Single().ErrorCode);
@@ -616,7 +616,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 var mappingContext = new SimpleMappingContext(new EdmModel(DataSpace.SSpace), true);
                 Assert.Null(OneToOneMappingBuilder.GetStoreTvfReturnType(mappingContext, storeFunction));
-                Assert.Equal(1, mappingContext.Errors.Count);
+                Assert.Single(mappingContext.Errors);
                 Assert.Equal(
                     (int)ModelBuilderErrorCode.UnableToGenerateFunctionImportReturnType,
                     mappingContext.Errors.Single().ErrorCode);
@@ -727,7 +727,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                             mappingContext, storeFunction, new UniqueIdentifierService(),
                             new UniqueIdentifierService()));
 
-                Assert.Equal(1, mappingContext.Errors.Count);
+                Assert.Single(mappingContext.Errors);
                 Assert.Equal(
                     String.Format(
                         CultureInfo.InvariantCulture,
@@ -772,7 +772,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                             new UniqueIdentifierService());
 
                 Assert.Null(functionImport);
-                Assert.Equal(1, mappingContext.Errors.Count);
+                Assert.Single(mappingContext.Errors);
                 Assert.Equal(
                     (int)ModelBuilderErrorCode.UnableToGenerateFunctionImportParameterName,
                     mappingContext.Errors.Single().ErrorCode);
@@ -1105,7 +1105,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                             new UniqueIdentifierService(),
                             new UniqueIdentifierService()));
 
-                Assert.Equal(1, mappingContext.Errors.Count);
+                Assert.Single(mappingContext.Errors);
                 Assert.Empty(mappingContext.MappedStoreFunctions());
             }
         }
@@ -1218,8 +1218,8 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                     storeModel.Containers.Single().BaseEntitySets,
                     out associationSetsFromNonCollapsibleItems);
 
-                Assert.Equal(1, collapsibleItems.Count());
-                Assert.Equal(0, associationSetsFromNonCollapsibleItems.Count());
+                Assert.Single(collapsibleItems);
+                Assert.Empty(associationSetsFromNonCollapsibleItems);
 
                 var item = collapsibleItems.FirstOrDefault();
                 Assert.Equal("C", item.EntitySet.Name);
@@ -1258,7 +1258,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                     storeModel.Containers.Single().BaseEntitySets,
                     out associationSetsFromNonCollapsibleItems);
 
-                Assert.Equal(0, collapsibleItems.Count());
+                Assert.Empty(collapsibleItems);
                 Assert.Equal(2, associationSetsFromNonCollapsibleItems.Count());
                 Assert.Equal("R1", associationSetsFromNonCollapsibleItems.ElementAtOrDefault(0).Name);
                 Assert.Equal("R2", associationSetsFromNonCollapsibleItems.ElementAtOrDefault(1).Name);
@@ -1298,7 +1298,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                     storeModel.Containers.Single().BaseEntitySets,
                     out associationSetsFromNonCollapsibleItems);
 
-                Assert.Equal(0, collapsibleItems.Count());
+                Assert.Empty(collapsibleItems);
                 Assert.Equal(2, associationSetsFromNonCollapsibleItems.Count());
                 Assert.Equal("R1", associationSetsFromNonCollapsibleItems.ElementAtOrDefault(0).Name);
                 Assert.Equal("R2", associationSetsFromNonCollapsibleItems.ElementAtOrDefault(1).Name);
@@ -1336,7 +1336,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                     storeModel.Containers.Single().BaseEntitySets,
                     out associationSetsFromNonCollapsibleItems);
 
-                Assert.Equal(0, collapsibleItems.Count());
+                Assert.Empty(collapsibleItems);
                 Assert.Equal(2, associationSetsFromNonCollapsibleItems.Count());
                 Assert.Equal("R1", associationSetsFromNonCollapsibleItems.ElementAtOrDefault(0).Name);
                 Assert.Equal("R2", associationSetsFromNonCollapsibleItems.ElementAtOrDefault(1).Name);
@@ -1396,7 +1396,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                     storeModel.Containers.Single().BaseEntitySets,
                     out associationSetsFromNonCollapsibleItems);
 
-                Assert.Equal(0, collapsibleItems.Count());
+                Assert.Empty(collapsibleItems);
                 Assert.Equal(2, associationSetsFromNonCollapsibleItems.Count());
                 Assert.Equal("R1", associationSetsFromNonCollapsibleItems.ElementAtOrDefault(0).Name);
                 Assert.Equal("R2", associationSetsFromNonCollapsibleItems.ElementAtOrDefault(1).Name);
@@ -1423,8 +1423,8 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 var mappingContext = CreateOneToOneMappingBuilder().Build(storeModel);
 
-                Assert.Equal(1, mappingContext.StoreAssociationTypes().Count());
-                Assert.Equal(1, mappingContext.StoreAssociationSets().Count());
+                Assert.Single(mappingContext.StoreAssociationTypes());
+                Assert.Single(mappingContext.StoreAssociationSets());
                 Assert.Equal(2, mappingContext.StoreAssociationEndMembers().Count());
                 Assert.Equal(2, mappingContext.StoreAssociationSetEnds().Count());
 
@@ -1473,8 +1473,8 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 var mappingContext = CreateOneToOneMappingBuilder().Build(storeModel);
 
-                Assert.Equal(0, mappingContext.StoreAssociationTypes().Count());
-                Assert.Equal(0, mappingContext.StoreAssociationSets().Count());
+                Assert.Empty(mappingContext.StoreAssociationTypes());
+                Assert.Empty(mappingContext.StoreAssociationSets());
                 Assert.Equal(2, mappingContext.StoreAssociationEndMembers().Count());
                 Assert.Equal(2, mappingContext.StoreAssociationSetEnds().Count());
 
@@ -1490,7 +1490,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 // the mapping for the collapsed entity set should be replaced with a mapping to a conceptual association set
                 Assert.True(mappingContext.ConceptualEntitySets().All(e => e.Name != "C"));
-                Assert.Equal(1, mappingContext.ConceptualAssociationSets().Count());
+                Assert.Single(mappingContext.ConceptualAssociationSets());
 
                 Assert.Equal(new[] { "Id", "Col1" }, mappingContext.StoreForeignKeyProperties.Select(p => p.Name));
             }
@@ -1516,8 +1516,8 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 var mappingContext = CreateOneToOneMappingBuilder().Build(storeModel);
 
-                Assert.Equal(1, mappingContext.ConceptualAssociationTypes().Count());
-                Assert.Equal(1, mappingContext.ConceptualAssociationSets().Count());
+                Assert.Single(mappingContext.ConceptualAssociationTypes());
+                Assert.Single(mappingContext.ConceptualAssociationSets());
                 Assert.Equal(2, mappingContext.ConceptualAssociationEndMembers().Count());
                 Assert.Equal(2, mappingContext.ConceptualAssociationSetEnds().Count());
 
@@ -1530,7 +1530,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 Assert.Equal("R1", associationType.Name);
                 Assert.True(associationType.IsForeignKey);
-                Assert.Equal(1, associationType.ReferentialConstraints.Count);
+                Assert.Single(associationType.ReferentialConstraints);
                 Assert.Equal(2, associationType.AssociationEndMembers.Count);
 
                 var constraint = associationType.ReferentialConstraints[0];
@@ -1587,15 +1587,15 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 var mappingContext = CreateOneToOneMappingBuilder().Build(storeModel);
 
-                Assert.Equal(1, mappingContext.ConceptualContainers().Count());
-                Assert.Equal(0, mappingContext.ConceptualAssociationTypes().Count());
-                Assert.Equal(0, mappingContext.ConceptualAssociationTypes().Count());
-                Assert.Equal(1, mappingContext.ConceptualAssociationSets().Count());
+                Assert.Single(mappingContext.ConceptualContainers());
+                Assert.Empty(mappingContext.ConceptualAssociationTypes());
+                Assert.Empty(mappingContext.ConceptualAssociationTypes());
+                Assert.Single(mappingContext.ConceptualAssociationSets());
                 Assert.Equal(2, mappingContext.ConceptualAssociationEndMembers().Count());
                 Assert.Equal(2, mappingContext.ConceptualAssociationSetEnds().Count());
 
                 var container = mappingContext.ConceptualContainers().ElementAt(0);
-                Assert.Equal(1, container.AssociationSets.Count());
+                Assert.Single(container.AssociationSets);
 
                 var associationSet = container.AssociationSets.ElementAt(0);
                 var associationType = associationSet.ElementType;
@@ -1606,7 +1606,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 Assert.Equal("C", associationType.Name);
                 Assert.False(associationType.IsForeignKey);
-                Assert.Equal(0, associationType.ReferentialConstraints.Count);
+                Assert.Empty(associationType.ReferentialConstraints);
                 Assert.Equal(2, associationType.AssociationEndMembers.Count);
 
                 Assert.Equal("A", associationEndMember0.Name);
@@ -1663,12 +1663,12 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 var mappingContext = CreateOneToOneMappingBuilder().Build(storeModel);
 
-                Assert.Equal(1, mappingContext.ConceptualAssociationTypes().Count());
+                Assert.Single(mappingContext.ConceptualAssociationTypes());
 
                 var associationType = mappingContext.ConceptualAssociationTypes().ElementAt(0);
 
                 Assert.False(associationType.IsForeignKey);
-                Assert.Equal(1, associationType.ReferentialConstraints.Count);
+                Assert.Single(associationType.ReferentialConstraints);
 
                 Assert.Equal(
                     new[] { mappingContext.StoreAssociationTypes().Single().ReferentialConstraints[0].ToProperties[0] },
@@ -1699,12 +1699,12 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 var mappingContext = CreateOneToOneMappingBuilder(generateForeignKeyProperties: false).Build(storeModel);
 
-                Assert.Equal(1, mappingContext.ConceptualAssociationTypes().Count());
+                Assert.Single(mappingContext.ConceptualAssociationTypes());
 
                 var associationType = mappingContext.ConceptualAssociationTypes().ElementAt(0);
 
                 Assert.False(associationType.IsForeignKey);
-                Assert.Equal(0, associationType.ReferentialConstraints.Count);
+                Assert.Empty(associationType.ReferentialConstraints);
 
                 Assert.Equal(
                     new[] { mappingContext.StoreAssociationTypes().Single().ReferentialConstraints[0].ToProperties[0] },

@@ -119,7 +119,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.Metadata
             Assert.Equal(2, edmModel.EntityTypes.Count());
             Assert.NotNull(edmModel.EntityTypes.SingleOrDefault(e => e.Name == "Customers"));
             Assert.NotNull(edmModel.EntityTypes.SingleOrDefault(e => e.Name == "Orders"));
-            Assert.Equal(1, edmModel.AssociationTypes.Count());
+            Assert.Single(edmModel.AssociationTypes);
             Assert.NotNull(edmModel.AssociationTypes.SingleOrDefault(a => a.Name == "FK_Orders_Customers"));
         }
 

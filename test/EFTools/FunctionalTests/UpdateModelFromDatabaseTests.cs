@@ -47,7 +47,7 @@ namespace EFDesigner.FunctionalTests
                 // One command for stored procedure expected
                 Assert.Equal(1, cp.CommandCount);
                 // No integrity checks expected - facet propagation should be disabled for non SqlServer databases
-                Assert.Equal(0, cp.CommandProcessorContext.IntegrityChecks.Count);
+                Assert.Empty(cp.CommandProcessorContext.IntegrityChecks);
             }
         }
 
@@ -68,7 +68,7 @@ namespace EFDesigner.FunctionalTests
                     cp = ModelObjectItemWizard.PrepareCommandsAndIntegrityChecks(settings, artifact.GetEditingContext(), artifact);
                     Assert.NotNull(cp);
                     // Facet propagation should be enabled SqlServer databases
-                    Assert.Equal(1, cp.CommandProcessorContext.IntegrityChecks.Count);
+                    Assert.Single(cp.CommandProcessorContext.IntegrityChecks);
                 }
                 finally
                 {

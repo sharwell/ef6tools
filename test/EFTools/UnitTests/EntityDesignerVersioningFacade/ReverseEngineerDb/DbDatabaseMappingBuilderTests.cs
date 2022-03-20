@@ -41,7 +41,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
             var entityContainerMapping = dbMapping.EntityContainerMappings.Single();
             Assert.Same(storeContainer, entityContainerMapping.StorageEntityContainer);
             Assert.Same(modelContainer, entityContainerMapping.EdmEntityContainer);
-            Assert.Equal(1, entityContainerMapping.EntitySetMappings.Count());
+            Assert.Single(entityContainerMapping.EntitySetMappings);
 
             Assert.NotNull(dbMapping.Model);
             Assert.Same(modelContainer, dbMapping.Model.Containers.Single());
@@ -208,7 +208,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 DbDatabaseMappingBuilder.BuildEntitySetMappings(storageContainerMapping, mappingContext).Single();
 
             Assert.Same(modelEntitySet, entitySetMapping.EntitySet);
-            Assert.Equal(1, entitySetMapping.EntityTypeMappings.Count());
+            Assert.Single(entitySetMapping.EntityTypeMappings);
         }
 
         [Fact]
@@ -250,10 +250,10 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                     .BuildEntityTypeMapping(storageEntitySetMapping, mappingContext, storeEntitySet);
 
             Assert.Same(modelEntityType, typeMapping.EntityType);
-            Assert.Equal(1, typeMapping.MappingFragments.Count);
+            Assert.Single(typeMapping.MappingFragments);
             var mappingFragment = typeMapping.MappingFragments.Single();
             Assert.Equal(storeEntityType, mappingFragment.Table);
-            Assert.Equal(1, mappingFragment.ColumnMappings.Count());
+            Assert.Single(mappingFragment.ColumnMappings);
         }
 
         [Fact]
@@ -268,22 +268,22 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
             var associationSetMappings =
                 DbDatabaseMappingBuilder.BuildAssociationSetMappings(entityContainerMapping, mappingContext);
 
-            Assert.Equal(1, associationSetMappings.Count());
+            Assert.Single(associationSetMappings);
 
             var setMapping = associationSetMappings.First();
 
             Assert.Equal("modelAS", setMapping.Set.Name);
             Assert.Equal("storeET2", setMapping.Table.Name);
-            Assert.Equal(1, setMapping.TypeMappings.Count());
-            Assert.Equal(1, setMapping.TypeMappings.ElementAt(0).Types.Count);
+            Assert.Single(setMapping.TypeMappings);
+            Assert.Single(setMapping.TypeMappings.ElementAt(0).Types);
             Assert.Equal("modelAT", setMapping.TypeMappings.ElementAt(0).Types[0].Name);
             Assert.Equal("modelEM1", setMapping.SourceEndMapping.AssociationEnd.Name);
             Assert.Equal("modelEM2", setMapping.TargetEndMapping.AssociationEnd.Name);
-            Assert.Equal(1, setMapping.SourceEndMapping.PropertyMappings.Count);
-            Assert.Equal(1, setMapping.TargetEndMapping.PropertyMappings.Count);
+            Assert.Single(setMapping.SourceEndMapping.PropertyMappings);
+            Assert.Single(setMapping.TargetEndMapping.PropertyMappings);
             Assert.Equal("modelSourceId", setMapping.SourceEndMapping.PropertyMappings[0].Property.Name);
             Assert.Equal("modelTargetId", setMapping.TargetEndMapping.PropertyMappings[0].Property.Name);
-            Assert.Equal(1, setMapping.Conditions.Count());
+            Assert.Single(setMapping.Conditions);
             Assert.Equal("storeTargetId", setMapping.Conditions.First().Column.Name);
             Assert.Equal(false, setMapping.Conditions.First().IsNull);
         }
@@ -482,7 +482,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
             var associationSetMappings =
                 DbDatabaseMappingBuilder.BuildAssociationSetMappings(entityContainerMapping, mappingContext);
 
-            Assert.Equal(0, associationSetMappings.Count());
+            Assert.Empty(associationSetMappings);
         }
 
         private static SimpleMappingContext CreateSimpleMappingContext(bool isForeignKey)

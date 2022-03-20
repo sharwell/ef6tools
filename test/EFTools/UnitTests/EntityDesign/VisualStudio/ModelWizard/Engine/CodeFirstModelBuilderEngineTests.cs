@@ -28,7 +28,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
             new CodeFirstModelBuilderEngineInvoker()
                 .InvokeProcessModel(model, null, null, null, errors);
 
-            Assert.Equal(1, errors.Count);
+            Assert.Single(errors);
 
             Assert.Contains(
                 string.Format(Strings.EdmModel_Validator_Semantic_KeyMissingOnEntityType("E")), 
@@ -47,7 +47,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
             new CodeFirstModelBuilderEngineInvoker()
                 .InvokeProcessModel(model, null, null, null, errors);
 
-            Assert.Equal(1, errors.Count);
+            Assert.Single(errors);
 
             Assert.Contains(
                 string.Format(Strings.EdmModel_Validator_Semantic_KeyMissingOnEntityType("E")),

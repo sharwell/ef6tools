@@ -189,7 +189,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                             errors);
 
                 Assert.Null(property);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
                 Assert.Equal(
                     string.Format(
                         CultureInfo.InvariantCulture,
@@ -211,7 +211,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                             errors);
 
                 Assert.Null(property);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
                 Assert.Equal(
                     string.Format(
                         CultureInfo.InvariantCulture,
@@ -237,7 +237,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                             errors);
 
                     Assert.Null(property);
-                    Assert.Equal(1, errors.Count);
+                    Assert.Single(errors);
                     Assert.Equal(
                         string.Format(
                             CultureInfo.InvariantCulture,
@@ -339,7 +339,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                                 errors);
 
                     Assert.Null(property);
-                    Assert.Equal(1, errors.Count);
+                    Assert.Single(errors);
                     Assert.Equal(
                         string.Format(
                             CultureInfo.InvariantCulture,
@@ -372,7 +372,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                                 errors);
 
                     Assert.Null(property);
-                    Assert.Equal(1, errors.Count);
+                    Assert.Single(errors);
                     Assert.Equal(
                         string.Format(
                             CultureInfo.InvariantCulture,
@@ -439,7 +439,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                                 errors);
 
                     Assert.Null(property);
-                    Assert.Equal(1, errors.Count);
+                    Assert.Single(errors);
                     Assert.Equal(
                         string.Format(
                             CultureInfo.InvariantCulture,
@@ -507,7 +507,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                                 errors);
 
                     Assert.Null(property);
-                    Assert.Equal(1, errors.Count);
+                    Assert.Single(errors);
                     Assert.Equal(
                         string.Format(
                             CultureInfo.InvariantCulture,
@@ -572,7 +572,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                                 errors);
 
                     Assert.Null(property);
-                    Assert.Equal(1, errors.Count);
+                    Assert.Single(errors);
                     Assert.Equal(
                         string.Format(
                             CultureInfo.InvariantCulture,
@@ -673,7 +673,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                                 errors);
 
                     Assert.Null(property);
-                    Assert.Equal(1, errors.Count);
+                    Assert.Single(errors);
                     Assert.Equal(
                         string.Format(
                             CultureInfo.InvariantCulture,
@@ -781,7 +781,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
             Assert.Equal(2, keyColumns.Count);
             Assert.Equal("IntColumn", keyColumns[0]);
             Assert.Equal("GeographyKey", keyColumns[1]);
-            Assert.Equal(1, invalidKeyTypeColumns.Count);
+            Assert.Single(invalidKeyTypeColumns);
             Assert.Equal("GeographyKey", invalidKeyTypeColumns[0]);
         }
 
@@ -807,10 +807,10 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
             Assert.Equal("2008", storeModel.ProviderInfo.ProviderManifestToken);
             Assert.Equal("myModelContainer", storeModel.Containers.Single().Name);
             Assert.Equal(2, storeModel.Containers.Single().EntitySets.Count);
-            Assert.Equal(1, storeModel.Containers.Single().AssociationSets.Count);
+            Assert.Single(storeModel.Containers.Single().AssociationSets);
             Assert.Equal(2, storeModel.EntityTypes.Count());
-            Assert.Equal(1, storeModel.AssociationTypes.Count());
-            Assert.Equal(1, storeModel.Functions.Count());
+            Assert.Single(storeModel.AssociationTypes);
+            Assert.Single(storeModel.Functions);
 
             var returnParameter = storeModel.Functions.Single().ReturnParameter;
             Assert.IsType<CollectionType>(returnParameter.TypeUsage.EdmType);
@@ -1539,7 +1539,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 CreateStoreModelBuilder()
                     .CreateEntitySets(inputTableDetailsRows, entityRegister, entitySetsForReadOnlyEntities, DbObjectType.Table);
 
-                Assert.Equal(1, entitySets.Count);
+                Assert.Single(entitySets);
                 Assert.Equal("dbo", entitySets[0].Schema);
                 Assert.Empty(entitySetsForReadOnlyEntities);
             }
@@ -1561,7 +1561,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 CreateStoreModelBuilder()
                     .CreateEntitySets(inputTableDetailsRows, entityRegister, entitySetsForReadOnlyEntities, DbObjectType.Table);
 
-                Assert.Equal(1, entitySets.Count);
+                Assert.Single(entitySets);
                 Assert.Null(entitySets[0].Schema);
                 Assert.Empty(entitySetsForReadOnlyEntities);
             }
@@ -1610,7 +1610,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                     .CreateEntitySets(inputTableDetailsRows, entityRegister, entitySetsForReadOnlyEntities, DbObjectType.Table);
 
                 Assert.Empty(entitySets);
-                Assert.Equal(1, entityTypes.Count);
+                Assert.Single(entityTypes);
                 Assert.Empty(entitySetsForReadOnlyEntities);
             }
 
@@ -1702,7 +1702,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var rowTypes = CreateStoreModelBuilder().CreateTvfReturnTypes(columns);
 
                 Assert.NotNull(rowTypes);
-                Assert.Equal(1, rowTypes.Count);
+                Assert.Single(rowTypes);
                 Assert.Equal(new[] { "Id", "Name" }, rowTypes.Single().Value.Properties.Select(p => p.Name));
                 Assert.False(rowTypes.Single().Value.MetadataProperties.Any(p => p.Name == "EdmSchemaErrors"));
             }
@@ -1737,7 +1737,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var rowTypes = CreateStoreModelBuilder().CreateTvfReturnTypes(columns);
 
                 Assert.NotNull(rowTypes);
-                Assert.Equal(1, rowTypes.Count);
+                Assert.Single(rowTypes);
                 Assert.True(rowTypes.Single().Value.MetadataProperties.Any(p => p.Name == "EdmSchemaErrors"));
             }
         }
@@ -1768,7 +1768,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                         1, errors);
 
                 Assert.Null(type);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
                 var error = errors.Single();
 
                 Assert.Equal(EdmSchemaErrorSeverity.Warning, error.Severity);
@@ -1792,7 +1792,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                         1, errors);
 
                 Assert.Null(type);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
                 var error = errors.Single();
 
                 Assert.Equal(EdmSchemaErrorSeverity.Warning, error.Severity);
@@ -1816,7 +1816,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                         1, errors);
 
                 Assert.Null(type);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
                 var error = errors.Single();
 
                 Assert.Equal(EdmSchemaErrorSeverity.Warning, error.Severity);
@@ -1841,7 +1841,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                         1, errors);
 
                 Assert.Null(parameter);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
                 var error = errors.Single();
 
                 Assert.Equal(EdmSchemaErrorSeverity.Warning, error.Severity);
@@ -1867,7 +1867,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                         1, errors);
 
                 Assert.Null(parameter);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
                 var error = errors.Single();
 
                 Assert.Equal(EdmSchemaErrorSeverity.Warning, error.Severity);
@@ -2017,7 +2017,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.Equal(2, parameters.Length);
                 Assert.False(parameters.Any(p => p == null));
 
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
                 var error = errors.Single();
                 Assert.Equal(EdmSchemaErrorSeverity.Warning, error.Severity);
                 Assert.Equal((int)ModelBuilderErrorCode.UnsupportedType, error.ErrorCode);
@@ -2058,7 +2058,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                         errors);
 
                 Assert.Null(parameter);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
 
                 var error = errors.Single();
                 Assert.Equal(EdmSchemaErrorSeverity.Warning, error.Severity);
@@ -2083,7 +2083,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                         errors);
 
                 Assert.Null(parameter);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
 
                 var error = errors.Single();
                 Assert.Equal(EdmSchemaErrorSeverity.Warning, error.Severity);
@@ -2108,7 +2108,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                         errors);
 
                 Assert.Null(parameter);
-                Assert.Equal(0, errors.Count);
+                Assert.Empty(errors);
             }
 
             [Fact]
@@ -2164,7 +2164,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
 
                 Assert.Null(parameter);
 
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
                 Assert.Equal(
                     string.Format(
                         CultureInfo.InvariantCulture,
@@ -2287,7 +2287,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.NotNull(function);
                 Assert.Equal("myModel.function", function.FullName);
                 Assert.Null(function.StoreFunctionNameAttribute);
-                Assert.Equal(1, function.Parameters.Count);
+                Assert.Single(function.Parameters);
                 Assert.Null(function.ReturnParameter);
                 Assert.False(function.MetadataProperties.Any(p => p.Name == "EdmSchemaErrors"));
             }
@@ -2309,7 +2309,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 Assert.NotNull(function);
                 Assert.Equal("myModel.function", function.FullName);
                 Assert.Null(function.StoreFunctionNameAttribute);
-                Assert.Equal(0, function.Parameters.Count);
+                Assert.Empty(function.Parameters);
                 Assert.Null(function.ReturnParameter);
                 Assert.False(function.MetadataProperties.Any(p => p.Name == "EdmSchemaErrors"));
             }
@@ -2436,7 +2436,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var associationSets = storeModelBuilder.CreateAssociationSets(relationshipDetails, entityRegister, associationTypes);
 
                 Assert.Equal(2, associationTypes.Count);
-                Assert.Equal(1, associationSets.Count);
+                Assert.Single(associationSets);
 
                 var associationType1 = associationTypes[0];
                 var associationType2 = associationTypes[1];
@@ -2453,7 +2453,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var errors = metaProperty.Value as List<EdmSchemaError>;
 
                 Assert.NotNull(errors);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
 
                 var error = errors[0];
 
@@ -2486,7 +2486,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var associationTypes = new List<AssociationType>();
                 var associationSet = storeModelBuilder.TryCreateAssociationSet(relationshipDetails, entityRegister, associationTypes);
 
-                Assert.Equal(1, associationTypes.Count);
+                Assert.Single(associationTypes);
                 Assert.NotNull(associationSet);
 
                 var associationType = associationTypes[0];
@@ -2544,13 +2544,13 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var associationTypes = new List<AssociationType>();
                 var associationSet = storeModelBuilder.TryCreateAssociationSet(relationshipDetails, entityRegister, associationTypes);
 
-                Assert.Equal(1, associationTypes.Count);
+                Assert.Single(associationTypes);
                 Assert.Null(associationSet);
 
                 var associationType = associationTypes[0];
 
                 Assert.NotNull(associationType);
-                Assert.Equal(0, associationType.AssociationEndMembers.Count);
+                Assert.Empty(associationType.AssociationEndMembers);
                 Assert.Null(associationType.Constraint);
                 Assert.True(MetadataItemHelper.IsInvalid(associationType));
 
@@ -2595,13 +2595,13 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var associationTypes = new List<AssociationType>();
                 var associationSet = storeModelBuilder.TryCreateAssociationSet(relationshipDetails, entityRegister, associationTypes);
 
-                Assert.Equal(1, associationTypes.Count);
+                Assert.Single(associationTypes);
                 Assert.Null(associationSet);
 
                 var associationType = associationTypes[0];
 
                 Assert.NotNull(associationType);
-                Assert.Equal(0, associationType.AssociationEndMembers.Count);
+                Assert.Empty(associationType.AssociationEndMembers);
                 Assert.Null(associationType.Constraint);
                 Assert.True(MetadataItemHelper.IsInvalid(associationType));
 
@@ -2612,7 +2612,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var errors = metaProperty.Value as List<EdmSchemaError>;
 
                 Assert.NotNull(errors);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
 
                 var error = errors[0];
 
@@ -2644,13 +2644,13 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var associationTypes = new List<AssociationType>();
                 var associationSet = storeModelBuilder.TryCreateAssociationSet(relationshipDetails, entityRegister, associationTypes);
 
-                Assert.Equal(1, associationTypes.Count);
+                Assert.Single(associationTypes);
                 Assert.Null(associationSet);
 
                 var associationType = associationTypes[0];
 
                 Assert.NotNull(associationType);
-                Assert.Equal(0, associationType.AssociationEndMembers.Count);
+                Assert.Empty(associationType.AssociationEndMembers);
                 Assert.Null(associationType.Constraint);
                 Assert.True(MetadataItemHelper.IsInvalid(associationType));
 
@@ -2661,7 +2661,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var errors = metaProperty.Value as List<EdmSchemaError>;
 
                 Assert.NotNull(errors);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
 
                 var error = errors[0];
 
@@ -2697,7 +2697,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var associationTypes = new List<AssociationType>();
                 var associationSet = storeModelBuilder.TryCreateAssociationSet(relationshipDetails, entityRegister, associationTypes);
 
-                Assert.Equal(1, associationTypes.Count);
+                Assert.Single(associationTypes);
                 Assert.Null(associationSet);
 
                 var associationType = associationTypes[0];
@@ -2714,7 +2714,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var errors = metaProperty.Value as List<EdmSchemaError>;
 
                 Assert.NotNull(errors);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
 
                 var error = errors[0];
 
@@ -2749,7 +2749,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var associationTypes = new List<AssociationType>();
                 var associationSet = storeModelBuilder.TryCreateAssociationSet(relationshipDetails, entityRegister, associationTypes);
 
-                Assert.Equal(1, associationTypes.Count);
+                Assert.Single(associationTypes);
                 Assert.Null(associationSet);
 
                 var associationType = associationTypes[0];
@@ -2766,7 +2766,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var errors = metaProperty.Value as List<EdmSchemaError>;
 
                 Assert.NotNull(errors);
-                Assert.Equal(1, errors.Count);
+                Assert.Single(errors);
 
                 var error = errors[0];
 
@@ -2820,7 +2820,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var associationTypes = new List<AssociationType>();
                 var associationSet = storeModelBuilder.TryCreateAssociationSet(relationshipDetails, entityRegister, associationTypes);
 
-                Assert.Equal(1, associationTypes.Count);
+                Assert.Single(associationTypes);
                 Assert.NotNull(associationSet);
 
                 var associationType = associationTypes[0];
@@ -2910,7 +2910,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var associationTypes = new List<AssociationType>();
                 var associationSet = storeModelBuilder.TryCreateAssociationSet(relationshipDetails, entityRegister, associationTypes);
 
-                Assert.Equal(1, associationTypes.Count);
+                Assert.Single(associationTypes);
                 Assert.NotNull(associationSet);
 
                 var associationType = associationTypes[0];
@@ -2958,7 +2958,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
                 var associationTypes = new List<AssociationType>();
                 var associationSet = storeModelBuilder.TryCreateAssociationSet(relationshipDetails, entityRegister, associationTypes);
 
-                Assert.Equal(1, associationTypes.Count);
+                Assert.Single(associationTypes);
                 Assert.NotNull(associationSet);
 
                 var associationType = associationTypes[0];

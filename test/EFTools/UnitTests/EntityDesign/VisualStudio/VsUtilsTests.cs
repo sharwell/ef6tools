@@ -83,15 +83,15 @@ namespace Microsoft.Data.Entity.Design.VisualStudio
             var referenceAssemblyNames = VsUtils.GetProjectReferenceAssemblyNames(project).ToArray();
 
             Assert.Equal(2, referenceAssemblyNames.Count());
-            Assert.Equal(
-                0, referenceAssemblyNames.Where(
-                    ran => ran.Key == "AspNet.ScriptManager.jQuery.UI.Combined").Count());
-            Assert.Equal(
-                1, referenceAssemblyNames.Where(
-                    ran => ran.Key == "System.Data.Entity").Count());
-            Assert.Equal(
-                1, referenceAssemblyNames.Where(
-                    ran => ran.Key == "EntityFramework").Count());
+            Assert.Empty(
+                referenceAssemblyNames.Where(
+                    ran => ran.Key == "AspNet.ScriptManager.jQuery.UI.Combined"));
+            Assert.Single(
+                referenceAssemblyNames.Where(
+                    ran => ran.Key == "System.Data.Entity"));
+            Assert.Single(
+                referenceAssemblyNames.Where(
+                    ran => ran.Key == "EntityFramework"));
         }
 
         [Fact]

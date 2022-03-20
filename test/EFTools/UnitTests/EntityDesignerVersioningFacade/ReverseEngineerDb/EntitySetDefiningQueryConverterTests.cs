@@ -42,11 +42,11 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
             Assert.NotNull(workspace);
             var storeItemCollection = (StoreItemCollection)workspace.GetItemCollection(DataSpace.SSpace);
             Assert.NotNull(storeItemCollection);
-            Assert.Equal(1, storeItemCollection.GetEntityContainer("StoreModelContainer").EntitySets.Count);
+            Assert.Single(storeItemCollection.GetEntityContainer("StoreModelContainer").EntitySets);
             Assert.Equal(
                 "EntityTypeSet",
                 storeItemCollection.GetEntityContainer("StoreModelContainer").EntitySets.Single().Name);
-            Assert.Equal(1, storeItemCollection.GetItems<EntityType>().Count);
+            Assert.Single(storeItemCollection.GetItems<EntityType>());
             Assert.Equal("EntityType", storeItemCollection.GetItems<EntityType>().Single().Name);
             Assert.NotNull(workspace.GetItemCollection(DataSpace.CSpace));
             Assert.NotNull(workspace.GetItemCollection(DataSpace.CSSpace));

@@ -74,7 +74,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Gui.ViewModels
                 isModernProviderAvailable: true,
                 isCodeFirst: false);
 
-            Assert.Equal(1, viewModel.EntityFrameworkVersions.Count());
+            Assert.Single(viewModel.EntityFrameworkVersions);
 
             var first = viewModel.EntityFrameworkVersions.First();
             Assert.Equal(RuntimeVersion.Version6, first.Version);
@@ -100,7 +100,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Gui.ViewModels
                 isModernProviderAvailable,
                 isCodeFirst);
 
-            Assert.Equal(1, viewModel.EntityFrameworkVersions.Count());
+            Assert.Single(viewModel.EntityFrameworkVersions);
 
             var first = viewModel.EntityFrameworkVersions.First();
             Assert.Equal(installedEntityFrameworkVersion, first.Version);
@@ -126,7 +126,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Gui.ViewModels
                 isModernProviderAvailable,
                 isCodeFirst);
 
-            Assert.Equal(1, viewModel.EntityFrameworkVersions.Count());
+            Assert.Single(viewModel.EntityFrameworkVersions);
 
             var first = viewModel.EntityFrameworkVersions.First();
             Assert.Equal(installedEntityFrameworkVersion, first.Version);
@@ -201,7 +201,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Gui.ViewModels
 
             Assert.Equal(RuntimeConfigState.Skip, viewModel.State);
 
-            Assert.Equal(1, viewModel.EntityFrameworkVersions.Count());
+            Assert.Single(viewModel.EntityFrameworkVersions);
             var efVersion = viewModel.EntityFrameworkVersions.Single();
             Assert.Equal(RuntimeVersion.Latest, efVersion.Version);
             Assert.False(efVersion.Disabled);
@@ -222,7 +222,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Gui.ViewModels
 
             Assert.Equal(RuntimeConfigState.Error, viewModel.State);
 
-            Assert.Equal(1, viewModel.EntityFrameworkVersions.Count());
+            Assert.Single(viewModel.EntityFrameworkVersions);
             var efVersion = viewModel.EntityFrameworkVersions.Single();
             Assert.Equal(RuntimeVersion.Latest, efVersion.Version);
             Assert.True(efVersion.Disabled);
@@ -243,7 +243,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Gui.ViewModels
 
             Assert.Equal(RuntimeConfigState.Skip, viewModel.State);
 
-            Assert.Equal(1, viewModel.EntityFrameworkVersions.Count());
+            Assert.Single(viewModel.EntityFrameworkVersions);
             var efVersion = viewModel.EntityFrameworkVersions.Single();
             Assert.Equal(RuntimeVersion.Latest, efVersion.Version);
             Assert.False(efVersion.Disabled);
@@ -264,7 +264,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Gui.ViewModels
 
             Assert.Equal(RuntimeConfigState.Error, viewModel.State);
 
-            Assert.Equal(1, viewModel.EntityFrameworkVersions.Count());
+            Assert.Single(viewModel.EntityFrameworkVersions);
             var efVersion = viewModel.EntityFrameworkVersions.Single();
             Assert.Equal(RuntimeVersion.Latest, efVersion.Version);
             Assert.True(efVersion.Disabled);
