@@ -25,7 +25,7 @@ namespace UnitTests.EntityDesignModel.Commands
 
             using (var property = createPropertyCommand.CreateProperty())
             {
-                Assert.IsType(typeof(ConceptualProperty), property);
+                Assert.IsType<ConceptualProperty>(property);
                 Assert.Contains(property, parentEntity.Properties());
                 Assert.Equal(
                     "<Property Name=\"test\" Type=\"Int32\" Nullable=\"true\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\" />",
@@ -40,7 +40,7 @@ namespace UnitTests.EntityDesignModel.Commands
             var createPropertyCommand = new CreatePropertyCommand("test", parentEntity, "Int32", false, null);
             using (var property = createPropertyCommand.CreateProperty())
             {
-                Assert.IsType(typeof(StorageProperty), property);
+                Assert.IsType<StorageProperty>(property);
                 Assert.Contains(property, parentEntity.Properties());
                 Assert.Equal(
                     "<Property Name=\"test\" Type=\"Int32\" Nullable=\"false\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm/ssdl\" />",
