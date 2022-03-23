@@ -15,6 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="System.Activities" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -43,6 +44,9 @@
     <ProjectReference Include="$(RepositoryRoot)src\EFTools\EntityDesignExtensibility\EntityDesignExtensibility.csproj" />
     <ProjectReference Include="$(RepositoryRoot)src\EFTools\EntityDesignModel\EntityDesignModel.csproj" />
     <ProjectReference Include="$(RepositoryRoot)src\EFTools\EntityDesign\EntityDesign.csproj" />
+    <ProjectReference Include="$(RepositoryRoot)src\EFTools\EntityDesignDatabaseGeneration\EntityDesignDatabaseGeneration.csproj" />
+    <ProjectReference Include="$(RepositoryRoot)src\EFTools\EntityDesignEntityDesigner\EntityDesigner.csproj" />
+    <ProjectReference Include="$(RepositoryRoot)src\EFTools\EntityDesignerVersioningFacade\EntityDesignerVersioningFacade.csproj" />
     <ProjectReference Include="$(RepositoryRoot)src\EFTools\EntityDesignPackage\EntityDesignPackage.csproj" />
   </ItemGroup>
 
