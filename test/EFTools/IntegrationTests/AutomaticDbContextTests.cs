@@ -409,7 +409,7 @@
                 dte =>
                 {
                     ThreadHelper.ThrowIfNotOnUIThread();
-                    return ((EnvDTE80.Solution2)dte.Solution).GetProjectTemplate("ConsoleApplication.zip|FrameworkVersion=" + targetFramework, projectLanguage);
+                    return ((EnvDTE80.Solution2)dte.Solution).GetProjectTemplate("Windows\\1033\\ConsoleApplication.zip|FrameworkVersion=" + targetFramework, projectLanguage);
                 },
                 cancellationToken);
         }
@@ -431,7 +431,7 @@
             await JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
 
             var dte = await TestServices.Shell.GetRequiredGlobalServiceAsync<SDTE, EnvDTE.DTE>(cancellationToken);
-            var solutionPath = Directory.GetParent(TestContext.DeploymentDirectory).FullName;
+            var solutionPath = CreateTemporaryPath();
 
             if (!await TestServices.SolutionExplorer.IsSolutionOpenAsync(cancellationToken))
             {
@@ -452,6 +452,11 @@
                     ThreadHelper.ThrowIfNotOnUIThread();
                     return p.Name.Contains(projectName);
                 });
+        }
+
+        private static string CreateTemporaryPath()
+        {
+            return Path.Combine(Path.GetTempPath(), "ef6tools-test", Path.GetRandomFileName());
         }
     }
 }
