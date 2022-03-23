@@ -11,7 +11,7 @@
     <AssemblyAttributeClsCompliant>false</AssemblyAttributeClsCompliant>
     <ApplicationIcon>Resources\File.ico</ApplicationIcon>
     <DeployExtension>false</DeployExtension>
-    <CreateVsixContainer>false</CreateVsixContainer>
+    <CreateVsixContainer>true</CreateVsixContainer>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>

@@ -42,7 +42,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.Package
         {
             get
             {
-                Debug.Assert(_package != null, "PackageManager.Package: package is null and someone is trying to access it!");
+                Assumes.Present(_package);
                 return _package;
             }
             set { _package = value; }
@@ -91,6 +91,9 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.Package
                     }
                 }
             }
+
+            Assumes.Present(package);
+            _package = (IEdmPackage)package;
         }
     }
 }
