@@ -2,12 +2,10 @@
 
 namespace EFDesigner.IntegrationTests
 {
-    using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Threading;
     using System.Threading.Tasks;
-    using System.Windows.Threading;
     using EFDesigner.IntegrationTests.InProcess;
     using Microsoft.Data.Entity.Design.Model;
     using Microsoft.Data.Entity.Design.VisualStudio.Package;
@@ -20,7 +18,6 @@ namespace EFDesigner.IntegrationTests
     public class MultiTargetingTestsInProcRemote : AbstractIntegrationTest
     {
         private IEdmPackage _package;
-        private readonly (string DeploymentDirectory, Action<string> WriteLine, string TestName) TestContext = (Path.GetDirectoryName(typeof(AutomaticDbContextTests).Assembly.Location), _ => { }, "Name");
 
         public override async Task InitializeAsync()
         {

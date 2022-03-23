@@ -20,7 +20,6 @@ namespace EFDesigner.IntegrationTests
             new EFArtifactHelper(EFArtifactHelper.GetEntityDesignModelManager(ServiceProvider.GlobalProvider));
 
         private IEdmPackage _package;
-        private readonly (string DeploymentDirectory, string unused) TestContext = (Path.GetDirectoryName(typeof(AutomaticDbContextTests).Assembly.Location), "");
 
         public override async Task InitializeAsync()
         {

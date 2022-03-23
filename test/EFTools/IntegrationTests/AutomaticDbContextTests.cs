@@ -18,7 +18,6 @@
     public class AutomaticDbContextTests : AbstractIntegrationTest
     {
         private IEdmPackage _package;
-        private readonly (string DeploymentDirectory, string unused) TestContext = (Path.GetDirectoryName(typeof(AutomaticDbContextTests).Assembly.Location), "");
 
         private string ModelEdmxFilePath
         {

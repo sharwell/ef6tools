@@ -24,7 +24,6 @@ namespace EFDesigner.IntegrationTests
     public class ModelFirstTestsRemote : AbstractIntegrationTest
     {
         private IEdmPackage _package;
-        private readonly (string DeploymentDirectory, string unused) TestContext = (Path.GetDirectoryName(typeof(AutomaticDbContextTests).Assembly.Location), "");
 
         public override async Task InitializeAsync()
         {

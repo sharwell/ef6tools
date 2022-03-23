@@ -20,7 +20,6 @@ namespace EFDesigner.IntegrationTests
     public class RefactorRenameTests : AbstractIntegrationTest
     {
         private IEdmPackage _package;
-        private readonly (string DeploymentDirectory, string TestRunDirectory) TestContext = (Path.GetDirectoryName(typeof(AutomaticDbContextTests).Assembly.Location), Path.GetDirectoryName(typeof(AutomaticDbContextTests).Assembly.Location));
 
         public override async Task InitializeAsync()
         {

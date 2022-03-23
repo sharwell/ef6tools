@@ -27,7 +27,6 @@ namespace EFDesigner.IntegrationTests
         private const string RedoCommand = "Edit.Redo";
 
         private IEdmPackage _package;
-        private readonly (string DeploymentDirectory, string unused) TestContext = (Path.GetDirectoryName(typeof(AutomaticDbContextTests).Assembly.Location), "");
 
         public override async Task InitializeAsync()
         {

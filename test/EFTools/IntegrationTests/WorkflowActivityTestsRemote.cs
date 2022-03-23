@@ -5,7 +5,6 @@ namespace EFDesigner.IntegrationTests
     using System.Activities;
     using System.Activities.Hosting;
     using System.Collections.Generic;
-    using System.IO;
     using System.Threading.Tasks;
     using EFDesigner.IntegrationTests.InProcess;
     using Microsoft.Data.Entity.Design.DatabaseGeneration;
@@ -18,7 +17,6 @@ namespace EFDesigner.IntegrationTests
     public class WorkflowActivityTestsRemote : AbstractIntegrationTest
     {
         private IEdmPackage _package;
-        private readonly (string DeploymentDirectory, string unused) TestContext = (Path.GetDirectoryName(typeof(AutomaticDbContextTests).Assembly.Location), "");
 
         public override async Task InitializeAsync()
         {
