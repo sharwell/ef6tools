@@ -8,7 +8,6 @@ namespace EFDesigner.IntegrationTests
     using System.Threading.Tasks;
     using EFDesigner.IntegrationTests.InProcess;
     using Microsoft.Data.Entity.Design.Model;
-    using Microsoft.Data.Entity.Design.VisualStudio.Package;
     using Microsoft.VisualStudio.Extensibility.Testing;
     using Microsoft.VisualStudio.Shell;
     using Microsoft.VisualStudio.Shell.Interop;
@@ -17,18 +16,6 @@ namespace EFDesigner.IntegrationTests
 
     public class MultiTargetingTestsInProcRemote : AbstractIntegrationTest
     {
-        private IEdmPackage _package;
-
-        public override async Task InitializeAsync()
-        {
-            await JoinableTaskFactory.SwitchToMainThreadAsync();
-
-            await base.InitializeAsync();
-
-            PackageManager.LoadEDMPackage(ServiceProvider.GlobalProvider);
-            _package = PackageManager.Package;
-        }
-
         private readonly EFArtifactHelper _efArtifactHelper =
             new EFArtifactHelper(EFArtifactHelper.GetEntityDesignModelManager(ServiceProvider.GlobalProvider));
 

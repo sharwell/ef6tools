@@ -5,29 +5,14 @@ namespace EFDesigner.IntegrationTests
     using System.Activities;
     using System.Activities.Hosting;
     using System.Collections.Generic;
-    using System.Threading.Tasks;
     using EFDesigner.IntegrationTests.InProcess;
     using Microsoft.Data.Entity.Design.DatabaseGeneration;
     using Microsoft.Data.Entity.Design.DatabaseGeneration.Activities;
     using Microsoft.Data.Entity.Design.VersioningFacade;
-    using Microsoft.Data.Entity.Design.VisualStudio.Package;
-    using Microsoft.VisualStudio.Shell;
     using Xunit;
 
     public class WorkflowActivityTestsRemote : AbstractIntegrationTest
     {
-        private IEdmPackage _package;
-
-        public override async Task InitializeAsync()
-        {
-            await JoinableTaskFactory.SwitchToMainThreadAsync();
-
-            await base.InitializeAsync();
-
-            PackageManager.LoadEDMPackage(ServiceProvider.GlobalProvider);
-            _package = PackageManager.Package;
-        }
-
         private IDictionary<string, object> InvokeWorkflowActivity<A>(Dictionary<string, object> inputs, EdmParameterBag parameterBag)
             where A : Activity, new()
         {

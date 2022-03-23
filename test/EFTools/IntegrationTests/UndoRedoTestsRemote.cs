@@ -15,7 +15,6 @@ namespace EFDesigner.IntegrationTests
     using Microsoft.Data.Entity.Design.Model.Eventing;
     using Microsoft.Data.Entity.Design.Model.Mapping;
     using Microsoft.Data.Entity.Design.UI.Views;
-    using Microsoft.Data.Entity.Design.VisualStudio.Package;
     using Microsoft.VisualStudio.Shell;
     using Microsoft.VisualStudio.Shell.Interop;
     using Xunit;
@@ -25,18 +24,6 @@ namespace EFDesigner.IntegrationTests
     {
         private const string UndoCommand = "Edit.Undo";
         private const string RedoCommand = "Edit.Redo";
-
-        private IEdmPackage _package;
-
-        public override async Task InitializeAsync()
-        {
-            await JoinableTaskFactory.SwitchToMainThreadAsync();
-
-            await base.InitializeAsync();
-
-            PackageManager.LoadEDMPackage(ServiceProvider.GlobalProvider);
-            _package = PackageManager.Package;
-        }
 
         /// <summary>
         ///     Simple Entity tests:
@@ -1481,7 +1468,7 @@ namespace EFDesigner.IntegrationTests
 
             try
             {
-                var editingContext = _package.DocumentFrameMgr.EditingContextManager.GetNewOrExistingContext(entityDesignArtifact.Uri);
+                var editingContext = Package.DocumentFrameMgr.EditingContextManager.GetNewOrExistingContext(entityDesignArtifact.Uri);
 
                 // Add DiagramId information in transactioncontext, so the correct diagram item will be created when Escher model is mutated.
                 var transactionContext = new EfiTransactionContext();

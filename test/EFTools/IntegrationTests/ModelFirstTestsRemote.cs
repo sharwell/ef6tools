@@ -9,7 +9,6 @@ namespace EFDesigner.IntegrationTests
     using System.IO;
     using System.Text;
     using System.Threading;
-    using System.Threading.Tasks;
     using System.Xml;
     using System.Xml.Linq;
     using EFDesigner.IntegrationTests.InProcess;
@@ -17,24 +16,10 @@ namespace EFDesigner.IntegrationTests
     using Microsoft.Data.Entity.Design.VersioningFacade;
     using Microsoft.Data.Entity.Design.VisualStudio;
     using Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine;
-    using Microsoft.Data.Entity.Design.VisualStudio.Package;
-    using Microsoft.VisualStudio.Shell;
     using Xunit;
 
     public class ModelFirstTestsRemote : AbstractIntegrationTest
     {
-        private IEdmPackage _package;
-
-        public override async Task InitializeAsync()
-        {
-            await JoinableTaskFactory.SwitchToMainThreadAsync();
-
-            await base.InitializeAsync();
-
-            PackageManager.LoadEDMPackage(ServiceProvider.GlobalProvider);
-            _package = PackageManager.Package;
-        }
-
         internal void TestPipeline(
             string testName,
             EdmItemCollection csdlInput,

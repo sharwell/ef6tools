@@ -14,7 +14,6 @@
     using Microsoft.Data.Entity.Design.Model.Entity;
     using Microsoft.Data.Entity.Design.Package;
     using Microsoft.Data.Entity.Design.VisualStudio;
-    using Microsoft.Data.Entity.Design.VisualStudio.Package;
     using Microsoft.VisualStudio.Shell;
     using Microsoft.VisualStudio.Shell.Interop;
     using Xunit;
@@ -23,18 +22,6 @@
 
     public class EntityTypeShapeColorTest : AbstractIntegrationTest
     {
-        private IEdmPackage _package;
-
-        public override async Task InitializeAsync()
-        {
-            await JoinableTaskFactory.SwitchToMainThreadAsync();
-
-            await base.InitializeAsync();
-
-            PackageManager.LoadEDMPackage(ServiceProvider.GlobalProvider);
-            _package = PackageManager.Package;
-        }
-
         [IdeFact]
         public async Task ChangeEntityTypeShapeFillColorTest()
         {
@@ -229,7 +216,7 @@
                                                 .GetNewOrExistingArtifact(TestUtils.FileName2Uri(projectItem.FileNames[0]));
 
                 var editingContext =
-                    _package.DocumentFrameMgr.EditingContextManager.GetNewOrExistingContext(entityDesignArtifact.Uri);
+                    Package.DocumentFrameMgr.EditingContextManager.GetNewOrExistingContext(entityDesignArtifact.Uri);
                 var commandProcessorContext = new CommandProcessorContext(
                     editingContext, "DiagramTest", "DiagramTestTxn", entityDesignArtifact);
 

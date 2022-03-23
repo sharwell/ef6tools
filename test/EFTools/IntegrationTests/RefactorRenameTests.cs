@@ -12,25 +12,12 @@ namespace EFDesigner.IntegrationTests
     using Microsoft.Data.Entity.Design.Model.Commands;
     using Microsoft.Data.Entity.Design.Refactoring;
     using Microsoft.Data.Entity.Design.VisualStudio;
-    using Microsoft.Data.Entity.Design.VisualStudio.Package;
     using Microsoft.VisualStudio.Shell;
     using Microsoft.VisualStudio.Shell.Interop;
     using Xunit;
 
     public class RefactorRenameTests : AbstractIntegrationTest
     {
-        private IEdmPackage _package;
-
-        public override async Task InitializeAsync()
-        {
-            await JoinableTaskFactory.SwitchToMainThreadAsync();
-
-            await base.InitializeAsync();
-
-            PackageManager.LoadEDMPackage(ServiceProvider.GlobalProvider);
-            _package = PackageManager.Package;
-        }
-
         private const string PubSimpleProgramText = @"using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -176,7 +163,7 @@ namespace RefactorRenameProperty
                                                 .GetNewOrExistingArtifact(TestUtils.FileName2Uri(projectItem.FileNames[0]));
 
                 var editingContext =
-                    _package.DocumentFrameMgr.EditingContextManager.GetNewOrExistingContext(entityDesignArtifact.Uri);
+                    Package.DocumentFrameMgr.EditingContextManager.GetNewOrExistingContext(entityDesignArtifact.Uri);
                 var cpc = new CommandProcessorContext(
                     editingContext, "DiagramTest" + projectName, "DiagramTestTxn" + projectName, entityDesignArtifact);
 

@@ -8,7 +8,6 @@
     using System.Threading.Tasks;
     using Microsoft.Data.Entity.Design.Package;
     using Microsoft.Data.Entity.Design.VisualStudio.ModelWizard;
-    using Microsoft.Data.Entity.Design.VisualStudio.Package;
     using Microsoft.VisualStudio;
     using Microsoft.VisualStudio.Extensibility.Testing;
     using Microsoft.VisualStudio.Shell;
@@ -17,24 +16,12 @@
 
     public class AutomaticDbContextTests : AbstractIntegrationTest
     {
-        private IEdmPackage _package;
-
         private string ModelEdmxFilePath
         {
             get
             {
                 return Path.Combine(TestContext.DeploymentDirectory, @"TestData\Model\v3\Simple.edmx");
             }
-        }
-
-        public override async Task InitializeAsync()
-        {
-            await JoinableTaskFactory.SwitchToMainThreadAsync();
-
-            await base.InitializeAsync();
-
-            PackageManager.LoadEDMPackage(ServiceProvider.GlobalProvider);
-            _package = PackageManager.Package;
         }
 
         [IdeFact]

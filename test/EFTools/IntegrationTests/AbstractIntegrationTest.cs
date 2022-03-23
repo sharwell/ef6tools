@@ -3,18 +3,32 @@
     using System;
     using System.IO;
     using System.Threading.Tasks;
+    using Microsoft;
+    using Microsoft.Data.Entity.Design.VisualStudio.Package;
     using Microsoft.VisualStudio.Extensibility.Testing;
+    using Microsoft.VisualStudio.Shell;
     using Xunit;
 
     [IdeSettings(MinVersion = VisualStudioVersion.VS2022, MaxVersion = VisualStudioVersion.VS2022, MaxAttempts = 2)]
     public abstract class AbstractIntegrationTest : AbstractIdeIntegrationTest
     {
+        private IEdmPackage _package;
+
         public AbstractIntegrationTest()
         {
             TestContext = new TestContextImpl();
         }
 
         protected TestContextImpl TestContext { get; }
+
+        private protected IEdmPackage Package
+        {
+            get
+            {
+                Assumes.Present(_package);
+                return _package;
+            }
+        }
 
         public override async Task InitializeAsync()
         {
@@ -27,6 +41,10 @@
 
             await TestServices.StateReset.ResetGlobalOptionsAsync(HangMitigatingCancellationToken);
             await TestServices.StateReset.ResetHostSettingsAsync(HangMitigatingCancellationToken);
+
+            await JoinableTaskFactory.SwitchToMainThreadAsync();
+            PackageManager.LoadEDMPackage(ServiceProvider.GlobalProvider);
+            _package = PackageManager.Package;
         }
 
         protected sealed class TestContextImpl

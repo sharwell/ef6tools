@@ -15,7 +15,6 @@ namespace EFDesigner.IntegrationTests
     using Microsoft.Data.Entity.Design.Model.Entity;
     using Microsoft.Data.Entity.Design.Model.Eventing;
     using Microsoft.Data.Entity.Design.VisualStudio.Model.Commands;
-    using Microsoft.Data.Entity.Design.VisualStudio.Package;
     using Microsoft.VisualStudio.Shell;
     using Microsoft.VisualStudio.Shell.Interop;
     using Xunit;
@@ -27,18 +26,6 @@ namespace EFDesigner.IntegrationTests
     /// </summary>
     public class MigrateDiagramNodesTest : AbstractIntegrationTest
     {
-        private IEdmPackage _package;
-
-        public override async Task InitializeAsync()
-        {
-            await JoinableTaskFactory.SwitchToMainThreadAsync();
-
-            await base.InitializeAsync();
-
-            PackageManager.LoadEDMPackage(ServiceProvider.GlobalProvider);
-            _package = PackageManager.Package;
-        }
-
         [IdeFact]
         public async Task SimpleAddEntity()
         {
@@ -150,7 +137,7 @@ namespace EFDesigner.IntegrationTests
 
                 Debug.Assert(entityDesignArtifact != null);
                 var editingContext =
-                    _package.DocumentFrameMgr.EditingContextManager.GetNewOrExistingContext(entityDesignArtifact.Uri);
+                    Package.DocumentFrameMgr.EditingContextManager.GetNewOrExistingContext(entityDesignArtifact.Uri);
 
                 // Create TransactionContext to indicate that the transactions are done from first diagram.
                 // This is not used by MigrateDiagramInformationCommand but other commands in the callback methods.

@@ -9,7 +9,6 @@ namespace EFDesigner.IntegrationTests
     using System.Threading.Tasks;
     using System.Xml.Linq;
     using EFDesigner.IntegrationTests.InProcess;
-    using Microsoft.Data.Entity.Design.VisualStudio.Package;
     using Microsoft.VisualStudio.Shell;
     using Microsoft.VisualStudio.Shell.Interop;
     using Xunit;
@@ -18,18 +17,6 @@ namespace EFDesigner.IntegrationTests
     {
         private readonly EFArtifactHelper _efArtifactHelper =
             new EFArtifactHelper(EFArtifactHelper.GetEntityDesignModelManager(ServiceProvider.GlobalProvider));
-
-        private IEdmPackage _package;
-
-        public override async Task InitializeAsync()
-        {
-            await JoinableTaskFactory.SwitchToMainThreadAsync();
-
-            await base.InitializeAsync();
-
-            PackageManager.LoadEDMPackage(ServiceProvider.GlobalProvider);
-            _package = PackageManager.Package;
-        }
 
         private string ModelsDirectory
         {
