@@ -212,21 +212,9 @@
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
 
-  <PropertyGroup Condition="'$(VisualStudioVersion)' == '11.0' OR '$(VisualStudioVersion)' == '12.0' OR '$(VisualStudioVersion)' == '14.0'">
-    <VsctCommandsFile>Commands_preVS15.vsct</VsctCommandsFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(VisualStudioVersion)' != '11.0' AND '$(VisualStudioVersion)' != '12.0' AND '$(VisualStudioVersion)' != '14.0'">
-    <VsctCommandsFile>Commands_VS15.vsct</VsctCommandsFile>
-  </PropertyGroup>
-
   <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.targets" />
 
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="Exists('$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets')" />
-
-  <Target Name="BeforeBuild">
-    <Copy SourceFiles="$(VsctCommandsFile)" DestinationFiles="Commands.vsct" OverwriteReadOnlyFiles="true" />
-  </Target>
 
   <Target Name="AfterBuild">
     <MakeDir Directories="$(OutputPath)PkgDefData" />
