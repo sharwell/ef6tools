@@ -7,7 +7,6 @@ using System.Runtime.InteropServices;
 
 [assembly: CLSCompliant(true)]
 [assembly: ComVisible(false)]
-[assembly: AssemblyProduct("Microsoft Entity Framework")]
 [assembly: AssemblyMetadata("Serviceable", "True")]
 
 #if NET40

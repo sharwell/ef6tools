@@ -43,12 +43,12 @@
     <Company>Microsoft Corporation</Company>
     <Copyright>© Microsoft Corporation.  All rights reserved.</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
+    <Product>Microsoft Entity Framework</Product>
 
     <!-- Assembly info is included explicitly -->
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
   </PropertyGroup>

@@ -5,7 +5,6 @@ using System.Reflection;
 using System.Resources;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyProduct("Microsoft Entity Framework")]
 [assembly: ComVisible(false)]
 
 #if !BUILD_GENERATED_VERSION
