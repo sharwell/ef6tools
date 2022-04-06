@@ -20,6 +20,9 @@
 
       <ItemGroup>
         <AssemblyMetadata Include="Serviceable" Value="True" />
+        <AssemblyAttribute Include="System.Reflection.AssemblyDefaultAliasAttribute">
+          <_Parameter1>$(TargetFileName)</_Parameter1>
+        </AssemblyAttribute>
         <AssemblyAttribute Include="System.Resources.SatelliteContractVersionAttribute">
           <_Parameter1>$(AssemblyVersion)</_Parameter1>
         </AssemblyAttribute>
