@@ -18,4 +18,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Interop" Version="$(MicrosoftVisualStudioInteropPackageVersion)" />
   </ItemGroup>
 
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.InteropServices.GuidAttribute">
+      <_Parameter1>ba60bf9d-4afe-425f-8a41-4f41401bcc88</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
 </Project>
