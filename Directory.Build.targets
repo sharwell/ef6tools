@@ -19,6 +19,7 @@
       </PropertyGroup>
 
       <ItemGroup>
+        <AssemblyMetadata Include="Serviceable" Value="True" />
         <AssemblyAttribute Include="System.Resources.SatelliteContractVersionAttribute">
           <_Parameter1>$(AssemblyVersion)</_Parameter1>
         </AssemblyAttribute>
