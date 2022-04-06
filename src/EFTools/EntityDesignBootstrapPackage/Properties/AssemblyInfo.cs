@@ -3,5 +3,4 @@
 using System;
 using System.Reflection;
 
-[assembly: AssemblyDescription("Microsoft.Data.Entity.Design.BootstrapPackage.dll")]
 [assembly: CLSCompliant(true)]

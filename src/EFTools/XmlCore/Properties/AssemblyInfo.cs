@@ -4,6 +4,5 @@ using System;
 using System.Reflection;
 using System.Windows;
 
-[assembly: AssemblyDescription("Microsoft.Data.Tools.Design.XmlCore.dll")]
 [assembly: CLSCompliant(false)]
 [assembly: ThemeInfoAttribute(ResourceDictionaryLocation.SourceAssembly, ResourceDictionaryLocation.SourceAssembly)]

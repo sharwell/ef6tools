@@ -2,4 +2,8 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile Condition="'$(AssemblyOriginatorKeyFile)' == ''">$(RepositoryRoot)src\EFTools\EFToolsPublicKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <Description>$(TargetFileName)</Description>
+  </PropertyGroup>
 </Project>

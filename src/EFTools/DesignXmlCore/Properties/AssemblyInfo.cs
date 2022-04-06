@@ -3,5 +3,4 @@
 using System;
 using System.Reflection;
 
-[assembly: AssemblyDescription("Microsoft.VisualStudio.Data.Tools.Design.XmlCore.dll")]
 [assembly: CLSCompliant(false)]
