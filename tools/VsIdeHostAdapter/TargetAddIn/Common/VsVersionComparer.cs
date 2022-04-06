@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.Common;
 using Microsoft.Win32;
