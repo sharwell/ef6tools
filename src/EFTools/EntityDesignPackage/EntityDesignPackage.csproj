@@ -8,12 +8,15 @@
     <TargetFrameworks>$(ToolingDotNetFrameworkSdkVersion)</TargetFrameworks>
     <AssemblyName>Microsoft.Data.Entity.Design.Package</AssemblyName>
     <RootNamespace>Microsoft.Data.Entity.Design.Package</RootNamespace>
-    <AssemblyAttributeClsCompliant>false</AssemblyAttributeClsCompliant>
     <ApplicationIcon>Resources\File.ico</ApplicationIcon>
     <DeployExtension>false</DeployExtension>
     <CreateVsixContainer>true</CreateVsixContainer>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CLSCompliant>true</CLSCompliant>
   </PropertyGroup>
 
   <PropertyGroup>

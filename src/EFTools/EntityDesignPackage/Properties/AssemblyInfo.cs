@@ -5,4 +5,3 @@ using System.Reflection;
 using System.Runtime.ConstrainedExecution;
 
 [assembly: ReliabilityContract(Consistency.MayCorruptProcess, Cer.None)]
-[assembly: CLSCompliant(true)]

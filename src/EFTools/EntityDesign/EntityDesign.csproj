@@ -7,7 +7,6 @@
     <TargetFrameworks>$(ToolingDotNetFrameworkSdkVersion)</TargetFrameworks>
     <AssemblyName>Microsoft.Data.Entity.Design</AssemblyName>
     <RootNamespace>Microsoft.Data.Entity.Design</RootNamespace>
-    <AssemblyAttributeClsCompliant>false</AssemblyAttributeClsCompliant>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>

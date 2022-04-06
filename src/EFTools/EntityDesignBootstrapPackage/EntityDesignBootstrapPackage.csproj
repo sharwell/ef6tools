@@ -11,9 +11,11 @@
     <AssemblyName>Microsoft.Data.Entity.Design.BootstrapPackage</AssemblyName>
     <RootNamespace>Microsoft.Data.Entity.Design.BootstrapPackage</RootNamespace>
     <TargetFrameworks>$(ToolingDotNetFrameworkSdkVersion)</TargetFrameworks>
-    <!-- do we need this ?-->
-    <AssemblyAttributeClsCompliant>false</AssemblyAttributeClsCompliant>
     <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CLSCompliant>true</CLSCompliant>
   </PropertyGroup>
 
   <PropertyGroup>

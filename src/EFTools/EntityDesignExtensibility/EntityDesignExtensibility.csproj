@@ -6,9 +6,7 @@
   <PropertyGroup>
     <AssemblyName>Microsoft.Data.Entity.Design.Extensibility</AssemblyName>
     <RootNamespace>Microsoft.Data.Entity.Design.Extensibility</RootNamespace>
-    <AssemblyAttributeClsCompliant>false</AssemblyAttributeClsCompliant>
     <TargetFrameworks>$(ToolingDotNetFrameworkSdkVersion)</TargetFrameworks>
-    <AssemblyAttributeClsCompliant>false</AssemblyAttributeClsCompliant>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 

@@ -7,7 +7,6 @@
     <AssemblyName>Microsoft.VisualStudio.Data.Tools.Design.XmlCore</AssemblyName>
     <RootNamespace>Microsoft.VisualStudio.Data.Tools.Design.XmlCore</RootNamespace>
     <TargetFrameworks>$(ToolingDotNetFrameworkSdkVersion)</TargetFrameworks>
-    <AssemblyAttributeClsCompliant>false</AssemblyAttributeClsCompliant>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>

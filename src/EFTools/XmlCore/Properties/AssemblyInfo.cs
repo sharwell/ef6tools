@@ -4,5 +4,4 @@ using System;
 using System.Reflection;
 using System.Windows;
 
-[assembly: CLSCompliant(false)]
 [assembly: ThemeInfoAttribute(ResourceDictionaryLocation.SourceAssembly, ResourceDictionaryLocation.SourceAssembly)]

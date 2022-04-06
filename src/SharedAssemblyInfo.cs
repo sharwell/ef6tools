@@ -5,7 +5,6 @@ using System.Reflection;
 using System.Resources;
 using System.Runtime.InteropServices;
 
-[assembly: CLSCompliant(true)]
 [assembly: AssemblyMetadata("Serviceable", "True")]
 
 #if NET40

@@ -9,6 +9,10 @@
     <AssemblyName>Microsoft.Data.Entity.Design.VersioningFacade</AssemblyName>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <CLSCompliant>true</CLSCompliant>
+  </PropertyGroup>
+
   <ItemGroup>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data.DataSetExtensions" />

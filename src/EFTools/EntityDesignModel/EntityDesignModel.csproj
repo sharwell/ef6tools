@@ -7,8 +7,6 @@
     <TargetFrameworks>$(ToolingDotNetFrameworkSdkVersion)</TargetFrameworks>
     <RootNamespace>Microsoft.Data.Entity.Design.Model</RootNamespace>
     <AssemblyName>Microsoft.Data.Entity.Design.Model</AssemblyName>
-    <!-- do we need this ?-->
-    <AssemblyAttributeClsCompliant>false</AssemblyAttributeClsCompliant>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>

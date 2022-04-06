@@ -4,5 +4,4 @@ using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: CLSCompliant(false)]
 [assembly: Guid("af5600cc-afa7-4835-8ab7-ad8c7d68235e")]

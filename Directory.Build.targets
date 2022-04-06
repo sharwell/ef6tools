@@ -13,6 +13,9 @@
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
         <FileVersion>6.1.0.0</FileVersion>
         <InformationalVersion>6.1.0-alpha1</InformationalVersion>
+
+        <!-- The runtime assemblies are CLS compliant by default -->
+        <CLSCompliant Condition="'$(CLSCompliant)' == ''">true</CLSCompliant>
       </PropertyGroup>
 
       <ItemGroup>
@@ -30,7 +33,17 @@
     </Otherwise>
   </Choose>
 
+  <PropertyGroup>
+    <CLSCompliant Condition="'$(CLSCompliant)' == ''">false</CLSCompliant>
+    <_CLSCompliantLiteral Condition="'$(CLSCompliant)' == 'true'">true</_CLSCompliantLiteral>
+    <_CLSCompliantLiteral Condition="'$(CLSCompliant)' != 'true'">false</_CLSCompliantLiteral>
+  </PropertyGroup>
+
   <ItemGroup>
+    <AssemblyAttribute Include="System.CLSCompliantAttribute">
+      <_Parameter1>$(_CLSCompliantLiteral)</_Parameter1>
+      <_Parameter1_IsLiteral>true</_Parameter1_IsLiteral>
+    </AssemblyAttribute>
     <AssemblyAttribute Include="System.Runtime.InteropServices.ComVisibleAttribute">
       <_Parameter1>false</_Parameter1>
       <_Parameter1_IsLiteral>true</_Parameter1_IsLiteral>

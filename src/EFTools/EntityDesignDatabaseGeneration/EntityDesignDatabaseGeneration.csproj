@@ -7,7 +7,6 @@
     <TargetFrameworks>$(ToolingDotNetFrameworkSdkVersion)</TargetFrameworks>
     <AssemblyName>Microsoft.Data.Entity.Design.DatabaseGeneration</AssemblyName>
     <RootNamespace>Microsoft.Data.Entity.Design.DatabaseGeneration</RootNamespace>
-    <AssemblyAttributeClsCompliant>false</AssemblyAttributeClsCompliant>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
