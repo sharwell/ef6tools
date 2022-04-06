@@ -6,8 +6,3 @@ using System.Resources;
 using System.Runtime.InteropServices;
 
 [assembly: ComVisible(false)]
-
-#if !BUILD_GENERATED_VERSION
-[assembly: AssemblyVersion("17.0.0.0")]
-[assembly: AssemblyFileVersion("17.0.0.0")]
-#endif

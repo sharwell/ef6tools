@@ -6,4 +6,27 @@
   <PropertyGroup>
     <Description>$(TargetFileName)</Description>
   </PropertyGroup>
+
+  <Choose>
+    <When Condition="'$(BuildingRuntimeProject)' == 'true'">
+      <PropertyGroup>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+        <FileVersion>6.1.0.0</FileVersion>
+        <InformationalVersion>6.1.0-alpha1</InformationalVersion>
+      </PropertyGroup>
+
+      <ItemGroup>
+        <AssemblyAttribute Include="System.Resources.SatelliteContractVersionAttribute">
+          <_Parameter1>$(AssemblyVersion)</_Parameter1>
+        </AssemblyAttribute>
+      </ItemGroup>
+    </When>
+
+    <Otherwise>
+      <PropertyGroup>
+        <AssemblyVersion>17.0.0.0</AssemblyVersion>
+        <FileVersion>17.0.0.0</FileVersion>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
 </Project>

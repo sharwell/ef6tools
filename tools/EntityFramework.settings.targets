@@ -8,16 +8,6 @@ Project global pre-settings.
   <!--- Configurable properties -->
   
   <PropertyGroup >
-    <RuntimeVersionMajor>6</RuntimeVersionMajor>
-    <RuntimeVersionMinor>2</RuntimeVersionMinor>
-    <RuntimeAssemblyVersionMinor>0</RuntimeAssemblyVersionMinor>
-    <ToolingVersionMajor Condition="'$(VisualStudioVersion)' == '17.0'">17</ToolingVersionMajor>
-    <ToolingVersionMinor Condition="'$(VisualStudioVersion)' == '17.0'">0</ToolingVersionMinor>
-    <VersionBuild>0</VersionBuild>
-    <VersionRevision>0</VersionRevision>
-    <VersionReleasePrefix>0</VersionReleasePrefix>
-    <VersionRelease>$(VersionReleasePrefix)</VersionRelease>
-    <VersionReleaseName></VersionReleaseName>
     <ToolingDotNetFrameworkVersion>v4.7.2</ToolingDotNetFrameworkVersion>
     <ToolingDotNetFrameworkSdkVersion>net472</ToolingDotNetFrameworkSdkVersion>
   </PropertyGroup>
@@ -33,13 +23,6 @@ Project global pre-settings.
   <PropertyGroup>
     <BuildingToolingProject Condition="'$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), EFToolsPublicKey.snk))' != '' Or '$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), VsIdeHostAdapter.sln))' != '' Or $(MSBuildProjectDirectory.Contains('test\EFTools'))">true</BuildingToolingProject>
     <BuildingRuntimeProject Condition="'$(BuildingRuntimeProject)' == '' AND '$(BuildingToolingProject)' != 'true' AND  '$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), EcmaPublicKey.snk))' != ''">true</BuildingRuntimeProject>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <VersionMajor Condition="'$(BuildingRuntimeProject)' == 'true'">$(RuntimeVersionMajor)</VersionMajor>
-    <VersionMajor Condition="'$(BuildingToolingProject)' == 'true'">$(ToolingVersionMajor)</VersionMajor>
-    <VersionMinor Condition="'$(BuildingRuntimeProject)' == 'true'">$(RuntimeVersionMinor)</VersionMinor>
-    <VersionMinor Condition="'$(BuildingToolingProject)' == 'true'">$(ToolingVersionMinor)</VersionMinor>
   </PropertyGroup>
 
   <PropertyGroup>
