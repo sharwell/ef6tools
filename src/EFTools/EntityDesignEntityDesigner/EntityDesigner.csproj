@@ -56,6 +56,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.ConstrainedExecution.ReliabilityContractAttribute">
+      <_Parameter1>System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess</_Parameter1>
+      <_Parameter1_IsLiteral>true</_Parameter1_IsLiteral>
+      <_Parameter2>System.Runtime.ConstrainedExecution.Cer.None</_Parameter2>
+      <_Parameter2_IsLiteral>true</_Parameter2_IsLiteral>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="CustomCode\Dialogs\CustomZoomDialog.cs">
       <SubType>Form</SubType>
     </Compile>
