@@ -14,10 +14,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Interop" Version="$(MicrosoftVisualStudioInteropPackageVersion)" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Include="$(RepositoryRoot)src\EFTools\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
-  </ItemGroup>
-
 </Project>

@@ -63,9 +63,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Update="GeneratedCode\CommandSet.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -9,7 +9,6 @@
     <AssemblyName>Microsoft.Data.Entity.Design.Model</AssemblyName>
     <!-- do we need this ?-->
     <AssemblyAttributeClsCompliant>false</AssemblyAttributeClsCompliant>
-    <AssemblyAttributeComVisible>false</AssemblyAttributeComVisible>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
@@ -41,9 +40,6 @@
     </Compile>
     <Compile Include="$(RepositoryRoot)src\EntityFramework\Core\SchemaObjectModel\ErrorCode.cs">
       <Link>Validation\RuntimeErrorCodes\ErrorCode.cs</Link>
-    </Compile>
-    <Compile Include="..\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Update="Designer\EntityDesignerDiagramConstant.cs">
       <AutoGen>True</AutoGen>

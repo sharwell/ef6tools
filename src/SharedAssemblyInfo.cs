@@ -6,7 +6,6 @@ using System.Resources;
 using System.Runtime.InteropServices;
 
 [assembly: CLSCompliant(true)]
-[assembly: ComVisible(false)]
 [assembly: AssemblyMetadata("Serviceable", "True")]
 
 #if NET40

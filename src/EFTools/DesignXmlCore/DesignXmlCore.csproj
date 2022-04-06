@@ -66,9 +66,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Update="Base\Shell\TreeGridDesignerInPlaceEdit.cs">
       <SubType>Component</SubType>
     </Compile>

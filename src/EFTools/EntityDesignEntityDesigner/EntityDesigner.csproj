@@ -53,9 +53,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Update="CustomCode\Dialogs\CustomZoomDialog.cs">
       <SubType>Form</SubType>
     </Compile>
