@@ -5,7 +5,6 @@ using System.Reflection;
 using System.Resources;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyCopyright("© Microsoft Corporation.  All rights reserved.")]
 [assembly: AssemblyProduct("Microsoft Entity Framework")]
 [assembly: ComVisible(false)]
 [assembly: NeutralResourcesLanguage("en-US")]

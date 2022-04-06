@@ -41,6 +41,7 @@
     <EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
 
     <Company>Microsoft Corporation</Company>
+    <Copyright>© Microsoft Corporation.  All rights reserved.</Copyright>
 
     <!-- Assembly info is included explicitly -->
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
