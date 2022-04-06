@@ -3,6 +3,5 @@
 using System;
 using System.Reflection;
 
-[assembly: AssemblyTitle("Microsoft.Data.Entity.Design.VersioningFacade")]
 [assembly: AssemblyDescription("Microsoft.Data.Entity.Design.VersioningFacade.dll")]
 [assembly: CLSCompliant(true)]

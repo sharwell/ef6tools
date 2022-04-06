@@ -3,6 +3,5 @@
 using System;
 using System.Reflection;
 
-[assembly: AssemblyTitle("Microsoft.Data.Entity.Design.DataSourceWizardExtension")]
 [assembly: AssemblyDescription("Microsoft.Data.Entity.Design.DataSourceWizardExtension.dll")]
 [assembly: CLSCompliant(false)]

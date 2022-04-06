@@ -3,6 +3,5 @@
 using System;
 using System.Reflection;
 
-[assembly: AssemblyTitle("Microsoft.Data.Entity.Design.DatabaseGeneration")]
 [assembly: AssemblyDescription("Microsoft.Data.Entity.Design.DatabaseGeneration.dll")]
 [assembly: CLSCompliant(false)]

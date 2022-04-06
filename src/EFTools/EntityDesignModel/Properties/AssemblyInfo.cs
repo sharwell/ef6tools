@@ -3,6 +3,5 @@
 using System;
 using System.Reflection;
 
-[assembly: AssemblyTitle("Microsoft.Data.Entity.Design.Model")]
 [assembly: AssemblyDescription("Microsoft.Data.Entity.Design.Model.dll")]
 [assembly: CLSCompliant(false)]

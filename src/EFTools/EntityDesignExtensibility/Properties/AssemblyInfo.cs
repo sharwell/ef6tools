@@ -3,6 +3,5 @@
 using System;
 using System.Reflection;
 
-[assembly: AssemblyTitle("Microsoft.Data.Entity.Design.Extensibility")]
 [assembly: AssemblyDescription("Microsoft.Data.Entity.Design.Extensibility.dll")]
 [assembly: CLSCompliant(false)]
