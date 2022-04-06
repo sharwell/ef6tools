@@ -7,7 +7,6 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyProduct("Microsoft Entity Framework")]
 [assembly: ComVisible(false)]
-[assembly: NeutralResourcesLanguage("en-US")]
 
 #if !BUILD_GENERATED_VERSION
 #if VS11

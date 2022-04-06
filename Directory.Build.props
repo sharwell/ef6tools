@@ -42,6 +42,7 @@
 
     <Company>Microsoft Corporation</Company>
     <Copyright>© Microsoft Corporation.  All rights reserved.</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
 
     <!-- Assembly info is included explicitly -->
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
