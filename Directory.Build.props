@@ -44,9 +44,6 @@
     <Copyright>© Microsoft Corporation.  All rights reserved.</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Product>Microsoft Entity Framework</Product>
-
-    <!-- Assembly info is included explicitly -->
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
   </PropertyGroup>
 
   <PropertyGroup>
