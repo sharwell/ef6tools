@@ -25,12 +25,12 @@ namespace Microsoft.Data.Entity.Design.Package
     using Microsoft.VisualStudio.Utilities;
     using ModelChangeEventArgs = Microsoft.Data.Entity.Design.VisualStudio.Package.ModelChangeEventArgs;
 
-    //[ProvideToolWindow(typeof(EntityDesignExplorerWindow),
-    //    MultiInstances = false,
-    //    Style = VsDockStyle.Tabbed,
-    //    Orientation = ToolWindowOrientation.Right,
-    //    Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
-    //[ProvideToolWindowVisibility(typeof(EntityDesignExplorerWindow), Constants.MicrosoftDataEntityDesignEditorFactoryId)]
+    [ProvideToolWindow(typeof(EntityDesignExplorerWindow),
+        MultiInstances = false,
+        Style = VsDockStyle.Tabbed,
+        Orientation = ToolWindowOrientation.Right,
+        Window = "{3ae79031-e1bc-11d0-8f78-00a0c9110057}")]
+    [ProvideToolWindowVisibility(typeof(EntityDesignExplorerWindow), Constants.MicrosoftDataEntityDesignEditorFactoryId)]
     [ProvideToolWindow(typeof(MappingDetailsWindow),
         MultiInstances = false,
         Style = VsDockStyle.Tabbed,

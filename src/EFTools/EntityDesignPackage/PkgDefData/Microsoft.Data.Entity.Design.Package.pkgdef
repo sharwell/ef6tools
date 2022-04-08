@@ -32,17 +32,6 @@
 "TransparentColor"=dword:00ff00ff
 "UniqueID"="Microsoft.Data.Entity.Design.Package.EntityToolToolboxItem"
 
-// Register the Tool Window for our EDM Explorer 
-[$RootKey$\ToolWindows\{a34b1c5d-6d37-4a0c-a8b0-99f8e8158b48}]
-@="{8889e051-b7f9-4781-bb33-2a36a9bdb3a5}"
-"Name"="Microsoft.Data.Entity.Design.VisualStudio.Package.ExplorerWindow"
-"Orientation"="Right"
-"Style"="Tabbed"
-"Window"="{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-
-[$RootKey$\ToolWindows\{a34b1c5d-6d37-4a0c-a8b0-99f8e8158b48}\Visibility]
-"{c99aea30-8e36-4515-b76f-496f5a48a6aa}"=dword:00000000
-
 // Single File Generator Registration 
 [$RootKey$\CLSID\{A58BFFCF-B9BD-4904-9248-0936C15D178A}]
 @="Microsoft.Data.Entity.Design.VisualStudio.SingleFileGenerator.EntityModelCodeGenerator"
