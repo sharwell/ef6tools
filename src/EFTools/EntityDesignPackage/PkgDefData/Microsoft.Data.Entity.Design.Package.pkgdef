@@ -1,13 +1,5 @@
 [$RootKey$\Packages\{8889E051-B7F9-4781-BB33-2A36A9BDB3A5}\Toolbox\DefaultContent]
 
-// Single File Generator Registration 
-[$RootKey$\CLSID\{A58BFFCF-B9BD-4904-9248-0936C15D178A}]
-@="Microsoft.Data.Entity.Design.VisualStudio.SingleFileGenerator.EntityModelCodeGenerator"
-"Assembly"="Microsoft.Data.Entity.Design, version=EFDESIGNERVERSIONTOKEN, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"
-"Class"="Microsoft.Data.Entity.Design.VisualStudio.SingleFileGenerator.EntityModelCodeGenerator"
-"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
-"ThreadingModel"="Both"
-
 // Generic Code-Generator registration 
 [$RootKey$\Generators\{164B10B9-B200-11D0-8C61-00A0C91E29D5}\EntityModelCodeGenerator]
 @="Microsoft VB Code Generator for ADO.NET vNext Entity Model"

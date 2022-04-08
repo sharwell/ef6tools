@@ -18,6 +18,7 @@ using System.Diagnostics;
 using System.Drawing.Design;
 using System.Linq;
 using System.Windows.Forms;
+using Microsoft.Data.Entity.Design.VisualStudio.SingleFileGenerator;
 	
 namespace Microsoft.Data.Entity.Design.Package
 {
@@ -60,6 +61,7 @@ namespace Microsoft.Data.Entity.Design.Package
 	[global::System.Runtime.InteropServices.ComVisible(true)]
 	//[DslShell::ProvideBindingPath]
 	//[DslShell::ProvideXmlEditorChooserBlockSxSWithXmlEditor(@"MicrosoftDataEntityDesign", typeof(MicrosoftDataEntityDesignEditorFactory))]
+	[VSShell::ProvideObject(typeof(EntityModelCodeGenerator), RegisterUsing = VSShell::RegistrationMethod.CodeBase)]
 	internal abstract partial class MicrosoftDataEntityDesignPackageBase : DslShell::ModelingPackage
 	{
 		protected global::Microsoft.Data.Entity.Design.EntityDesigner.MicrosoftDataEntityDesignToolboxHelper toolboxHelper;	
