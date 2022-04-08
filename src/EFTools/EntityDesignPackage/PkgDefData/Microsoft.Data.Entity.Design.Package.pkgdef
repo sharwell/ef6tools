@@ -1,11 +1,5 @@
 [$RootKey$\Packages\{8889E051-B7F9-4781-BB33-2A36A9BDB3A5}\Toolbox\DefaultContent]
 
-// Generic Code-Generator registration 
-[$RootKey$\Generators\{39C9C826-8EF8-4079-8C95-428F5B1C323F}\EntityModelCodeGenerator]
-@="Microsoft Code Generator for ADO.NET vNext Entity Model"
-"CLSID"="{A58BFFCF-B9BD-4904-9248-0936C15D178A}"
-"GeneratesDesignTimeSource"=dword:00000001
-
 // VB and C Sharp ASP.NET Template Filter (so the menu item only shows up in and under the App_Code folder)
 [$RootKey$\Projects\{E24C65DC-7377-472b-9ABA-BC803B73C61A}\AddNewItemFilters\App_Browsers]
 "ModelObjectItemCS_ASPNET.vstemplate"=dword:00000000
