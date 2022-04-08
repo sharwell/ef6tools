@@ -74,10 +74,6 @@
 [$RootKey$\Projects\{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}\FileExtensions\.edmx]
 "EditorFactoryNotify"="{c99aea30-8e36-4515-b76f-496f5a48a6aa}"
 
-// Register a .diagram file as the child of an .edmx file 
-[$RootKey$\Projects\{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}\RelatedFiles\.edmx]
-".diagram"=dword:00000002
-
 // Register the Include path for T4 Templates 
 [$RootKey$\TextTemplating\IncludeFolders\.tt]
 "Include67826F5E-E1F5-4618-B91C-957E4A34F0D9"="$RootFolder$Common7\IDE\Extensions\Microsoft\Entity Framework Tools\Templates\Includes\"
