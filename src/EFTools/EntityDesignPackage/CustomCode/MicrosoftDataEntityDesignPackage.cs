@@ -31,12 +31,12 @@ namespace Microsoft.Data.Entity.Design.Package
     //    Orientation = ToolWindowOrientation.Right,
     //    Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
     //[ProvideToolWindowVisibility(typeof(EntityDesignExplorerWindow), Constants.MicrosoftDataEntityDesignEditorFactoryId)]
-    //[ProvideToolWindow(typeof(MappingDetailsWindow),
-    //    MultiInstances = false,
-    //    Style = VsDockStyle.Tabbed,
-    //    Orientation = ToolWindowOrientation.Left,
-    //    Window = "{34E76E81-EE4A-11D0-AE2E-00A0C90FFFC3}")]
-    //[ProvideToolWindowVisibility(typeof(MappingDetailsWindow), Constants.MicrosoftDataEntityDesignEditorFactoryId)]
+    [ProvideToolWindow(typeof(MappingDetailsWindow),
+        MultiInstances = false,
+        Style = VsDockStyle.Tabbed,
+        Orientation = ToolWindowOrientation.Left,
+        Window = "{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}")]
+    [ProvideToolWindowVisibility(typeof(MappingDetailsWindow), Constants.MicrosoftDataEntityDesignEditorFactoryId)]
     [MyProvideMenuResource(CommonPackageConstants.ctmenuResourceId, CommonPackageConstants.ctmenuVersion)]
     [SuppressMessage("Microsoft.Performance", "CA1812:AvoidUninstantiatedInternalClasses")]
     [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling")]

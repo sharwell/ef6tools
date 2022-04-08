@@ -43,17 +43,6 @@
 [$RootKey$\ToolWindows\{a34b1c5d-6d37-4a0c-a8b0-99f8e8158b48}\Visibility]
 "{c99aea30-8e36-4515-b76f-496f5a48a6aa}"=dword:00000000
 
-// Register the Tool Window for our Mapping Details 
-[$RootKey$\ToolWindows\{cdbdee54-b399-484b-b763-db2c3393d646}]
-@="{8889e051-b7f9-4781-bb33-2a36a9bdb3a5}"
-"Name"="Microsoft.Data.Entity.Design.UI.Views.MappingDetails.MappingDetailsWindow"
-"Orientation"="Left"
-"Style"="Tabbed"
-"Window"="{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-
-[$RootKey$\ToolWindows\{cdbdee54-b399-484b-b763-db2c3393d646}\Visibility]
-"{c99aea30-8e36-4515-b76f-496f5a48a6aa}"=dword:00000000
-
 // Single File Generator Registration 
 [$RootKey$\CLSID\{A58BFFCF-B9BD-4904-9248-0936C15D178A}]
 @="Microsoft.Data.Entity.Design.VisualStudio.SingleFileGenerator.EntityModelCodeGenerator"
