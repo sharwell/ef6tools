@@ -25,23 +25,23 @@ namespace Microsoft.Data.Entity.Design.Package
     using Microsoft.VisualStudio.Utilities;
     using ModelChangeEventArgs = Microsoft.Data.Entity.Design.VisualStudio.Package.ModelChangeEventArgs;
 
-    [ProvideToolWindow(typeof(EntityDesignExplorerWindow),
-        MultiInstances = false,
-        Style = VsDockStyle.Tabbed,
-        Orientation = ToolWindowOrientation.Right,
-        Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
-    [ProvideToolWindowVisibility(typeof(EntityDesignExplorerWindow), Constants.MicrosoftDataEntityDesignEditorFactoryId)]
-    [ProvideToolWindow(typeof(MappingDetailsWindow),
-        MultiInstances = false,
-        Style = VsDockStyle.Tabbed,
-        Orientation = ToolWindowOrientation.Left,
-        Window = "{34E76E81-EE4A-11D0-AE2E-00A0C90FFFC3}")]
-    [ProvideToolWindowVisibility(typeof(MappingDetailsWindow), Constants.MicrosoftDataEntityDesignEditorFactoryId)]
-    [MyProvideMenuResource(CommonPackageConstants.ctmenuResourceId, CommonPackageConstants.ctmenuVersion)]
+    //[ProvideToolWindow(typeof(EntityDesignExplorerWindow),
+    //    MultiInstances = false,
+    //    Style = VsDockStyle.Tabbed,
+    //    Orientation = ToolWindowOrientation.Right,
+    //    Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
+    //[ProvideToolWindowVisibility(typeof(EntityDesignExplorerWindow), Constants.MicrosoftDataEntityDesignEditorFactoryId)]
+    //[ProvideToolWindow(typeof(MappingDetailsWindow),
+    //    MultiInstances = false,
+    //    Style = VsDockStyle.Tabbed,
+    //    Orientation = ToolWindowOrientation.Left,
+    //    Window = "{34E76E81-EE4A-11D0-AE2E-00A0C90FFFC3}")]
+    //[ProvideToolWindowVisibility(typeof(MappingDetailsWindow), Constants.MicrosoftDataEntityDesignEditorFactoryId)]
+    //[MyProvideMenuResource(CommonPackageConstants.ctmenuResourceId, CommonPackageConstants.ctmenuVersion)]
     [SuppressMessage("Microsoft.Performance", "CA1812:AvoidUninstantiatedInternalClasses")]
     [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling")]
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable")]
-    [ProvideEditorLogicalView(typeof(MicrosoftDataEntityDesignEditorFactory), PackageConstants.guidLogicalViewString, IsTrusted = true)]
+    //[ProvideEditorLogicalView(typeof(MicrosoftDataEntityDesignEditorFactory), PackageConstants.guidLogicalViewString, IsTrusted = true)]
     internal sealed partial class MicrosoftDataEntityDesignPackage : IEdmPackage, IVsTrackProjectRetargetingEvents
     {
         [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Justification = "Used by Visual Studio")]

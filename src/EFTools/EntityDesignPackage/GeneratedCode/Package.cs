@@ -24,42 +24,42 @@ namespace Microsoft.Data.Entity.Design.Package
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
-	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\10.0")]
-	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
-	[VSShell::ProvideStaticToolboxGroup("@Entity FrameworkToolboxTab;Microsoft.Data.Entity.Design.EntityDesigner.dll", "Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab")]
-	[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
-					"@EntityToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
-					"Microsoft.Data.Entity.Design.Package.EntityToolToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"vs.edm.common.entitytypes", 
-					"@EntityToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
-					0xff00ff)]
-	[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
-					"@AssociationToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
-					"Microsoft.Data.Entity.Design.Package.AssociationToolToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"vs.edm.common.associations", 
-					"@AssociationToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
-					0xff00ff)]
-	[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
-					"@InheritanceToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
-					"Microsoft.Data.Entity.Design.Package.InheritanceToolToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"vs.edm.common.inheritancerelationships", 
-					"@InheritanceToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
-					0xff00ff)]
-	[VSShell::ProvideEditorFactory(typeof(MicrosoftDataEntityDesignEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
-	[VSShell::ProvideEditorExtension(typeof(MicrosoftDataEntityDesignEditorFactory), "." + Constants.DesignerFileExtension, 50)]
-	[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
-		ProjectSystem = DslShell::ProvideRelatedFileAttribute.CSharpProjectGuid,
-		FileOptions = DslShell::RelatedFileType.FileName)]
-	[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
-		ProjectSystem = DslShell::ProvideRelatedFileAttribute.VisualBasicProjectGuid,
-		FileOptions = DslShell::RelatedFileType.FileName)]
-	[DslShell::RegisterAsDslToolsEditor]
+	//[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\10.0")]
+	//[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
+	//[VSShell::ProvideStaticToolboxGroup("@Entity FrameworkToolboxTab;Microsoft.Data.Entity.Design.EntityDesigner.dll", "Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab")]
+	//[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
+	//				"@EntityToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
+	//				"Microsoft.Data.Entity.Design.Package.EntityToolToolboxItem", 
+	//				"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+	//				"vs.edm.common.entitytypes", 
+	//				"@EntityToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
+	//				0xff00ff)]
+	//[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
+	//				"@AssociationToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
+	//				"Microsoft.Data.Entity.Design.Package.AssociationToolToolboxItem", 
+	//				"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+	//				"vs.edm.common.associations", 
+	//				"@AssociationToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
+	//				0xff00ff)]
+	//[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
+	//				"@InheritanceToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
+	//				"Microsoft.Data.Entity.Design.Package.InheritanceToolToolboxItem", 
+	//				"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+	//				"vs.edm.common.inheritancerelationships", 
+	//				"@InheritanceToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
+	//				0xff00ff)]
+	//[VSShell::ProvideEditorFactory(typeof(MicrosoftDataEntityDesignEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
+	//[VSShell::ProvideEditorExtension(typeof(MicrosoftDataEntityDesignEditorFactory), "." + Constants.DesignerFileExtension, 50)]
+	//[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
+	//	ProjectSystem = DslShell::ProvideRelatedFileAttribute.CSharpProjectGuid,
+	//	FileOptions = DslShell::RelatedFileType.FileName)]
+	//[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
+	//	ProjectSystem = DslShell::ProvideRelatedFileAttribute.VisualBasicProjectGuid,
+	//	FileOptions = DslShell::RelatedFileType.FileName)]
+	//[DslShell::RegisterAsDslToolsEditor]
 	[global::System.Runtime.InteropServices.ComVisible(true)]
-	[DslShell::ProvideBindingPath]
-	[DslShell::ProvideXmlEditorChooserBlockSxSWithXmlEditor(@"MicrosoftDataEntityDesign", typeof(MicrosoftDataEntityDesignEditorFactory))]
+	//[DslShell::ProvideBindingPath]
+	//[DslShell::ProvideXmlEditorChooserBlockSxSWithXmlEditor(@"MicrosoftDataEntityDesign", typeof(MicrosoftDataEntityDesignEditorFactory))]
 	internal abstract partial class MicrosoftDataEntityDesignPackageBase : DslShell::ModelingPackage
 	{
 		protected global::Microsoft.Data.Entity.Design.EntityDesigner.MicrosoftDataEntityDesignToolboxHelper toolboxHelper;	
@@ -144,7 +144,7 @@ namespace Microsoft.Data.Entity.Design.Package
 	/// Consult the Visual Studio SDK documentation for more information.
 	/// [VSShell::ProvideLoadKey("Standard", Constants.ProductVersion, Constants.ProductName, Constants.CompanyName, 1)]
 	/// </remarks>
-	[VSShell::ProvideToolboxItems(1)]
+	//[VSShell::ProvideToolboxItems(1)]
 	//[VSTextTemplatingHost::ProvideDirectiveProcessor(typeof(global::Microsoft.Data.Entity.Design.EntityDesigner.EntityFrameworkDirectiveProcessor), global::Microsoft.Data.Entity.Design.EntityDesigner.EntityFrameworkDirectiveProcessor.EntityFrameworkDirectiveProcessorName, "A directive processor that provides access to EntityFramework files")]
 	[global::System.Runtime.InteropServices.Guid(Constants.MicrosoftDataEntityDesignPackageId)]
 	internal sealed partial class MicrosoftDataEntityDesignPackage : MicrosoftDataEntityDesignPackageBase
