@@ -37,7 +37,7 @@ namespace Microsoft.Data.Entity.Design.Package
     //    Orientation = ToolWindowOrientation.Left,
     //    Window = "{34E76E81-EE4A-11D0-AE2E-00A0C90FFFC3}")]
     //[ProvideToolWindowVisibility(typeof(MappingDetailsWindow), Constants.MicrosoftDataEntityDesignEditorFactoryId)]
-    //[MyProvideMenuResource(CommonPackageConstants.ctmenuResourceId, CommonPackageConstants.ctmenuVersion)]
+    [MyProvideMenuResource(CommonPackageConstants.ctmenuResourceId, CommonPackageConstants.ctmenuVersion)]
     [SuppressMessage("Microsoft.Performance", "CA1812:AvoidUninstantiatedInternalClasses")]
     [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling")]
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable")]

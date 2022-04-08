@@ -66,10 +66,6 @@
 "InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
 "ThreadingModel"="Both"
 
-// Register Entity Designer menu resource 
-[$RootKey$\Menus]
-"{8889e051-b7f9-4781-bb33-2a36a9bdb3a5}"=", EntityDesigner.ctmenu, 1"
-
 // Generic Code-Generator registration 
 [$RootKey$\Generators\{164B10B9-B200-11D0-8C61-00A0C91E29D5}\EntityModelCodeGenerator]
 @="Microsoft VB Code Generator for ADO.NET vNext Entity Model"
