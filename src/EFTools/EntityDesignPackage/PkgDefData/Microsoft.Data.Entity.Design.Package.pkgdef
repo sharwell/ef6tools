@@ -71,10 +71,6 @@
 [$RootKey$\Projects\{F184B08F-C81C-45f6-A57F-5ABD9991F28F}\FileExtensions\.edmx]
 "EditorFactoryNotify"="{c99aea30-8e36-4515-b76f-496f5a48a6aa}"
 
-// Register a .diagram file as the child of an .edmx file 
-[$RootKey$\Projects\{F184B08F-C81C-45f6-A57F-5ABD9991F28F}\RelatedFiles\.edmx]
-".diagram"=dword:00000002
-
 [$RootKey$\Projects\{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}\FileExtensions\.edmx]
 "EditorFactoryNotify"="{c99aea30-8e36-4515-b76f-496f5a48a6aa}"
 

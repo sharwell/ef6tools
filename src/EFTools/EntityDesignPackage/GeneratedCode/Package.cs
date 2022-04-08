@@ -53,9 +53,9 @@ namespace Microsoft.Data.Entity.Design.Package
 	//[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
 	//	ProjectSystem = DslShell::ProvideRelatedFileAttribute.CSharpProjectGuid,
 	//	FileOptions = DslShell::RelatedFileType.FileName)]
-	//[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
-	//	ProjectSystem = DslShell::ProvideRelatedFileAttribute.VisualBasicProjectGuid,
-	//	FileOptions = DslShell::RelatedFileType.FileName)]
+	[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
+		ProjectSystem = DslShell::ProvideRelatedFileAttribute.VisualBasicProjectGuid,
+		FileOptions = DslShell::RelatedFileType.FileName)]
 	[DslShell::RegisterAsDslToolsEditor]
 	[global::System.Runtime.InteropServices.ComVisible(true)]
 	//[DslShell::ProvideBindingPath]
