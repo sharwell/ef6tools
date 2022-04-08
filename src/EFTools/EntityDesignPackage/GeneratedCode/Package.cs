@@ -25,7 +25,7 @@ namespace Microsoft.Data.Entity.Design.Package
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
 	//[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\10.0")]
-	//[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
+	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.CodeBase, UseManagedResourcesOnly = true)]
 	//[VSShell::ProvideStaticToolboxGroup("@Entity FrameworkToolboxTab;Microsoft.Data.Entity.Design.EntityDesigner.dll", "Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab")]
 	//[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
 	//				"@EntityToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 

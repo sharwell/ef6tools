@@ -17,14 +17,6 @@
 [$RootKey$\Editors\{c99aea30-8e36-4515-b76f-496f5a48a6aa}\LogicalViews]
 "{ab6778a7-2644-4467-bd57-154f50f3dae5}"=""
 
-// VSPackage Registration   
-[$RootKey$\Packages\{8889E051-B7F9-4781-BB33-2A36A9BDB3A5}]
-@="Microsoft.Data.Entity.Design.Package.MicrosoftDataEntityDesignPackage"
-"Assembly"="Microsoft.Data.Entity.Design.Package, version=EFDESIGNERVERSIONTOKEN, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-"Class"="Microsoft.Data.Entity.Design.Package.MicrosoftDataEntityDesignPackage"
-"CodeBase"="$RootFolder$Common7\IDE\Microsoft.Data.Entity.Design.Package.dll"
-"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
-
 // Register Toolbox Items 
 [$RootKey$\Packages\{8889E051-B7F9-4781-BB33-2A36A9BDB3A5}\Toolbox]
 "Default Items"=dword:00000001

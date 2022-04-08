@@ -10,6 +10,7 @@
     <RootNamespace>Microsoft.Data.Entity.Design.Package</RootNamespace>
     <ApplicationIcon>Resources\File.ico</ApplicationIcon>
     <DeployExtension>false</DeployExtension>
+    <UseCodebase>true</UseCodebase>
     <CreateVsixContainer>true</CreateVsixContainer>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
