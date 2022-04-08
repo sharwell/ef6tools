@@ -63,6 +63,7 @@ namespace Microsoft.Data.Entity.Design.Package
 	//[DslShell::ProvideXmlEditorChooserBlockSxSWithXmlEditor(@"MicrosoftDataEntityDesign", typeof(MicrosoftDataEntityDesignEditorFactory))]
 	[VSShell::ProvideObject(typeof(EntityModelCodeGenerator), RegisterUsing = VSShell::RegistrationMethod.CodeBase)]
 	[VSShell::CodeGeneratorRegistration(typeof(EntityModelCodeGenerator), "Microsoft VB Code Generator for ADO.NET vNext Entity Model", VSTextTemplatingHost::ProvideCodeGeneratorAttribute.VisualBasicProjectGuid, GeneratesDesignTimeSource = true)]
+	[VSShell::CodeGeneratorRegistration(typeof(EntityModelCodeGenerator), "Microsoft C# Code Generator for ADO.NET vNext Entity Model", VSTextTemplatingHost::ProvideCodeGeneratorAttribute.CSharpProjectGuid, GeneratesDesignTimeSource = true)]
 	internal abstract partial class MicrosoftDataEntityDesignPackageBase : DslShell::ModelingPackage
 	{
 		protected global::Microsoft.Data.Entity.Design.EntityDesigner.MicrosoftDataEntityDesignToolboxHelper toolboxHelper;	
