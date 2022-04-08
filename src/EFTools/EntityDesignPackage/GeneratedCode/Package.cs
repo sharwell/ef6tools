@@ -56,7 +56,7 @@ namespace Microsoft.Data.Entity.Design.Package
 	//[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
 	//	ProjectSystem = DslShell::ProvideRelatedFileAttribute.VisualBasicProjectGuid,
 	//	FileOptions = DslShell::RelatedFileType.FileName)]
-	//[DslShell::RegisterAsDslToolsEditor]
+	[DslShell::RegisterAsDslToolsEditor]
 	[global::System.Runtime.InteropServices.ComVisible(true)]
 	//[DslShell::ProvideBindingPath]
 	//[DslShell::ProvideXmlEditorChooserBlockSxSWithXmlEditor(@"MicrosoftDataEntityDesign", typeof(MicrosoftDataEntityDesignEditorFactory))]
