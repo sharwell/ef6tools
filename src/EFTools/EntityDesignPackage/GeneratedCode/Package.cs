@@ -69,6 +69,7 @@ namespace Microsoft.Data.Entity.Design.Package
 	[VSShell::CodeGeneratorRegistration(typeof(EntityModelCodeGenerator), "Microsoft C# Code Generator for ADO.NET vNext Entity Model", VSTextTemplatingHost::ProvideCodeGeneratorAttribute.CSharpProjectGuid, GeneratesDesignTimeSource = true)]
 	[VSShell::CodeGeneratorRegistration(typeof(EntityModelCodeGenerator), "Microsoft Code Generator for ADO.NET vNext Entity Model", VSTextTemplatingHost::ProvideCodeGeneratorAttribute.AspNetProjectGuid, GeneratesDesignTimeSource = true)]
 	[VSTextTemplatingHost::ProvideDirectiveProcessor(typeof(FallbackT4VSHostProcessor), "T4VSHost", description: null)]
+	[VSTextTemplatingHost::ProvideIncludeFolder(".tt", 0, @"TextTemplates\Includes\")]
 	internal abstract partial class MicrosoftDataEntityDesignPackageBase : DslShell::ModelingPackage
 	{
 		protected global::Microsoft.Data.Entity.Design.EntityDesigner.MicrosoftDataEntityDesignToolboxHelper toolboxHelper;	
