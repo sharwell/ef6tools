@@ -48,8 +48,8 @@ namespace Microsoft.Data.Entity.Design.Package
 	//				"vs.edm.common.inheritancerelationships", 
 	//				"@InheritanceToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
 	//				0xff00ff)]
-	//[VSShell::ProvideEditorFactory(typeof(MicrosoftDataEntityDesignEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
-	//[VSShell::ProvideEditorExtension(typeof(MicrosoftDataEntityDesignEditorFactory), "." + Constants.DesignerFileExtension, 50)]
+	[VSShell::ProvideEditorFactory(typeof(MicrosoftDataEntityDesignEditorFactory), 103, CommonPhysicalViewAttributes = (int)VSShellInterop::__VSPHYSICALVIEWATTRIBUTES.PVA_SupportsPreview, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
+	[VSShell::ProvideEditorExtension(typeof(MicrosoftDataEntityDesignEditorFactory), "." + Constants.DesignerFileExtension, 61)]
 	//[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
 	//	ProjectSystem = DslShell::ProvideRelatedFileAttribute.CSharpProjectGuid,
 	//	FileOptions = DslShell::RelatedFileType.FileName)]
