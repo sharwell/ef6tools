@@ -41,13 +41,13 @@ namespace Microsoft.Data.Entity.Design.Package
 					helpKeyword: "", 
 					"@AssociationToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
 					0xff00ff)]
-	//[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
-	//				"@InheritanceToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
-	//				"Microsoft.Data.Entity.Design.Package.InheritanceToolToolboxItem", 
-	//				"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-	//				"vs.edm.common.inheritancerelationships", 
-	//				"@InheritanceToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
-	//				0xff00ff)]
+	[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
+					"@InheritanceToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
+					"Microsoft.Data.Entity.Design.Package.InheritanceToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					helpKeyword: "", 
+					"@InheritanceToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
+					0xff00ff)]
 	[VSShell::ProvideEditorFactory(typeof(MicrosoftDataEntityDesignEditorFactory), 103, CommonPhysicalViewAttributes = (int)VSShellInterop::__VSPHYSICALVIEWATTRIBUTES.PVA_SupportsPreview, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(MicrosoftDataEntityDesignEditorFactory), "." + Constants.DesignerFileExtension, 61)]
 	//[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
