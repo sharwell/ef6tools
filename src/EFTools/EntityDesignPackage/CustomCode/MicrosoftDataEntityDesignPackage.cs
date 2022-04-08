@@ -41,7 +41,7 @@ namespace Microsoft.Data.Entity.Design.Package
     [SuppressMessage("Microsoft.Performance", "CA1812:AvoidUninstantiatedInternalClasses")]
     [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling")]
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable")]
-    //[ProvideEditorLogicalView(typeof(MicrosoftDataEntityDesignEditorFactory), PackageConstants.guidLogicalViewString, IsTrusted = true)]
+    [ProvideEditorLogicalView(typeof(MicrosoftDataEntityDesignEditorFactory), PackageConstants.guidLogicalViewString, IsTrusted = true)]
     internal sealed partial class MicrosoftDataEntityDesignPackage : IEdmPackage, IVsTrackProjectRetargetingEvents
     {
         [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Justification = "Used by Visual Studio")]
