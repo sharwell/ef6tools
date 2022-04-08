@@ -4,14 +4,6 @@
 
 [$RootKey$\Packages\{8889E051-B7F9-4781-BB33-2A36A9BDB3A5}\Toolbox\DefaultContent]
 
-[$RootKey$\Packages\{8889E051-B7F9-4781-BB33-2A36A9BDB3A5}\Toolbox\DefaultContent\09F81DF4F026AAC1F033E176AFBEBCFF24E86B1DBB993F03A6A45848B52FECF5\BEC239151C59BC3DB41C03C3169DA1]
-@="@AssociationToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll"
-"BitmapResourceID"="@AssociationToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll"
-"Formats"="CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS"
-"HelpKeyword"=""
-"TransparentColor"=dword:00ff00ff
-"UniqueID"="Microsoft.Data.Entity.Design.Package.AssociationToolToolboxItem"
-
 [$RootKey$\Packages\{8889E051-B7F9-4781-BB33-2A36A9BDB3A5}\Toolbox\DefaultContent\09F81DF4F026AAC1F033E176AFBEBCFF24E86B1DBB993F03A6A45848B52FECF5\D6F894FAEE744F1C45D37A95ED62FB8]
 @="@InheritanceToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll"
 "BitmapResourceID"="@InheritanceToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll"

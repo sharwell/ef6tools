@@ -34,13 +34,13 @@ namespace Microsoft.Data.Entity.Design.Package
 					helpKeyword: "", 
 					"@EntityToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
 					0xff00ff)]
-	//[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
-	//				"@AssociationToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
-	//				"Microsoft.Data.Entity.Design.Package.AssociationToolToolboxItem", 
-	//				"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-	//				"vs.edm.common.associations", 
-	//				"@AssociationToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
-	//				0xff00ff)]
+	[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
+					"@AssociationToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
+					"Microsoft.Data.Entity.Design.Package.AssociationToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					helpKeyword: "", 
+					"@AssociationToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
+					0xff00ff)]
 	//[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
 	//				"@InheritanceToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
 	//				"Microsoft.Data.Entity.Design.Package.InheritanceToolToolboxItem", 
