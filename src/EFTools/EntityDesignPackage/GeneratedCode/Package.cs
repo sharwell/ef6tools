@@ -144,7 +144,7 @@ namespace Microsoft.Data.Entity.Design.Package
 	/// Consult the Visual Studio SDK documentation for more information.
 	/// [VSShell::ProvideLoadKey("Standard", Constants.ProductVersion, Constants.ProductName, Constants.CompanyName, 1)]
 	/// </remarks>
-	//[VSShell::ProvideToolboxItems(1)]
+	[VSShell::ProvideToolboxItems(1)]
 	//[VSTextTemplatingHost::ProvideDirectiveProcessor(typeof(global::Microsoft.Data.Entity.Design.EntityDesigner.EntityFrameworkDirectiveProcessor), global::Microsoft.Data.Entity.Design.EntityDesigner.EntityFrameworkDirectiveProcessor.EntityFrameworkDirectiveProcessorName, "A directive processor that provides access to EntityFramework files")]
 	[global::System.Runtime.InteropServices.Guid(Constants.MicrosoftDataEntityDesignPackageId)]
 	internal sealed partial class MicrosoftDataEntityDesignPackage : MicrosoftDataEntityDesignPackageBase
