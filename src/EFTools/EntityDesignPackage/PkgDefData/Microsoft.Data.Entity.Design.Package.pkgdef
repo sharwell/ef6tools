@@ -44,9 +44,6 @@
 
 [$RootKey$\Projects\{E24C65DC-7377-472b-9ABA-BC803B73C61A}\RelatedFiles\.edmx\.diagram]
 
-[$RootKey$\Projects\{F184B08F-C81C-45f6-A57F-5ABD9991F28F}\FileExtensions\.edmx]
-"EditorFactoryNotify"="{c99aea30-8e36-4515-b76f-496f5a48a6aa}"
-
 // Register the Include path for T4 Templates 
 [$RootKey$\TextTemplating\IncludeFolders\.tt]
 "Include67826F5E-E1F5-4618-B91C-957E4A34F0D9"="$RootFolder$Common7\IDE\Extensions\Microsoft\Entity Framework Tools\Templates\Includes\"
