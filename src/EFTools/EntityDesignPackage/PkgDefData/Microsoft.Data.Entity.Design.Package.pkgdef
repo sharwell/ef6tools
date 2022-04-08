@@ -1,11 +1,6 @@
 [$RootKey$\Packages\{8889E051-B7F9-4781-BB33-2A36A9BDB3A5}\Toolbox\DefaultContent]
 
 // Generic Code-Generator registration 
-[$RootKey$\Generators\{164B10B9-B200-11D0-8C61-00A0C91E29D5}\EntityModelCodeGenerator]
-@="Microsoft VB Code Generator for ADO.NET vNext Entity Model"
-"CLSID"="{A58BFFCF-B9BD-4904-9248-0936C15D178A}"
-"GeneratesDesignTimeSource"=dword:00000001
-
 [$RootKey$\Generators\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC}\EntityModelCodeGenerator]
 @="Microsoft C# Code Generator for ADO.NET vNext Entity Model"
 "CLSID"="{A58BFFCF-B9BD-4904-9248-0936C15D178A}"
