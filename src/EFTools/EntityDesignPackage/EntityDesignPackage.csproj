@@ -215,6 +215,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Microsoft.Data.Entity.Design.Package.Extra.pkgdef">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Resources\__TemplateIcon.ico" />
   </ItemGroup>
 
@@ -225,10 +228,5 @@
   <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.targets" />
 
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="Exists('$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets')" />
-
-  <Target Name="AfterBuild">
-    <MakeDir Directories="$(OutputPath)PkgDefData" />
-    <RegexReplaceInFile InputFileName="PkgDefData\Microsoft.Data.Entity.Design.Package.pkgdef" OutputFileName="$(OutputPath)PkgDefData\Microsoft.Data.Entity.Design.Package.pkgdef" Patterns="EFDESIGNERVERSIONTOKEN" Replacements="$(AssemblyVersion)" />
-  </Target>
 
 </Project>
