@@ -18,6 +18,7 @@ using System.Diagnostics;
 using System.Drawing.Design;
 using System.Linq;
 using System.Windows.Forms;
+using Microsoft.Data.Entity.Design.VisualStudio.Directives;
 using Microsoft.Data.Entity.Design.VisualStudio.SingleFileGenerator;
 	
 namespace Microsoft.Data.Entity.Design.Package
@@ -65,6 +66,7 @@ namespace Microsoft.Data.Entity.Design.Package
 	[VSShell::CodeGeneratorRegistration(typeof(EntityModelCodeGenerator), "Microsoft VB Code Generator for ADO.NET vNext Entity Model", VSTextTemplatingHost::ProvideCodeGeneratorAttribute.VisualBasicProjectGuid, GeneratesDesignTimeSource = true)]
 	[VSShell::CodeGeneratorRegistration(typeof(EntityModelCodeGenerator), "Microsoft C# Code Generator for ADO.NET vNext Entity Model", VSTextTemplatingHost::ProvideCodeGeneratorAttribute.CSharpProjectGuid, GeneratesDesignTimeSource = true)]
 	[VSShell::CodeGeneratorRegistration(typeof(EntityModelCodeGenerator), "Microsoft Code Generator for ADO.NET vNext Entity Model", VSTextTemplatingHost::ProvideCodeGeneratorAttribute.AspNetProjectGuid, GeneratesDesignTimeSource = true)]
+	[VSTextTemplatingHost::ProvideDirectiveProcessor(typeof(FallbackT4VSHostProcessor), "T4VSHost", description: null)]
 	internal abstract partial class MicrosoftDataEntityDesignPackageBase : DslShell::ModelingPackage
 	{
 		protected global::Microsoft.Data.Entity.Design.EntityDesigner.MicrosoftDataEntityDesignToolboxHelper toolboxHelper;	
