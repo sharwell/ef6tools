@@ -27,13 +27,13 @@ namespace Microsoft.Data.Entity.Design.Package
 	//[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\10.0")]
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.CodeBase, UseManagedResourcesOnly = true)]
 	[VSShell::ProvideStaticToolboxGroup("@Entity FrameworkToolboxTab;Microsoft.Data.Entity.Design.EntityDesigner.dll", "Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab")]
-	//[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
-	//				"@EntityToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
-	//				"Microsoft.Data.Entity.Design.Package.EntityToolToolboxItem", 
-	//				"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-	//				"vs.edm.common.entitytypes", 
-	//				"@EntityToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
-	//				0xff00ff)]
+	[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
+					"@EntityToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
+					"Microsoft.Data.Entity.Design.Package.EntityToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					helpKeyword: "", 
+					"@EntityToolToolboxBitmap;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
+					0xff00ff)]
 	//[VSShell::ProvideStaticToolboxItem("Microsoft.Data.Entity.Design.Package.Entity FrameworkToolboxTab",
 	//				"@AssociationToolToolboxItem;Microsoft.Data.Entity.Design.EntityDesigner.dll", 
 	//				"Microsoft.Data.Entity.Design.Package.AssociationToolToolboxItem", 
