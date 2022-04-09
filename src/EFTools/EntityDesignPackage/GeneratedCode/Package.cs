@@ -20,7 +20,19 @@ using System.Linq;
 using System.Windows.Forms;
 using Microsoft.Data.Entity.Design.VisualStudio.Directives;
 using Microsoft.Data.Entity.Design.VisualStudio.SingleFileGenerator;
-	
+
+[assembly: VSShell::ProvideBindingRedirection(CodeBase = "EntityFramework.dll")]
+[assembly: VSShell::ProvideBindingRedirection(CodeBase = "EntityFramework.SqlServer.dll")]
+[assembly: VSShell::ProvideBindingRedirection(CodeBase = "Microsoft.Data.Entity.Design.DatabaseGeneration.dll", OldVersionLowerBound = "16.0.0.0")]
+[assembly: VSShell::ProvideBindingRedirection(CodeBase = "Microsoft.Data.Entity.Design.dll", OldVersionLowerBound = "16.0.0.0")]
+[assembly: VSShell::ProvideBindingRedirection(CodeBase = "Microsoft.Data.Entity.Design.EntityDesigner.dll", OldVersionLowerBound = "16.0.0.0")]
+[assembly: VSShell::ProvideBindingRedirection(CodeBase = "Microsoft.Data.Entity.Design.Extensibility.dll", OldVersionLowerBound = "16.0.0.0")]
+[assembly: VSShell::ProvideBindingRedirection(CodeBase = "Microsoft.Data.Entity.Design.Model.dll", OldVersionLowerBound = "16.0.0.0")]
+[assembly: VSShell::ProvideBindingRedirection(CodeBase = "Microsoft.Data.Entity.Design.Package.dll", OldVersionLowerBound = "16.0.0.0")]
+[assembly: VSShell::ProvideBindingRedirection(CodeBase = "Microsoft.Data.Entity.Design.VersioningFacade.dll", OldVersionLowerBound = "16.0.0.0")]
+[assembly: VSShell::ProvideBindingRedirection(CodeBase = "Microsoft.Data.Tools.Design.XmlCore.dll", OldVersionLowerBound = "16.0.0.0")]
+[assembly: VSShell::ProvideBindingRedirection(CodeBase = "Microsoft.VisualStudio.Data.Tools.Design.XmlCore.dll", OldVersionLowerBound = "16.0.0.0")]
+
 namespace Microsoft.Data.Entity.Design.Package
 {
 	/// <summary>
