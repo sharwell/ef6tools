@@ -330,7 +330,6 @@
             new DbContextCodeGenerator().AddDbContextTemplates(edmxItem, useLegacyTemplate: false);
 
             Assert.Subset(
-                new HashSet<string> { "Simple.tt", "Simple.Context.tt" },
                 (edmxItem.ProjectItems ?? edmxItem.Collection).Cast<EnvDTE.ProjectItem>()
                     .Select(
                         i =>
@@ -338,7 +337,8 @@
                             ThreadHelper.ThrowIfNotOnUIThread();
                             return i.Name;
                         })
-                    .ToHashSet());
+                    .ToHashSet(),
+                new HashSet<string> { "Simple.tt", "Simple.Context.tt" });
         }
 
         // This test requires the EF 6.x DbContext item templates to be installed.
@@ -356,7 +356,6 @@
             new DbContextCodeGenerator().AddDbContextTemplates(edmxItem, useLegacyTemplate: false);
 
             Assert.Subset(
-                new HashSet<string> { "Simple.tt", "Simple.Context.tt" },
                 appCode.ProjectItems.Cast<EnvDTE.ProjectItem>()
                     .Select(
                         i =>
@@ -364,7 +363,8 @@
                             ThreadHelper.ThrowIfNotOnUIThread();
                             return i.Name;
                         })
-                    .ToHashSet());
+                    .ToHashSet(),
+                new HashSet<string> { "Simple.tt", "Simple.Context.tt" });
         }
 
         [IdeFact]
